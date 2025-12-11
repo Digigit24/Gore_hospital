@@ -44,7 +44,8 @@
 ==============================================  */
 
 /* Default  */
-
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 :root {
@@ -21195,3 +21196,116 @@ li.has-dropdown:hover .submenu {
 }
 
 /*# sourceMappingURL=../maps/style.css.map */
+/* Styling for GSAP Mission Cards */
+.mission-gsap-card {
+    background: #ffffff !important;
+    border-radius: 20px !important;
+    padding: 40px 30px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid rgba(0,0,0,0.03) !important;
+    transition: transform 0.3s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+    z-index: 2 !important;
+}
+
+.mission-gsap-card:hover {
+    box-shadow: 0 15px 40px rgba(24, 158, 203, 0.15) !important;
+    transform: translateY(-5px) !important;
+}
+
+.mission-gsap-card .card-icon {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    background: #f4f9fd !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 26px !important;
+    color: #189ecb !important; /* Default color */
+    margin-bottom: 20px !important;
+}
+
+.mission-gsap-card .card-title {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    margin-bottom: 10px !important;
+    color: #1F1F25 !important;
+}
+
+.mission-gsap-card .card-text {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    color: #666 !important;
+    margin: 0 !important;
+}
+
+/* Font Face Declaration */
+@font-face {
+    font-family: 'Gabriely';
+    src: url('../fonts/Gabriely Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT Pro';
+    src: url('../fonts/HelveticaNeueLTPro-HvEx.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT Pro';
+    src: url('../fonts/HelveticaNeueLTPro-BlkCn.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT Pro';
+    src: url('../fonts/HelveticaNeueLTPro-ExO.otf') format('opentype');
+    font-weight: 900;
+    font-style: oblique;
+}
+
+@font-face {
+    font-family: 'Helvetica Neue LT Pro';
+    src: url('../fonts/HelveticaNeueLTPro-It.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Apply Helvetica as default for headings */
+h1, h2, h3, h4, h5, h6,
+.title,
+.pre-title {
+    font-family: 'Helvetica Neue LT Pro', 'Gabriely', sans-serif;
+}
+
+/* Apply Gabriely font to all headings */
+
+
+/* Mobile Responsiveness */
+@media (max-width: 991px) {
+    .mission-left-content {
+        margin-bottom: 50px !important;
+        text-align: center !important;
+        padding-right: 0 !important;
+    }
+    .mission-left-content .icon-mission,
+    .mission-left-content div[style*="linear-gradient"] {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+*{
+    font-family: "Nunito", sans-serif;
+}
+h1, h2, h3, h4, h5, h6,
+.title,
+.pre-title {
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+}

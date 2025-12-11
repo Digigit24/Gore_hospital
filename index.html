@@ -353,10 +353,252 @@
   gtag('config', 'G-HW2B3PV89M');
 </script>
 <!-- Google Search -->
+<style>
+/* 1. Wrapper & Video Positioning */
+.banner-video-wrapper {
+    position: relative !important;
+    overflow: hidden !important;
+    z-index: 1 !important;
+    min-height: 650px !important; /* Ensure height on all devices */
+    display: flex !important;
+    align-items: center !important; /* Vertically center content */
+    justify-content: center !important;
+}
 
+.banner-bg-video {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: cover !important; /* Ensures video covers area without stretching */
+    z-index: -2 !important;
+}
+
+/* 2. Global Overlay (Subtle Tint) */
+/* This ensures the video isn't too bright overall */
+.banner-video-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(
+        135deg, 
+        rgba(2, 167, 233, 0.1) 0%, 
+        rgba(31, 31, 37, 0.3) 100%
+    ) !important;
+    z-index: -1 !important;
+}
+
+/* 3. The Glassmorphism Card (The Key Fix) */
+.banner-content-glass-card {
+    /* Glass Effect */
+    background: rgba(17, 16, 50, 0.65) !important; /* Dark Blue-ish transparent */
+    backdrop-filter: blur(12px) !important; /* The Blur/Frost effect */
+    -webkit-backdrop-filter: blur(12px) !important; /* Safari support */
+    
+    /* Border & Shape */
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+    border-radius: 20px !important;
+    padding: 50px 40px !important;
+    max-width: 800px !important;
+    margin: 0 auto !important; /* Center the card */
+    
+    /* Shadow for depth */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37) !important;
+    text-align: center !important;
+}
+
+/* 4. Text Typography Fixes */
+.banner-content-glass-card .title {
+    color: var(--color-white) !important; /* Force White Text */
+    font-size: 48px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin-bottom: 20px !important;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2) !important;
+}
+
+.banner-content-glass-card .disc {
+    color: #e0e0e0 !important; /* Off-white for description */
+    font-size: 18px !important;
+    line-height: 1.6 !important;
+    font-weight: 400 !important;
+    margin-bottom: 35px !important;
+}
+
+/* 5. Button Adjustments */
+.banner-content-glass-card .rts-btn {
+    border-radius: 50px !important;
+    padding: 12px 30px !important;
+    font-weight: 600 !important;
+}
+
+/* Primary Button (Appointment) - White bg, Blue text */
+.banner-content-glass-card .book-appointment-btn {
+    background-color: var(--color-white) !important;
+    color: var(--color-primary) !important;
+    border: 2px solid var(--color-white) !important;
+}
+.banner-content-glass-card .book-appointment-btn:hover {
+    background-color: transparent !important;
+    color: var(--color-white) !important;
+}
+
+/* Secondary Button (Call) - Transparent bg, White text */
+.banner-content-glass-card .rts-btn:not(.book-appointment-btn) {
+    background-color: var(--color-primary) !important;
+    color: var(--color-white) !important;
+    border: 2px solid var(--color-primary) !important;
+}
+.banner-content-glass-card .rts-btn:not(.book-appointment-btn):hover {
+    background-color: transparent !important;
+    border-color: var(--color-white) !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .banner-content-glass-card {
+        padding: 30px 20px !important;
+        margin: 0 15px !important;
+        backdrop-filter: blur(8px) !important; /* Less blur on mobile for performance */
+    }
+    .banner-content-glass-card .title {
+        font-size: 28px !important;
+    }
+    .banner-content-glass-card .disc {
+        font-size: 15px !important;
+    }
+    .select-area-down {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 15px !important;
+    }
+    .book-appointment-btn {
+        margin-right: 0 !important;
+    }
+}
+</style>
 <meta name="google-site-verification" content="YaL9bjJrrw4NMWo8kMtrYa26zhWuCjb8xqnf5YWTL84" >
+<style>
+/* 1. Video Container & Positioning */
+.banner-video-wrapper {
+    position: relative !important;
+    overflow: hidden !important;
+    /* Increased height for better cinematic feel */
+    min-height: 750px !important; 
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    z-index: 1 !important;
+}
 
-  </head d>
+.banner-bg-video {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    min-width: 100% !important;
+    min-height: 100% !important;
+    width: auto !important;
+    height: auto !important;
+    object-fit: cover !important;
+    z-index: -2 !important;
+}
+
+/* 2. THE OVERLAY (Fixes the "White/Blueish" video issue) */
+.banner-video-overlay {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    /* Gradient: Slight blue tint at top, Dark at bottom for text readability */
+    background: linear-gradient(
+        180deg, 
+        rgba(2, 167, 233, 0.2) 0%, 
+        rgba(0, 0, 0, 0.75) 100%
+    ) !important;
+    z-index: -1 !important;
+}
+
+/* 3. Content Styling (No Box, Just Clean Text) */
+.banner-content-area {
+    text-align: center !important;
+    position: relative !important;
+    z-index: 5 !important;
+    width: 100% !important;
+    padding: 0 15px !important;
+}
+
+/* 4. Heading Constraints (Wrapping) */
+.banner-content-area .title {
+    color: #ffffff !important;
+    font-size: 56px !important; /* Large, bold font */
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    margin-bottom: 25px !important;
+    
+    /* LIMIT WIDTH & CENTER */
+    max-width: 900px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    
+    /* Subtle shadow to pop against video */
+    text-shadow: 0 4px 10px rgba(0,0,0,0.5) !important;
+}
+
+/* 5. Paragraph Constraints */
+.banner-content-area .disc {
+    color: #e6e6e6 !important; /* Slightly off-white for hierarchy */
+    font-size: 18px !important;
+    line-height: 1.7 !important;
+    margin-bottom: 40px !important;
+    
+    /* LIMIT WIDTH & CENTER */
+    max-width: 700px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5) !important;
+}
+
+/* 6. Button Area */
+.select-area-down {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 20px !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .banner-video-wrapper {
+        min-height: 600px !important;
+    }
+    .banner-content-area .title {
+        font-size: 32px !important;
+        max-width: 100% !important;
+    }
+    .banner-content-area .disc {
+        font-size: 16px !important;
+        max-width: 100% !important;
+    }
+    .select-area-down {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+    .select-area-down a {
+        width: 100% !important;
+        max-width: 300px !important;
+        text-align: center !important;
+        margin: 0 !important; /* Remove existing margins */
+    }
+}
+</style>
+  </head>
 
   <body>
     <!-- header area start -->
@@ -657,10 +899,10 @@
     <div class="row">
       <div class="col-lg-12">
 
-        <!-- added extra class: banner-video-wrapper -->
+        <!-- Banner Wrapper -->
         <div class="banner-area-one rts-section-gap bg_image banner-video-wrapper">
 
-          <!-- background video (new, no text content changed) -->
+          <!-- 1. Background Video -->
           <video
             class="banner-bg-video"
             autoplay
@@ -672,58 +914,23 @@
             <source src="/assets/video/gore-hospital.mp4" type="video/mp4">
           </video>
 
-          <!-- subtle overlay to keep current color theme & text readability -->
+          <!-- 2. Dark Overlay (Directly on video, no box around text) -->
           <div class="banner-video-overlay"></div>
 
+          <!-- 3. Content Area (Centered & Width Limited) -->
           <div class="banner-content-area">
-            <div
-              class="pre-title wow fadeInUp"
-              data-wow-delay=".0s"
-              data-wow-duration=".8s"
-            >
-            </div>
-
+            
             <h1
               class="title wow fadeInUp"
               data-wow-delay=".2s"
               data-wow-duration=".8s"
+              style="letter-spacing: 4px;"
             >
-             Gore Multispeciality Hospital, in Ravet,Pimpri Chinchwad
+             Gore Multispeciality Hospital,<br> Ravet, Pimpri Chinchwad
             </h1>
 
-            <p
-              class="disc wow fadeInUp"
-              data-wow-delay=".4s"
-              data-wow-duration=".8s"
-            >
-              At Gore Multispeciality Hospital, we believe that healthcare
-              should combine modern medical excellence with compassionate
-              care. Recognized as the best multispeciality hospital in
-              Ravet, Pimpri Chinchwad, we are a trusted healthcare partner
-              for families across PCMC.
-            </p>
-
-            <div
-              class="select-area-down wow fadeInUp"
-              data-wow-delay=".6s"
-              data-wow-duration=".8s"
-            >
-             <a
-  href="./appointment.html"
-  class="rts-btn btn-primary book-appointment-btn"
-  style="margin-right: 12px"
->
-  <i class="fa-solid fa-calendar-check" aria-hidden="true"></i>
-  <span> Book Appointment</span>
-</a>
-
-              <a href="tel:+919689528414" class="rts-btn btn-primary">
-                Call Now – 24x7
-              </a>
-            </div>
+           
           </div>
-
-
 
         </div>
       </div>
