@@ -20611,13 +20611,13 @@ li.has-dropdown:hover .submenu {
 }
 
 .footer-wrapper-style-between .single-wized .body {
-    padding-top: 25px;
+    padding-top: 8px;
 }
 
 .footer-wrapper-style-between .single-wized .body .location {
     color: #fff;
     font-size: 16px;
-    margin-bottom: 30px;
+    margin-bottom: 14px;
 }
 
 .footer-wrapper-style-between .single-wized .body a {
@@ -21365,4 +21365,8 @@ h1, h2, h3, h4, h5, h6,
 .swiper-button-next:hover, .swiper-button-prev:hover {
     background-color: rgba(0, 0, 0, 0.2); /* Darker background on hover */
     transform: scale(1.1);  /* Slightly enlarge the button */
+}
+#footerlogo{
+    width: 140px;
+    margin-bottom: 20px;
 }
