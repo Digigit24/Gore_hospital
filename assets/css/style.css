@@ -16869,7 +16869,7 @@ a,p{
 }
 
 .appoinment-area-main {
-    background-image: url(../images/appoinment/01.jpg);
+    background-image: url(/assets/01.jpg);
     padding: 70px;
 }
 
@@ -16936,7 +16936,7 @@ a,p{
 }
 
 .request-appoinemnt-area-main-wrapper {
-    background-image: url(../images/appoinment/03.jpg);
+    background-image: url(/assets/03.jpg);
     padding: 76px 0 !important;
 }
 
@@ -16946,23 +16946,27 @@ a,p{
 }
 
 .request-appoinemnt-area-main-wrapper .pre {
-    border-radius: 30px;
+        border-radius: 30px;
     padding: 5px 16px;
-    color: #ffffff;
+    color: #fff;
     margin-bottom: 30px;
     text-align: center;
     display: block;
     max-width: max-content;
     margin: auto;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(97, 94, 252, 0.2);
 }
 
 .request-appoinemnt-area-main-wrapper .title {
-    margin-top: 20px;
+    border-radius: 30px;
+    padding: 5px 16px;
     color: #fff;
-    font-size: 64px;
-    line-height: 1;
     margin-bottom: 30px;
+    text-align: center;
+    display: block;
+    max-width: max-content;
+    margin: auto;
+    border: 1px solid rgba(97, 94, 252, 0.2);
 }
 
 @media only screen and (max-width: 991px) {

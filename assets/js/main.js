@@ -142,44 +142,44 @@
 
         swiperActive: function() {
             $(document).ready(function() {
-    var swiper = new Swiper(".swiper-container-h1", {
-        spaceBetween: 30,
-        slidesPerView: 1,   // default for mobile
-        loop: true,
-        speed: 1000,
-        // autoplay: {
-        //   delay: 3000,
-        //   disableOnInteraction: false,
-        // },
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            1500: {           // ≥1500px → 5 cards
-                slidesPerView: 4,
-            },
-            1199: {           // 1199–1499px → 4 cards
-                slidesPerView: 3,
-            },
-            991: {            // 991–1198px → 3 cards
-                slidesPerView: 2,
-            },
-            767: {            // 767–990px → 2 cards
-                slidesPerView: 2,
-            },
-            575: {            // <767px → 1 card
-                slidesPerView: 1,
-            },
-            0: {
-                slidesPerView: 1,
-            }
-        },
-    });
+   var swiper = new Swiper(".swiper-container-h1", {
+    spaceBetween: 30,
+    slidesPerView: 3,  // Show 3 slides at a time by default
+    loop: true,  // Enables looping of the slides
+    speed: 1000,
+    autoplay: {
+        delay: 3000,  // Delay in ms (3 seconds)
+        disableOnInteraction: false,  // Keep autoplay active after interaction
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",  // Next button
+        prevEl: ".swiper-button-prev",  // Previous button
+    },
+    pagination: {
+        el: ".swiper-pagination",  // Pagination bullets
+        clickable: true,
+    },
+    breakpoints: {
+        1500: { slidesPerView: 3 },  // ≥1500px → 3 slides
+        1199: { slidesPerView: 2 },  // 1199–1499px → 2 slides
+        991: { slidesPerView: 2 },   // 991–1198px → 2 slides
+        767: { slidesPerView: 1 },   // 767–990px → 1 slide
+        575: { slidesPerView: 1 },   // <767px → 1 slide
+        0: { slidesPerView: 1 },     // Default for mobile
+    },
+    slidesPerGroup: 3,  // Move 3 slides at a time
+});
+
+// Pause autoplay when mouse enters any slide
+$('.swiper-container-h1 .swiper-slide').on('mouseenter', function () {
+    swiper.autoplay.stop();
+});
+
+// Resume autoplay when mouse leaves any slide
+$('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
+    swiper.autoplay.start();
+});
+
 });
 
            
