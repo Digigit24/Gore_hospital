@@ -7473,6 +7473,7 @@ img {
     vertical-align: middle;
     max-width: 100%;
     height: auto;
+    
 }
 
 svg:not(:root) {
@@ -13538,12 +13539,12 @@ header.header-three .sub-dropdown .submenu.third-lvl.base {
     padding: 18px 26px;
     font-size: 16px;
     border-radius: 100px;
-    margin: 0;
     line-height: 1;
     display: flex;
     align-items: center;
     max-width: max-content;
     transition: 0.3s;
+        margin-bottom: 30px;
 }
 
 .rts-btn.btn-primary {
