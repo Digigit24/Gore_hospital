@@ -1177,94 +1177,46 @@
 
   // ===== BLOG CARD RENDER =====
 
+  // Assuming `post` object contains the necessary post data from WordPress API
   function createPostColumn(post) {
-
     const title = post.title?.rendered || "";
-
     const cleanTitle = stripHTML(title);
 
     const excerptRaw = post.excerpt?.rendered || "";
-
     const plainExcerpt = stripHTML(excerptRaw);
-
-    const excerpt =
-
-      plainExcerpt.length > 150
-
-        ? plainExcerpt.slice(0, 150) + "..."
-
-        : plainExcerpt;
-
-
-
-    const postId = post.id;
-
-    const link = `blog-post.html?postId=${postId}`;
-
-
+    const excerpt = plainExcerpt.length > 150 ? plainExcerpt.slice(0, 150) + "..." : plainExcerpt;
 
     const date = new Date(post.date).toLocaleDateString("en-IN", {
-
       day: "2-digit",
-
       month: "short",
-
       year: "numeric"
-
     });
 
+    // Fetch slug dynamically from WordPress response
+    const postSlug = post.slug;
 
+    // Construct the URL for the post using the slug
+    const link = `blog-post.html/${postSlug}`;
 
     const imageUrl = getImageUrl(post);
 
-
-
     return `
-
-      <div class="col-lg-6 col-md-6">
-
-        <article class="single-blog-card">
-
-          <div class="thumb">
-
-            ${imageUrl
-
-        ? `<img src="${imageUrl}" alt="${cleanTitle.replace(
-
-          /"/g,
-
-          "&quot;"
-
-        )}">`
-
-        : ""
-
-      }
-
-          </div>
-
-          <div class="blog-content">
-
-            <h3 class="title">
-
-              <a href="${link}">${title}</a>
-
-            </h3>
-
-            <p class="disc">${excerpt}</p>
-
-            <a href="${link}" class="read-more">Read More</a>
-
-          </div>
-
-        </article>
-
-      </div>
-
+        <div class="col-lg-6 col-md-6">
+            <article class="single-blog-card">
+                <div class="thumb">
+                    ${imageUrl ? `<img src="${imageUrl}" alt="${cleanTitle.replace(/"/g, "&quot;")}">` : ""}
+                </div>
+                <div class="blog-content">
+                    <h3 class="title">
+                        <a href="${link}">${title}</a>
+                    </h3>
+                    <p class="disc">${excerpt}</p>
+                    <a href="${link}" class="read-more">Read More</a>
+                </div>
+            </article>
+        </div>
     `;
-
   }
-
 
 
   // ===== SIDEBAR: LATEST ARTICLES =====

@@ -1785,11 +1785,43 @@
 
             <!-- 1. Background Video -->
 
-            <video class="banner-bg-video" autoplay muted loop playsinline poster="videos/gore-hospital.mp4">
+            <video id="hero-video" class="banner-bg-video" autoplay muted loop playsinline
+              poster="videos/gore-hospital.mp4"></video>
 
-              <source src="/#" type="video/mp4">
+            <!-- HLS.js for streaming support -->
+            <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+            <script>
+              document.addEventListener("DOMContentLoaded", function () {
+                var video = document.getElementById("hero-video");
+                var videoSrc = "http://13.200.246.130:3000/videos-static/418688027f6e5994594de41338c39008/landscape/558d87a0-0807-4069-b6ee-e64a341fd5fd/master.m3u8";
 
-            </video>
+                if (Hls.isSupported()) {
+                  var hls = new Hls({
+                    autoStartLoad: true,
+                    capLevelToPlayerSize: true, // Optimizes quality based on player size to save bandwidth
+                    debug: false
+                  });
+                  hls.loadSource(videoSrc);
+                  hls.attachMedia(video);
+                  hls.on(Hls.Events.MANIFEST_PARSED, function () {
+                    var playPromise = video.play();
+                    if (playPromise !== undefined) {
+                      playPromise.catch(function (error) {
+                        console.log("Autoplay prevented:", error);
+                      });
+                    }
+                  });
+                } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+                  // Fallback for native HLS support (Safari)
+                  video.src = videoSrc;
+                  video.addEventListener("loadedmetadata", function () {
+                    video.play().catch(function (error) {
+                      console.log("Autoplay prevented:", error);
+                    });
+                  });
+                }
+              });
+            </script>
 
 
 
@@ -2658,8 +2690,7 @@
 
               <!-- Use an Indian pulmonology / lung care image here -->
 
-              <img src="/assets/Cancer-Care.jpg" alt="Pulmonology - Lung and Respiratory Care"
-                class="img-fluid">
+              <img src="/assets/Cancer-Care.jpg" alt="Pulmonology - Lung and Respiratory Care" class="img-fluid">
 
             </div>
 
