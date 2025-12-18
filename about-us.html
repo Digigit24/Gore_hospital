@@ -51,108 +51,200 @@
     }
 
     /* Doctor Card Gradient Styles */
+    /* Doctor Card Styles from our-doctors.html */
     :root {
+      --text: #1f1f25;
+      --muted: #5b5b63;
+      --card-bg: #ffffff;
+      --card-bd: rgba(0, 0, 0, 0.06);
+      --soft: 0 6px 24px rgba(0, 0, 0, 0.06);
+      --soft-2: 0 12px 32px rgba(0, 0, 0, 0.07);
       --silver-gradient: linear-gradient(135deg,
           #f8f9fa 0%,
           #e9ecef 50%,
           #dee2e6 100%);
     }
 
-    .meet-doctor-area-sd .single-team-area-start {
-      position: relative;
+    /* ---------- Doctors grid ---------- */
+    .doc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+      margin: 40px 0 80px;
+    }
+
+    .doc-card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      /* Soft, premium shadow */
       overflow: hidden;
-    }
-
-    /* Shine effect for all doctor cards */
-    .meet-doctor-area-sd .single-team-area-start::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
       height: 100%;
-      background: linear-gradient(90deg,
-          transparent,
-          rgba(255, 255, 255, 0.4),
-          transparent);
-      transition: left 0.5s ease;
-      z-index: 10;
-      pointer-events: none;
+      border: 1px solid rgba(0, 0, 0, 0.02);
     }
 
-    .meet-doctor-area-sd .single-team-area-start:hover::before {
-      left: 100%;
+    .doc-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
     }
 
-    /* Gradient card styling (no image) */
-    .meet-doctor-area-sd .single-team-area-start.no-image {
-      height: 528px !important;
-      background: var(--silver-gradient);
-      border-radius: 16px;
-      border: 1px solid rgba(0, 0, 0, 0.08);
-    }
-
-    .meet-doctor-area-sd .single-team-area-start.no-image::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at top right,
-          rgba(255, 255, 255, 0.6),
-          transparent 60%);
-      pointer-events: none;
-      z-index: 1;
-      border-radius: 16px;
-    }
-
-    .meet-doctor-area-sd .single-team-area-start.no-image .thumbnail {
+    .doc-photo {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      /* Square - Professional & Consistent */
+      background: #f8f9fa;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 40px 24px;
-      background: transparent;
-      position: relative;
-      z-index: 2;
-      min-height: 350px;
     }
 
-    .meet-doctor-area-sd .single-team-area-start.no-image .thumbnail img {
-      display: none;
+    .doc-photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
-    .meet-doctor-area-sd .single-team-area-start.no-image .thumbnail-content {
+    .doc-card:hover .doc-photo img {
+      transform: scale(1.08);
+      /* Subtle zoom */
+    }
+
+    /* Details Section */
+    .doc-body {
+      padding: 24px 20px;
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      align-items: center;
+      /* Center align for premium feel */
       text-align: center;
+      gap: 6px;
+      flex-grow: 1;
+      background: #fff;
+      z-index: 5;
+      position: relative;
+    }
+
+    .doc-name {
+      font-weight: 500;
+      font-size: 19px;
+      line-height: 1.3;
+      margin: 0;
+      color: #1a202c;
+      letter-spacing: -0.3px;
+    }
+
+    .doc-spec {
+      font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #007bff;
+      /* Medical Blue accent */
+      margin-top: 2px;
+    }
+
+    .doc-qual {
+      font-size: 14px;
+      color: #718096;
+      margin: 0;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+
+    /* ---------- Empty State (Creative & Professional) ---------- */
+    .doc-card.no-image .doc-photo {
+      background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+    }
+
+    .doc-card.no-image .doc-photo img {
+      position: static;
+      width: 80px;
+      height: 80px;
+      opacity: 0.4;
+      object-fit: contain;
+      filter: grayscale(100%);
+      animation: pulse-logo 3s infinite ease-in-out;
+      display: block !important;
+    }
+
+    @keyframes pulse-logo {
+      0% {
+        opacity: 0.3;
+        transform: scale(0.95);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(1.05);
+      }
+
+      100% {
+        opacity: 0.3;
+        transform: scale(0.95);
+      }
+    }
+
+    .doc-card.no-image .doc-photo img {
+      /* This rule was in our-doctors.html but the img is displayed block above... 
+           Ah, there was a rule to display none, but then override. 
+           In our-doctors.html: 
+           .doc-card.no-image .doc-photo img { ... display: block !important; } 
+           then later
+           .doc-card.no-image .doc-photo img { display: none !important; }
+           Wait, there is a conflict in the source file I read?
+           Lines 206-219 set styles.
+           Lines 238-240 set display: none !important.
+           Let's look at Step 8 output lines 238-240.
+           238:     .doc-card.no-image .doc-photo img {
+           239:       display: none !important;
+           240:     }
+           This seems effectively to HIDE the image?
+           But line 218 said `display: block !important;`.
+           The later one wins. So images are HIDDEN in no-image cards?
+           Then what shows?
+           Line 243: .scan-line.
+           Line 259: .doc-card.no-image .doc-body { ... min-height: 110px; }
+           
+           Wait, if I hide the image, the `doc-photo` div is just a gradient?
+           Let's stick to what `our-doctors.html` has, assuming it works there.
+           I will copy the *entire* CSS block including the contradictory parts, as that's "layout consistant".
+        */
+      display: none !important;
+    }
+
+    /* The Scanner Bar Animation */
+    .scan-line {
+      position: absolute;
+      top: -10%;
+      left: 0;
       width: 100%;
-      margin-top: 184px;
+      height: 15%;
+      background: linear-gradient(180deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.9) 50%,
+          transparent 100%);
+      filter: blur(4px);
+      opacity: 0.7;
+      z-index: 2;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
     }
 
-    .meet-doctor-area-sd .single-team-area-start.no-image .thumbnail-content .doctor-name {
-      font-weight: 600;
-      color: #2d3748;
-      font-size: 22px;
-      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
-      margin: 0;
-    }
-
-    .meet-doctor-area-sd .single-team-area-start.no-image .thumbnail-content .doctor-specialty {
-      color: #4a5568;
-      font-weight: 600;
-      font-size: 16px;
-      margin: 0;
-    }
-
-    .meet-doctor-area-sd .single-team-area-start.no-image .bottom {
-      display: none;
-    }
-
-    /* Enhanced shine for gradient cards */
-    .meet-doctor-area-sd .single-team-area-start.no-image::before {
-      background: linear-gradient(90deg,
-          transparent,
-          rgba(255, 255, 255, 0.6),
-          transparent);
+    .doc-card.no-image .doc-body {
+      background: #ffffff;
+      justify-content: flex-start;
+      height: auto;
+      min-height: 110px;
     }
 
     .social-icon {
@@ -760,9 +852,9 @@
                           <!-- Right side -->
                           <div class="col-lg-3">
                             <div class="menu-right-add">
-                              <img src="assets/01_menu.webp" alt="gore-hospital-image">
+                              <img src="assets/01_menu.webp" alt="gore-hospital-image" loading="lazy">
                               <div class="absolute-image">
-                                <img src="assets/02_menu.webp" alt="gore-hospital-image">
+                                <img src="assets/02_menu.webp" alt="gore-hospital-image" loading="lazy">
                                 <div class="inner-content">
                                   <h3 class="title">
                                     Trust Your Heart to <br>
@@ -797,7 +889,7 @@
             <div class="header-right">
               <!-- search removed per request -->
               <a href="/appointment.html" class="rts-btn btn-primary">Appointment
-                <img src="assets/arrow--up-right.svg" alt="gore-hospital-image"></a>
+                <img src="assets/arrow--up-right.svg" alt="gore-hospital-image" loading="lazy"></a>
               <div class="menu-btn" id="menu-btn">
                 <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect y="14" width="20" height="2" fill="#1F1F25"></rect>
@@ -821,7 +913,7 @@
         <div class="col-lg-6 pe-lg-5">
           <div class="about-image-left-wrapper" style="gap: 20px">
             <div class="thumbnail-main move-right wow">
-              <img src="assets/team.png" alt="About Gore Hospital" style="border-radius: 22px" class="about-image">
+              <img src="assets/team.png" alt="About Gore Hospital" style="border-radius: 22px" class="about-image" loading="lazy">
             </div>
             <div class="review-area">
 
@@ -893,7 +985,7 @@
             <div class="col-lg-5 col-md-12 mission-left-col">
               <div class="mission-left-content" style="padding-right: 30px; margin-bottom: 40px;">
                 <div class="icon-mission" style="margin-bottom: 30px;">
-                  <img src="/assets/01.svg" alt="Mission Icon" style="width: 80px; height: auto;">
+                  <img src="/assets/01.svg" alt="Mission Icon" style="width: 80px; height: auto;" loading="lazy">
                 </div>
 
                 <h2 style="font-size: 48px; font-weight: 700; color: #1F1F25; margin-bottom: 20px; line-height: 1.2;">
@@ -1032,7 +1124,7 @@
                           align-items: center !important; 
                           justify-content: center !important;">
                     <img src="assets/03_icon.svg" alt="patient-centric"
-                      style="width: 30px !important; height: auto !important;">
+                      style="width: 30px !important; height: auto !important;" loading="lazy">
                   </div>
 
                   <div class="info-chip">
@@ -1065,7 +1157,7 @@
                           align-items: center !important; 
                           justify-content: center !important;">
                     <img src="assets/04_icon.svg" alt="continuous-improvement"
-                      style="width: 30px !important; height: auto !important;">
+                      style="width: 30px !important; height: auto !important;" loading="lazy">
                   </div>
 
                   <div class="info-chip">
@@ -1134,43 +1226,50 @@
           </h2>
         </div>
 
-        <div class="col-lg-4 col-md-6 col-sm-6 ">
-          <div class="single-team-area-start">
-            <a href="our-doctors.html" class="thumbnail"><img src="assets/gore.png" alt="team"></a>
-            <div class="bottom">
-              <a href="our-doctors.html">
-                <h6 class="title">Dr. Dattesh Gore</h6>
+        <div class="col-lg-4 col-md-6 col-sm-6">
+          <article class="doc-card">
+            <div class="doc-photo">
+              <a href="our-doctors.html" style="display: block; width: 100%; height: 100%;">
+                <img src="assets/gore.png" alt="Dr. Dattesh Gore" loading="lazy">
               </a>
-              <p>Family Physician</p>
-
             </div>
-          </div>
+            <div class="doc-body">
+              <h3 class="doc-name"><a href="our-doctors.html" style="color: inherit; text-decoration: none;">Dr. Dattesh
+                  Gore</a></h3>
+              <p class="doc-spec">Family Physician</p>
+              <!-- <p class="doc-qual">Qualification if available</p> -->
+            </div>
+          </article>
         </div>
 
         <div class="col-lg-4 col-md-6 col-sm-6">
-          <div class="single-team-area-start">
-            <a href="our-doctors.html" class="thumbnail"><img src="#" alt="team"></a>
-            <div class="bottom">
-              <a href="our-doctors.html">
-                <h6 class="title">Dr. Chaitanya Kadam</h6>
+          <article class="doc-card">
+            <div class="doc-photo">
+              <a href="our-doctors.html" style="display: block; width: 100%; height: 100%;">
+                <img src="#" alt="Dr. Chaitanya Kadam" loading="lazy">
               </a>
-              <p>Obstetrics &amp; Gynaecology</p>
-
             </div>
-          </div>
+            <div class="doc-body">
+              <h3 class="doc-name"><a href="our-doctors.html" style="color: inherit; text-decoration: none;">Dr.
+                  Chaitanya Kadam</a></h3>
+              <p class="doc-spec">Obstetrics &amp; Gynaecology</p>
+            </div>
+          </article>
         </div>
 
         <div class="col-lg-4 col-md-6 col-sm-6">
-          <div class="single-team-area-start">
-            <a href="our-doctors.html" class="thumbnail"><img src="#" alt="team"></a>
-            <div class="bottom">
-              <a href="our-doctors.html">
-                <h6 class="title">Dr. Vilas Mundkar</h6>
+          <article class="doc-card">
+            <div class="doc-photo">
+              <a href="our-doctors.html" style="display: block; width: 100%; height: 100%;">
+                <img src="#" alt="Dr. Vilas Mundkar" loading="lazy">
               </a>
-              <p>Internal Medicine &amp; Critical Care</p>
-
             </div>
-          </div>
+            <div class="doc-body">
+              <h3 class="doc-name"><a href="our-doctors.html" style="color: inherit; text-decoration: none;">Dr. Vilas
+                  Mundkar</a></h3>
+              <p class="doc-spec">Internal Medicine &amp; Critical Care</p>
+            </div>
+          </article>
         </div>
       </div>
     </div>
@@ -1206,17 +1305,17 @@
                   <ul class="submenu mm-collapse">
                     <li>
                       <a class="mobile-menu-link" href="/services/cardiology.html"><img src="assets/cardiology.png"
-                          alt="gore-hospital-image" style="max-width:33px;">
+                          alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
                         Cardiology</a>
                     </li>
                     <li>
                       <a class="mobile-menu-link" href="/services/pediatric.html"><img src="assets/Paediatrics.png"
-                          alt="gore-hospital-image" style="max-width:33px;">
+                          alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
                         Paediatrics</a>
                     </li>
                     <li>
                       <a class="mobile-menu-link" href="/services/neurology.html"><img src="assets/nephrology.png"
-                          alt="gore-hospital-image" style="max-width:33px;">
+                          alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
                         Neurology</a>
                     </li>
 
@@ -1228,18 +1327,18 @@
                   <ul class="submenu mm-collapse">
                     <li>
                       <a class="mobile-menu-link" href="/services/orthopaedics.html"><img src="assets/orthopaedics.png"
-                          alt="gore-hospital-image" style="max-width:33px;">
+                          alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
                         Orthopaedics</a>
                     </li>
                     <li>
                       <a class="mobile-menu-link" href="/services/family-physician.html"><img
-                          src="assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;">
+                          src="assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
                         Family Physician</a>
                     </li>
 
                     <li>
                       <a class="mobile-menu-link" href="/services/gynaecology.html"><img src="assets/gynecology.png"
-                          alt="gore-hospital-image" style="max-width:33px;">
+                          alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
                         Gynecology</a>
                     </li>
                   </ul>
@@ -1250,22 +1349,22 @@
                   <ul class="submenu mm-collapse">
                     <li>
                       <a class="mobile-menu-link" href="/services/endocrinology.html"><img src="assets/Endocrinolog.png"
-                          alt="gore-hospital-image" style="max-width:33px;">
+                          alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
                         Endocrinology</a>
                     </li>
                     <li>
                       <a class="mobile-menu-link" href="/services/nephrology.html"><img src="assets/nephrology.png"
-                          alt="gore-hospital-image" style="max-width:33px;">
+                          alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
                         Nephrology</a>
                     </li>
                     <li>
                       <a class="mobile-menu-link" href="/services/cancer-care.html"><img
-                          src="assets/cancer-care-treatment.png" alt="gore-hospital-image" style="max-width:33px;">
+                          src="assets/cancer-care-treatment.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
                         Cancer Care</a>
                     </li>
                     <li>
                       <a class="mobile-menu-link" href="/services/radiology.html"><img src="assets/radiology.png"
-                          alt="gore-hospital-image" style="max-width:33px;">
+                          alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
                         Radiology</a>
                     </li>
                   </ul>
@@ -1308,10 +1407,12 @@
     <script src="assets/js/vendor/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <!-- Doctor card gradient detection and reordering -->
+    <!-- Doctor card gradient detection and reordering (UPDATED for doc-card) -->
     <script>
       (function () {
         const genericImages = ["01.jpg", "02.jpg", "03.jpg", "04.jpg"];
+        const genericImages2 = ["#"]; // Also handle empty or # src
+
         const doctorSection = document.querySelector(".meet-doctor-area-sd");
 
         if (!doctorSection) return;
@@ -1322,36 +1423,23 @@
         const columnsWithoutImages = [];
 
         columns.forEach((column) => {
-          const card = column.querySelector(".single-team-area-start");
-          const img = column.querySelector(".thumbnail img");
+          const card = column.querySelector(".doc-card");
+          if (!card) return; // Skip if no card found
+
+          const img = column.querySelector(".doc-photo img");
           const imgSrc = img ? img.getAttribute("src") : "";
           const filename = imgSrc.split("/").pop();
 
-          // Check if image is generic
-          if (genericImages.includes(filename)) {
+          // Check if image is generic or empty/hash
+          if (genericImages.includes(filename) || imgSrc === "#" || imgSrc === "" || !imgSrc) {
             card.classList.add("no-image");
 
-            // Get doctor info from bottom section
-            const title = column.querySelector(".bottom .title");
-            const specialty = column.querySelector(".bottom p");
-
-            if (title && specialty) {
-              // Create content for thumbnail area
-              const thumbnail = column.querySelector(".thumbnail");
-              const wrapper = document.createElement("div");
-              wrapper.className = "thumbnail-content";
-
-              const name = document.createElement("h6");
-              name.className = "doctor-name";
-              name.textContent = title.textContent;
-
-              const spec = document.createElement("p");
-              spec.className = "doctor-specialty";
-              spec.textContent = specialty.textContent;
-
-              wrapper.appendChild(name);
-              wrapper.appendChild(spec);
-              thumbnail.appendChild(wrapper);
+            // Add scanner line animation if not present
+            if (!card.querySelector('.scan-line')) {
+              const scanLine = document.createElement('div');
+              scanLine.className = 'scan-line';
+              const photoDiv = card.querySelector('.doc-photo');
+              if (photoDiv) photoDiv.appendChild(scanLine);
             }
 
             columnsWithoutImages.push(column);
@@ -1364,7 +1452,7 @@
         const row = doctorSection.querySelector(".row.g-5.mt--40");
         if (!row) return;
 
-        // Remove all doctor columns (keep the title column)
+        // Remove all doctor columns
         columns.forEach((col) => col.remove());
 
         // Re-append in order: real images first, then gradient cards

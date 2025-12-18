@@ -11,7 +11,7 @@
  */
 
 (function () {
-    const API_ENDPOINT = "https://forms.thedigitechsolutions.com/api/forms/submit/54b44dec-7cba-49bb-bdc2-6085ddb358f0";
+    const API_ENDPOINT = "https://forms.thedigitechsolutions.com/api/forms/submit/0bc30797-7a99-4b68-a7c9-9a7852e9c65c";
 
     /**
      * Initialize form handler on DOMContentLoaded

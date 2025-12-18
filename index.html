@@ -84,213 +84,187 @@
 
 
 
-    /* Doctor Card Gradient Styles */
-
+    /* Doctor Card Styles from our-doctors.html */
     :root {
-
+      --text: #1f1f25;
+      --muted: #5b5b63;
+      --card-bg: #ffffff;
+      --card-bd: rgba(0, 0, 0, 0.06);
+      --soft: 0 6px 24px rgba(0, 0, 0, 0.06);
+      --soft-2: 0 12px 32px rgba(0, 0, 0, 0.07);
       --silver-gradient: linear-gradient(135deg,
-
           #f8f9fa 0%,
-
           #e9ecef 50%,
-
           #dee2e6 100%);
-
     }
 
+    /* ---------- Doctors grid ---------- */
+    .doc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 30px;
+      margin: 40px 0 80px;
+    }
 
-
-    .single-team-area-start {
-
-      position: relative;
-
+    .doc-card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      /* Soft, premium shadow */
       overflow: hidden;
-
-    }
-
-
-
-    /* Shine effect for all doctor cards */
-
-    .single-team-area-start::before {
-
-      content: "";
-
-      position: absolute;
-
-      top: 0;
-
-      left: -100%;
-
-      width: 100%;
-
-      height: 100%;
-
-      background: linear-gradient(90deg,
-
-          transparent,
-
-          rgba(255, 255, 255, 0.4),
-
-          transparent);
-
-      transition: left 0.5s ease;
-
-      z-index: 10;
-
-      pointer-events: none;
-
-    }
-
-
-
-    .single-team-area-start:hover::before {
-
-      left: 100%;
-
-    }
-
-
-
-    /* Gradient card styling (no image) */
-
-    .single-team-area-start.no-image {
-
-      background: var(--silver-gradient);
-
-      border-radius: 16px;
-
-      border: 1px solid rgba(0, 0, 0, 0.08);
-
-    }
-
-
-
-    .single-team-area-start.no-image::after {
-
-      content: "";
-
-      position: absolute;
-
-      inset: 0;
-
-      background: radial-gradient(circle at top right,
-
-          rgba(255, 255, 255, 0.6),
-
-          transparent 60%);
-
-      pointer-events: none;
-
-      z-index: 1;
-
-      border-radius: 16px;
-
-    }
-
-
-
-    .single-team-area-start.no-image .thumbnail {
-
       display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      padding: 40px 24px;
-
-      background: transparent;
-
-      position: relative;
-
-      z-index: 2;
-
-      min-height: 350px;
-
-    }
-
-
-
-    .single-team-area-start.no-image .thumbnail img {
-
-      display: none;
-
-    }
-
-
-
-    .single-team-area-start.no-image .thumbnail-content {
-
-      display: flex;
-
       flex-direction: column;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      height: 100%;
+      border: 1px solid rgba(0, 0, 0, 0.02);
+    }
 
-      gap: 12px;
+    .doc-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    }
 
-      text-align: center;
-
+    .doc-photo {
+      position: relative;
       width: 100%;
-
+      aspect-ratio: 1 / 1;
+      /* Square - Professional & Consistent */
+      background: #f8f9fa;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
+    .doc-photo img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
 
+    .doc-card:hover .doc-photo img {
+      transform: scale(1.08);
+      /* Subtle zoom */
+    }
 
-    .single-team-area-start.no-image .thumbnail-content .doctor-name {
+    /* Details Section */
+    .doc-body {
+      padding: 24px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* Center align for premium feel */
+      text-align: center;
+      gap: 6px;
+      flex-grow: 1;
+      background: #fff;
+      z-index: 5;
+      position: relative;
+    }
 
-      font-weight: 600;
-
-      color: #2d3748;
-
-      font-size: 22px;
-
-      text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
-
+    .doc-name {
+      font-weight: 500;
+      font-size: 19px;
+      line-height: 1.3;
       margin: 0;
-
+      color: #1a202c;
+      letter-spacing: -0.3px;
     }
 
-
-
-    .single-team-area-start.no-image .thumbnail-content .doctor-specialty {
-
-      color: #4a5568;
-
+    .doc-spec {
       font-weight: 600;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #007bff;
+      /* Medical Blue accent */
+      margin-top: 2px;
+    }
 
-      font-size: 16px;
-
+    .doc-qual {
+      font-size: 14px;
+      color: #718096;
       margin: 0;
-
+      line-height: 1.5;
+      font-weight: 400;
     }
 
-
-
-    .single-team-area-start.no-image .bottom {
-
-      display: none;
-
+    /* ---------- Empty State (Creative & Professional) ---------- */
+    .doc-card.no-image .doc-photo {
+      background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
     }
 
-
-
-    /* Enhanced shine for gradient cards */
-
-    .single-team-area-start.no-image::before {
-
-      background: linear-gradient(90deg,
-
-          transparent,
-
-          rgba(255, 255, 255, 0.6),
-
-          transparent);
-
+    .doc-card.no-image .doc-photo img {
+      position: static;
+      width: 80px;
+      height: 80px;
+      opacity: 0.4;
+      object-fit: contain;
+      filter: grayscale(100%);
+      animation: pulse-logo 3s infinite ease-in-out;
+      display: block !important;
     }
 
+    @keyframes pulse-logo {
+      0% {
+        opacity: 0.3;
+        transform: scale(0.95);
+      }
 
+      50% {
+        opacity: 0.5;
+        transform: scale(1.05);
+      }
 
-    /* Social Media Icons Styling */
+      100% {
+        opacity: 0.3;
+        transform: scale(0.95);
+      }
+    }
+
+    .doc-card.no-image .doc-photo img {
+      display: none !important;
+    }
+
+    /* Ensure height for no-image cards */
+    .doc-card.no-image {
+      min-height: 400px;
+      /* Force minimum height if flex layout fails */
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* The Scanner Bar Animation */
+    .scan-line {
+      position: absolute;
+      top: -10%;
+      left: 0;
+      width: 100%;
+      height: 15%;
+      background: linear-gradient(180deg,
+          transparent 0%,
+          rgba(255, 255, 255, 0.9) 50%,
+          transparent 100%);
+      filter: blur(4px);
+      opacity: 0.7;
+      z-index: 2;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    }
+
+    .doc-card.no-image .doc-body {
+      background: #ffffff;
+      justify-content: flex-start;
+      height: auto;
+      min-height: 110px;
+    }
+
 
     .social-icon {
 
@@ -1156,6 +1130,114 @@
       }
 
     }
+
+    /* Team Slider Navigation */
+    .swiper-button-next-team,
+    .swiper-button-prev-team {
+      width: 44px;
+      height: 44px;
+      background: #ffffff;
+      border-radius: 50%;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+      /* Soft shadow */
+      display: flex;
+      /* Ensure flex to center icon */
+      align-items: center;
+      justify-content: center;
+      color: #007bff;
+      /* Medical Blue */
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      transition: all 0.3s ease;
+      z-index: 100 !important;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+    }
+
+    .swiper-button-next-team i,
+    .swiper-button-prev-team i {
+      font-size: 16px;
+      /* Explicit size for the icon */
+    }
+
+    /* We are using real icons now, so ensure ::after is empty so default swiper arrows don't double up */
+    .swiper-button-next-team::after,
+    .swiper-button-prev-team::after {
+      content: none !important;
+    }
+
+    .swiper-button-next-team:hover,
+    .swiper-button-prev-team:hover {
+      background: #007bff;
+      color: #ffffff;
+      box-shadow: 0 6px 20px rgba(0, 123, 255, 0.25);
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .swiper-button-prev-team {
+      left: 0;
+    }
+
+    .swiper-button-next-team {
+      right: 0;
+    }
+
+    /* Ensure wrapper handles them */
+    .team-swiper-wrapper-1 {
+      position: relative;
+      /* Use padding to create space for buttons instead of negative margins/positioning */
+      padding: 0 60px;
+      margin: 0 -20px;
+      /* Slight negative margin if needed to align perfectly, but padding is safer */
+      z-index: 5;
+      display: block !important;
+    }
+
+    .swiper-button-next-team,
+    .swiper-button-prev-team {
+      opacity: 1 !important;
+      visibility: visible !important;
+      display: flex !important;
+    }
+
+    .team-style-wrapper,
+    .team-area-start,
+    .container-80,
+    .col-lg-12,
+    .team-style-wrapper .container {
+      overflow: visible !important;
+      /* Ensure no parent clips the buttons */
+    }
+
+    /* Boost Z-index significantly */
+    .swiper-button-next-team,
+    .swiper-button-prev-team {
+      z-index: 100 !important;
+    }
+
+    @media (max-width: 1400px) {
+      .team-swiper-wrapper-1 {
+        padding: 0 40px;
+      }
+
+      .swiper-button-prev-team {
+        left: 0;
+      }
+
+      .swiper-button-next-team {
+        right: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      /* Hide arrows on mobile to avoid overlap */
+      .swiper-button-prev-team,
+      .swiper-button-next-team {
+        display: none !important;
+      }
+    }
   </style>
 
   <meta name="google-site-verification" content="YaL9bjJrrw4NMWo8kMtrYa26zhWuCjb8xqnf5YWTL84">
@@ -1657,11 +1739,11 @@
 
                             <div class="menu-right-add">
 
-                              <img src="assets/01_menu.webp" alt="gore-hospital-image">
+                              <img src="assets/01_menu.webp" alt="gore-hospital-image" loading="lazy">
 
                               <div class="absolute-image">
 
-                                <img src="assets/02_menu.webp" alt="gore-hospital-image">
+                                <img src="assets/02_menu.webp" alt="gore-hospital-image" loading="lazy">
 
                                 <div class="inner-content">
 
@@ -1731,7 +1813,7 @@
 
               <a href="/appointment.html" class="rts-btn btn-primary">Appointment
 
-                <img src="assets/arrow--up-right.svg" alt="gore-hospital-image"></a>
+                <img src="assets/arrow--up-right.svg" alt="gore-hospital-image" loading="lazy"></a>
 
               <div class="menu-btn" id="menu-btn">
 
@@ -1883,7 +1965,7 @@
 
             <div class="thumbnail-main move-right wow">
 
-              <img src="assets/group.png" alt="about" style="border-radius: 22px" class="group-img">
+              <img src="assets/group.png" alt="about" style="border-radius: 22px" class="group-img" loading="lazy">
 
             </div>
 
@@ -2003,7 +2085,7 @@
 
                 About Us
 
-                <img src="assets/arrow--up-right.svg" alt="gore-hospital-image">
+                <img src="assets/arrow--up-right.svg" alt="gore-hospital-image" loading="lazy">
 
               </a>
 
@@ -2011,7 +2093,7 @@
 
                 Specialist Doctors
 
-                <img src="assets/arrow--up-right.svg" alt="gore-hospital-image">
+                <img src="assets/arrow--up-right.svg" alt="gore-hospital-image" loading="lazy">
 
               </a>
 
@@ -2259,13 +2341,13 @@
 
                     <div class="feature-bg-primary">
 
-                      <img src="assets/02_feature.webp" alt="medicle">
+                      <img src="assets/02_feature.webp" alt="medicle" loading="lazy">
 
                     </div>
 
                     <div class="thumbnail-image">
 
-                      <img src="assets/card.png" alt="medicle">
+                      <img src="assets/card.png" alt="medicle" loading="lazy">
 
                     </div>
 
@@ -2283,7 +2365,7 @@
 
                         <div class="time-shedule">
 
-                          <img src="assets/03_feature.svg" alt="medicle">
+                          <img src="assets/03_feature.svg" alt="medicle" loading="lazy">
 
                           <span>24/7</span>
 
@@ -2293,7 +2375,7 @@
 
                       <div class="call-us">
 
-                        <img src="assets/04_feature.svg" alt="medicle">
+                        <img src="assets/04_feature.svg" alt="medicle" loading="lazy">
 
                         <span><a style="color:#ffffff;" href="tel:+91 9689528414">+91 9689528414</a></span>
 
@@ -2386,7 +2468,8 @@
 
               <!-- Use an Indian hospital / doctor image here -->
 
-              <img src="images/Nephrology-new.png" alt="Indian nephrologist consulting a patient" class="img-fluid">
+              <img src="images/Nephrology-new.png" alt="Indian nephrologist consulting a patient" class="img-fluid"
+                loading="lazy">
 
             </div>
 
@@ -2432,7 +2515,7 @@
 
               <!-- Use an Indian paediatrics / child care image here -->
 
-              <img src="images/Paediatrics.png" alt="Paediatrics - Child Care" class="img-fluid">
+              <img src="images/Paediatrics.png" alt="Paediatrics - Child Care" class="img-fluid" loading="lazy">
 
             </div>
 
@@ -2488,7 +2571,8 @@
 
               <!-- Use an Indian ENT / doctor-patient image here -->
 
-              <img src="/assets/gynaecology-treatment.jpg" alt="ENT Specialist Examining Patient" class="img-fluid">
+              <img src="/assets/gynaecology-treatment.jpg" alt="ENT Specialist Examining Patient" class="img-fluid"
+                loading="lazy">
 
             </div>
 
@@ -2538,7 +2622,8 @@
 
               <!-- Use an Indian pulmonology / lung care image here -->
 
-              <img src="images/Pulmonology.png" alt="Pulmonology - Lung and Respiratory Care" class="img-fluid">
+              <img src="images/Pulmonology.png" alt="Pulmonology - Lung and Respiratory Care" class="img-fluid"
+                loading="lazy">
 
             </div>
 
@@ -2588,7 +2673,8 @@
 
               <!-- Use an Indian pulmonology / lung care image here -->
 
-              <img src="images/Gastroenterology.png" alt="Pulmonology - Lung and Respiratory Care" class="img-fluid">
+              <img src="images/Gastroenterology.png" alt="Pulmonology - Lung and Respiratory Care" class="img-fluid"
+                loading="lazy">
 
             </div>
 
@@ -2640,7 +2726,8 @@
 
               <!-- Use an Indian pulmonology / lung care image here -->
 
-              <img src="images/Radiology.png" alt="Pulmonology - Lung and Respiratory Care" class="img-fluid">
+              <img src="images/Radiology.png" alt="Pulmonology - Lung and Respiratory Care" class="img-fluid"
+                loading="lazy">
 
             </div>
 
@@ -2690,7 +2777,8 @@
 
               <!-- Use an Indian pulmonology / lung care image here -->
 
-              <img src="/assets/Cancer-Care.jpg" alt="Pulmonology - Lung and Respiratory Care" class="img-fluid">
+              <img src="/assets/Cancer-Care.jpg" alt="Pulmonology - Lung and Respiratory Care" class="img-fluid"
+                loading="lazy">
 
             </div>
 
@@ -2740,7 +2828,8 @@
 
               <!-- Use an Indian pulmonology / lung care image here -->
 
-              <img src="images/family-physician.png" alt="Pulmonology - Lung and Respiratory Care" class="img-fluid">
+              <img src="images/family-physician.png" alt="Pulmonology - Lung and Respiratory Care" class="img-fluid"
+                loading="lazy">
 
             </div>
 
@@ -2808,17 +2897,15 @@
 
   <!-- team section start -->
 
-  <div class="team-area-start">
-
-    <div class="container-80">
+  <div class="team-area-start" style="overflow: visible;">
+    <div class="container-80" style="overflow: visible;">
 
       <div class="row">
 
         <div class="col-lg-12">
 
-          <div class="team-style-wrapper bg-light rts-section-gap">
-
-            <div class="container">
+          <div class="team-style-wrapper bg-light rts-section-gap" style="overflow: visible;">
+            <div class="container" style="overflow: visible;">
 
               <div class="row">
 
@@ -2868,33 +2955,19 @@
 
                         <div class="swiper-slide">
 
-                          <div class="single-team-area-start">
-
-                            <a href="our-doctors.html" class="thumbnail">
-
-                              <img src="assets/gore.png" alt="team">
-
-                            </a>
-
-                            <div class="bottom">
-
-                              <a href="our-doctors.html">
-
-                                <h6 class="title">Dr. Dattesh Gore</h6>
-
+                          <article class="doc-card">
+                            <div class="doc-photo">
+                              <a href="our-doctors.html" style="display: block; width: 100%; height: 100%;">
+                                <img src="assets/gore.png" alt="Dr. Dattesh Gore" loading="lazy">
                               </a>
-
-                              <p>
-
-                                Family Physician - MBBS, DA, MD Physician
-
-                                (Intensivist &amp; Anaesthesiologist)
-
-                              </p>
-
                             </div>
-
-                          </div>
+                            <div class="doc-body">
+                              <h3 class="doc-name"><a href="our-doctors.html"
+                                  style="color: inherit; text-decoration: none;">Dr. Dattesh Gore</a></h3>
+                              <p class="doc-spec">Family Physician - MBBS, DA, MD Physician (Intensivist &amp;
+                                Anaesthesiologist)</p>
+                            </div>
+                          </article>
 
                         </div>
 
@@ -2904,33 +2977,18 @@
 
                         <div class="swiper-slide">
 
-                          <div class="single-team-area-start">
-
-                            <a href="our-doctors.html" class="thumbnail">
-
-                              <img src="assets/amolthorat.jpg" alt="team">
-
-                            </a>
-
-                            <div class="bottom">
-
-                              <a href="our-doctors.html">
-
-                                <h6 class="title">Dr. Amol Thorat</h6>
-
+                          <article class="doc-card">
+                            <div class="doc-photo">
+                              <a href="our-doctors.html" style="display: block; width: 100%; height: 100%;">
+                                <img src="assets/amolthorat.jpg" alt="Dr. Amol Thorat" loading="lazy">
                               </a>
-
-                              <p>
-
-                                Paediatrics - MBBS, DCH, DNB, Paediatrician
-
-                                &amp; Neonatologist
-
-                              </p>
-
                             </div>
-
-                          </div>
+                            <div class="doc-body">
+                              <h3 class="doc-name"><a href="our-doctors.html"
+                                  style="color: inherit; text-decoration: none;">Dr. Amol Thorat</a></h3>
+                              <p class="doc-spec">Paediatrics - MBBS, DCH, DNB, Paediatrician &amp; Neonatologist</p>
+                            </div>
+                          </article>
 
                         </div>
 
@@ -2940,27 +2998,18 @@
 
                         <div class="swiper-slide">
 
-                          <div class="single-team-area-start">
-
-                            <a href="our-doctors.html" class="thumbnail">
-
-                              <img src="assets/sanika.jpg" alt="team">
-
-                            </a>
-
-                            <div class="bottom">
-
-                              <a href="our-doctors.html">
-
-                                <h6 class="title">Dr. Sanika Gawade</h6>
-
+                          <article class="doc-card">
+                            <div class="doc-photo">
+                              <a href="our-doctors.html" style="display: block; width: 100%; height: 100%;">
+                                <img src="assets/sanika.jpg" alt="Dr. Sanika Gawade" loading="lazy">
                               </a>
-
-                              <p>Dental Surgery - BDS (Dental Surgeon)</p>
-
                             </div>
-
-                          </div>
+                            <div class="doc-body">
+                              <h3 class="doc-name"><a href="our-doctors.html"
+                                  style="color: inherit; text-decoration: none;">Dr. Sanika Gawade</a></h3>
+                              <p class="doc-spec">Dental Surgery - BDS (Dental Surgeon)</p>
+                            </div>
+                          </article>
 
                         </div>
 
@@ -2970,31 +3019,18 @@
 
                         <div class="swiper-slide">
 
-                          <div class="single-team-area-start">
-
-                            <a href="our-doctors.html" class="thumbnail">
-
-                              <img src="#" alt="team">
-
-                            </a>
-
-                            <div class="bottom">
-
-                              <a href="our-doctors.html">
-
-                                <h6 class="title">Dr. Chaitanya Kadam</h6>
-
+                          <article class="doc-card">
+                            <div class="doc-photo">
+                              <a href="our-doctors.html" style="display: block; width: 100%; height: 100%;">
+                                <img src="#" alt="Dr. Chaitanya Kadam" loading="lazy">
                               </a>
-
-                              <p>
-
-                                Obstetrics &amp; Gynaecology - MBBS, DGO, DNB
-
-                              </p>
-
                             </div>
-
-                          </div>
+                            <div class="doc-body">
+                              <h3 class="doc-name"><a href="our-doctors.html"
+                                  style="color: inherit; text-decoration: none;">Dr. Chaitanya Kadam</a></h3>
+                              <p class="doc-spec">Obstetrics &amp; Gynaecology - MBBS, DGO, DNB</p>
+                            </div>
+                          </article>
 
                         </div>
 
@@ -3004,33 +3040,18 @@
 
                         <div class="swiper-slide">
 
-                          <div class="single-team-area-start">
-
-                            <a href="our-doctors.html" class="thumbnail">
-
-                              <img src="#" alt="team">
-
-                            </a>
-
-                            <div class="bottom">
-
-                              <a href="our-doctors.html">
-
-                                <h6 class="title">Dr. Vilas Mundkar</h6>
-
+                          <article class="doc-card">
+                            <div class="doc-photo">
+                              <a href="our-doctors.html" style="display: block; width: 100%; height: 100%;">
+                                <img src="#" alt="Dr. Vilas Mundkar" loading="lazy">
                               </a>
-
-                              <p>
-
-                                Internal Medicine &amp; Critical Care - MBBS
-
-                                (General Medicine)
-
-                              </p>
-
                             </div>
-
-                          </div>
+                            <div class="doc-body">
+                              <h3 class="doc-name"><a href="our-doctors.html"
+                                  style="color: inherit; text-decoration: none;">Dr. Vilas Mundkar</a></h3>
+                              <p class="doc-spec">Internal Medicine &amp; Critical Care - MBBS (General Medicine)</p>
+                            </div>
+                          </article>
 
                         </div>
 
@@ -3040,27 +3061,18 @@
 
                         <div class="swiper-slide">
 
-                          <div class="single-team-area-start">
-
-                            <a href="our-doctors.html" class="thumbnail">
-
-                              <img src="#" alt="team">
-
-                            </a>
-
-                            <div class="bottom">
-
-                              <a href="our-doctors.html">
-
-                                <h6 class="title">Dr. Gautam Jugal</h6>
-
+                          <article class="doc-card">
+                            <div class="doc-photo">
+                              <a href="our-doctors.html" style="display: block; width: 100%; height: 100%;">
+                                <img src="#" alt="Dr. Gautam Jugal" loading="lazy">
                               </a>
-
-                              <p>Cardiology - MBBS, MD, DM (Cardiologist)</p>
-
                             </div>
-
-                          </div>
+                            <div class="doc-body">
+                              <h3 class="doc-name"><a href="our-doctors.html"
+                                  style="color: inherit; text-decoration: none;">Dr. Gautam Jugal</a></h3>
+                              <p class="doc-spec">Cardiology - MBBS, MD, DM (Cardiologist)</p>
+                            </div>
+                          </article>
 
                         </div>
 
@@ -3070,47 +3082,42 @@
 
                         <div class="swiper-slide">
 
-                          <div class="single-team-area-start">
-
-                            <a href="our-doctors.html" class="thumbnail">
-
-                              <img src="#" alt="team">
-
-                            </a>
-
-                            <div class="bottom">
-
-                              <a href="our-doctors.html">
-
-                                <h6 class="title">Dr. Nikhil Mohorkar</h6>
-
+                          <article class="doc-card">
+                            <div class="doc-photo">
+                              <a href="our-doctors.html" style="display: block; width: 100%; height: 100%;">
+                                <img src="#" alt="Dr. Nikhil Mohorkar" loading="lazy">
                               </a>
-
-                              <p>
-
-                                Orthopaedics &amp; Trauma Care - MBBS, D.
-
-                                Ortho
-
-                              </p>
-
                             </div>
-
-                          </div>
+                            <div class="doc-body">
+                              <h3 class="doc-name"><a href="our-doctors.html"
+                                  style="color: inherit; text-decoration: none;">Dr. Nikhil Mohorkar</a></h3>
+                              <p class="doc-spec">Orthopaedics &amp; Trauma Care - MBBS, D. Ortho</p>
+                            </div>
+                          </article>
 
                         </div>
 
                       </div>
 
-                      <div class="swiper-pagination"></div>
-
                     </div>
 
                   </div>
 
+                  <!-- Navigation Buttons moved OUTSIDE swiper-container but inside wrapper -->
+                  <div class="swiper-button-prev swiper-button-prev-team">
+                    <i class="fas fa-chevron-left"></i>
+                  </div>
+                  <div class="swiper-button-next swiper-button-next-team">
+                    <i class="fas fa-chevron-right"></i>
+                  </div>
+
+                </div>
+
+              </div>
 
 
-                  <div style="
+
+              <div style="
 
                         display: flex;
 
@@ -3120,11 +3127,7 @@
 
                       " class="view-all-wrap">
 
-                    <a href="our-doctors.html" class="rts-btn btn-primary">View All Doctors</a>
-
-                  </div>
-
-                </div>
+                <a href="our-doctors.html" class="rts-btn btn-primary">View All Doctors</a>
 
               </div>
 
@@ -3137,6 +3140,10 @@
       </div>
 
     </div>
+
+  </div>
+
+  </div>
 
   </div>
 
@@ -3180,7 +3187,7 @@
 
                   <div class="quots">
 
-                    <img src="assets/quotes.png" alt="testimonails">
+                    <img src="assets/quotes.png" alt="testimonails" loading="lazy">
 
                   </div>
 
@@ -3196,7 +3203,7 @@
 
                     <a href="#" class="img review-img">
 
-                      <img src="assets/shaily-testimonial-img.jpg" alt="testiminials">
+                      <img src="assets/shaily-testimonial-img.jpg" alt="testiminials" loading="lazy">
 
                     </a>
 
@@ -3234,7 +3241,7 @@
 
                   <div class="quots">
 
-                    <img src="assets/quotes.png" alt="testimonails">
+                    <img src="assets/quotes.png" alt="testimonails" loading="lazy">
 
                   </div>
 
@@ -3250,7 +3257,7 @@
 
                     <a href="#" class="img review-img">
 
-                      <img src="assets/dnyaneshwar-testimonial-img.jpeg" alt="testiminials">
+                      <img src="assets/dnyaneshwar-testimonial-img.jpeg" alt="testiminials" loading="lazy">
 
                     </a>
 
@@ -3292,7 +3299,7 @@
 
                   <div class="quots">
 
-                    <img src="assets/quotes.png" alt="testimonails">
+                    <img src="assets/quotes.png" alt="testimonails" loading="lazy">
 
                   </div>
 
@@ -3308,7 +3315,7 @@
 
                     <a href="#" class="img review-img">
 
-                      <img src="assets/bittu-testimonial-img.jpg" alt="testiminials">
+                      <img src="assets/bittu-testimonial-img.jpg" alt="testiminials" loading="lazy">
 
                     </a>
 
@@ -3348,7 +3355,7 @@
 
                   <div class="quots">
 
-                    <img src="assets/quotes.png" alt="testimonails">
+                    <img src="assets/quotes.png" alt="testimonails" loading="lazy">
 
                   </div>
 
@@ -3364,7 +3371,7 @@
 
                     <a href="#" class="img review-img">
 
-                      <img src="assets/rohit-testimonial-img.jpg" alt="testiminials">
+                      <img src="assets/rohit-testimonial-img.jpg" alt="testiminials" loading="lazy">
 
                     </a>
 
@@ -3499,7 +3506,7 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/cardiology.html"><img src="assets/cardiology.png"
-                        alt="gore-hospital-image" style="max-width:33px;">
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
 
                       Cardiology</a>
 
@@ -3508,7 +3515,7 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/pediatric.html"><img src="assets/Paediatrics.png"
-                        alt="gore-hospital-image" style="max-width:33px;">
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
 
                       Paediatrics</a>
 
@@ -3517,7 +3524,7 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/neurology.html"><img src="assets/nephrology.png"
-                        alt="gore-hospital-image" style="max-width:33px;">
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
 
                       Neurology</a>
 
@@ -3540,7 +3547,7 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/orthopaedics.html"><img src="assets/orthopaedics.png"
-                        alt="gore-hospital-image" style="max-width:33px;">
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
 
                       Orthopaedics</a>
 
@@ -3549,7 +3556,8 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/family-physician.html"><img
-                        src="assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;">
+                        src="assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;"
+                        loading="lazy">
 
                       Family Physician</a>
 
@@ -3560,7 +3568,7 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/gynaecology.html"><img src="assets/gynecology.png"
-                        alt="gore-hospital-image" style="max-width:33px;">
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
 
                       Gynecology</a>
 
@@ -3581,7 +3589,7 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/endocrinology.html"><img src="assets/Endocrinolog.png"
-                        alt="gore-hospital-image" style="max-width:33px;">
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
 
                       Endocrinology</a>
 
@@ -3590,7 +3598,7 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/nephrology.html"><img src="assets/nephrology.png"
-                        alt="gore-hospital-image" style="max-width:33px;">
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
 
                       Nephrology</a>
 
@@ -3599,7 +3607,8 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/cancer-care.html"><img
-                        src="assets/cancer-care-treatment.png" alt="gore-hospital-image" style="max-width:33px;">
+                        src="assets/cancer-care-treatment.png" alt="gore-hospital-image" style="max-width:33px;"
+                        loading="lazy">
 
                       Cancer Care</a>
 
@@ -3608,7 +3617,7 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/radiology.html"><img src="assets/radiology.png"
-                        alt="gore-hospital-image" style="max-width:33px;">
+                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
 
                       Radiology</a>
 
@@ -3696,150 +3705,55 @@
 
 
 
-  <!-- Doctor card gradient detection and reordering -->
-
+  <!-- Doctor card gradient detection and reordering (UPDATED for doc-card) -->
   <script>
-
     (function () {
-
       const genericImages = ["01.jpg", "02.jpg", "03.jpg", "04.jpg"];
-
       const swiperWrapper = document.querySelector(
-
         ".team-swiper-container-h1 .swiper-wrapper"
-
       );
-
-
 
       if (!swiperWrapper) return;
 
-
-
       const slides = Array.from(
-
         swiperWrapper.querySelectorAll(".swiper-slide")
-
       );
-
       const slidesWithImages = [];
-
       const slidesWithoutImages = [];
 
-
-
       slides.forEach((slide) => {
+        const card = slide.querySelector(".doc-card");
+        if (!card) return; // Skip if no card found
 
-        const card = slide.querySelector(".single-team-area-start");
-
-        const img = slide.querySelector(".thumbnail img");
-
+        const img = slide.querySelector(".doc-photo img");
         const imgSrc = img ? img.getAttribute("src") : "";
+        const filename = imgSrc ? imgSrc.split("/").pop() : "";
 
-        const filename = imgSrc.split("/").pop();
-
-
-
-        // Check if image is generic
-
-        if (genericImages.includes(filename)) {
-
+        // Check if image is generic or empty/hash
+        if (genericImages.includes(filename) || imgSrc === "#" || imgSrc === "" || !imgSrc) {
           card.classList.add("no-image");
 
-
-
-          // Get doctor info from bottom section
-
-          const title = slide.querySelector(".bottom .title");
-
-          const specialty = slide.querySelector(".bottom p");
-
-
-
-          if (title && specialty) {
-
-            // Create content for thumbnail area
-
-            const thumbnail = slide.querySelector(".thumbnail");
-
-            const wrapper = document.createElement("div");
-
-            wrapper.className = "thumbnail-content";
-
-
-
-            const name = document.createElement("h6");
-
-            name.className = "doctor-name";
-
-            name.textContent = title.textContent;
-
-
-
-            const spec = document.createElement("p");
-
-            spec.className = "doctor-specialty";
-
-            spec.textContent = specialty.textContent;
-
-
-
-            wrapper.appendChild(name);
-
-            wrapper.appendChild(spec);
-
-            thumbnail.appendChild(wrapper);
-
+          // Add scanner line animation if not present
+          if (!card.querySelector('.scan-line')) {
+            const scanLine = document.createElement('div');
+            scanLine.className = 'scan-line';
+            const photoDiv = card.querySelector('.doc-photo');
+            if (photoDiv) photoDiv.appendChild(scanLine);
           }
 
-
-
           slidesWithoutImages.push(slide);
-
         } else {
-
           slidesWithImages.push(slide);
-
         }
-
       });
 
+      // Remove all slides
+      slides.forEach((slide) => slide.remove());
 
-
-      // Clear and reorder: real images first, then gradient cards
-
-      swiperWrapper.innerHTML = "";
-
+      // Re-append in order: real images first
       slidesWithImages.forEach((slide) => swiperWrapper.appendChild(slide));
-
-      slidesWithoutImages.forEach((slide) =>
-
-        swiperWrapper.appendChild(slide)
-
-      );
-
-
-
-      // Reinitialize Swiper if it exists
-
-      if (window.Swiper) {
-
-        setTimeout(() => {
-
-          const swiper = document.querySelector(
-
-            ".team-swiper-container-h1"
-
-          ).swiper;
-
-          if (swiper) swiper.update();
-
-        }, 100);
-
-      }
-
+      slidesWithoutImages.forEach((slide) => swiperWrapper.appendChild(slide));
     })();
-
   </script>
 
   <script src="https://assets.taskade.com/embeds/latest/taskade-embed.min.js"></script>

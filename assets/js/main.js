@@ -19,21 +19,21 @@
 
 ==================================================*/
 
-(function($) {
+(function ($) {
     'use strict';
 
     var rtsJs = {
-        m: function(e) {
+        m: function (e) {
             rtsJs.d();
             rtsJs.methods();
         },
-        d: function(e) {
+        d: function (e) {
             this._window = $(window),
                 this._document = $(document),
                 this._body = $('body'),
                 this._html = $('html')
         },
-        methods: function(e) {
+        methods: function (e) {
             rtsJs.metismenu();
             rtsJs.afterBefore();
             rtsJs.swiperActive();
@@ -49,17 +49,17 @@
         },
 
 
-        metismenu: function() {
+        metismenu: function () {
             $('#mobile-menu-active').metisMenu();
         },
 
-        afterBefore: function() {
-            $(document).ready(function() {
+        afterBefore: function () {
+            $(document).ready(function () {
 
                 if ($(".comparison-slider")[0]) {
                     let compSlider = $(".comparison-slider");
 
-                    compSlider.each(function() {
+                    compSlider.each(function () {
                         let compSliderWidth = $(this).width() + "px";
                         $(this).find(".resize img").css({
                             width: compSliderWidth
@@ -67,7 +67,7 @@
                         drags($(this).find(".divider"), $(this).find(".resize"), $(this));
                     });
 
-                    $(window).on("resize", function() {
+                    $(window).on("resize", function () {
                         let compSliderWidth = compSlider.width() + "px";
                         compSlider.find(".resize img").css({
                             width: compSliderWidth
@@ -79,14 +79,14 @@
             function drags(dragElement, resizeElement, container) {
 
                 let touched = false;
-                window.addEventListener('touchstart', function() {
+                window.addEventListener('touchstart', function () {
                     touched = true;
                 });
-                window.addEventListener('touchend', function() {
+                window.addEventListener('touchend', function () {
                     touched = false;
                 });
 
-                dragElement.on("mousedown touchstart", function(e) {
+                dragElement.on("mousedown touchstart", function (e) {
 
                     dragElement.addClass("draggable");
                     resizeElement.addClass("resizable");
@@ -99,7 +99,7 @@
                     let minLeft = containerOffset + 10;
                     let maxLeft = containerOffset + containerWidth - dragWidth - 10;
 
-                    dragElement.parents().on("mousemove touchmove", function(e) {
+                    dragElement.parents().on("mousemove touchmove", function (e) {
 
                         if (touched === false) {
                             e.preventDefault();
@@ -116,20 +116,20 @@
 
                         let widthValue = (leftValue + dragWidth / 2 - containerOffset) * 100 / containerWidth + "%";
 
-                        $(".draggable").css("left", widthValue).on("mouseup touchend touchcancel", function() {
+                        $(".draggable").css("left", widthValue).on("mouseup touchend touchcancel", function () {
                             $(this).removeClass("draggable");
                             resizeElement.removeClass("resizable");
                         });
 
                         $(".resizable").css("width", widthValue);
 
-                    }).on("mouseup touchend touchcancel", function() {
+                    }).on("mouseup touchend touchcancel", function () {
                         dragElement.removeClass("draggable");
                         resizeElement.removeClass("resizable");
 
                     });
 
-                }).on("mouseup touchend touchcancel", function(e) {
+                }).on("mouseup touchend touchcancel", function (e) {
                     dragElement.removeClass("draggable");
                     resizeElement.removeClass("resizable");
 
@@ -140,51 +140,51 @@
 
         },
 
-        swiperActive: function() {
-            $(document).ready(function() {
-   var swiper = new Swiper(".swiper-container-h1", {
-    spaceBetween: 30,
-    slidesPerView: 3,  // Show 3 slides at a time by default
-    loop: true,  // Enables looping of the slides
-    speed: 1000,
-    autoplay: {
-        delay: 3000,  // Delay in ms (3 seconds)
-        disableOnInteraction: false,  // Keep autoplay active after interaction
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",  // Next button
-        prevEl: ".swiper-button-prev",  // Previous button
-    },
-    pagination: {
-        el: ".swiper-pagination",  // Pagination bullets
-        clickable: true,
-    },
-    breakpoints: {
-        1500: { slidesPerView: 3 },  // ≥1500px → 3 slides
-        1199: { slidesPerView: 2 },  // 1199–1499px → 2 slides
-        991: { slidesPerView: 2 },   // 991–1198px → 2 slides
-        767: { slidesPerView: 1 },   // 767–990px → 1 slide
-        575: { slidesPerView: 1 },   // <767px → 1 slide
-        0: { slidesPerView: 1 },     // Default for mobile
-    },
-    slidesPerGroup: 3,  // Move 3 slides at a time
-});
+        swiperActive: function () {
+            $(document).ready(function () {
+                var swiper = new Swiper(".swiper-container-h1", {
+                    spaceBetween: 30,
+                    slidesPerView: 3,  // Show 3 slides at a time by default
+                    loop: true,  // Enables looping of the slides
+                    speed: 1000,
+                    autoplay: {
+                        delay: 3000,  // Delay in ms (3 seconds)
+                        disableOnInteraction: false,  // Keep autoplay active after interaction
+                    },
+                    navigation: {
+                        nextEl: ".swiper-button-next",  // Next button
+                        prevEl: ".swiper-button-prev",  // Previous button
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",  // Pagination bullets
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        1500: { slidesPerView: 3 },  // ≥1500px → 3 slides
+                        1199: { slidesPerView: 2 },  // 1199–1499px → 2 slides
+                        991: { slidesPerView: 2 },   // 991–1198px → 2 slides
+                        767: { slidesPerView: 1 },   // 767–990px → 1 slide
+                        575: { slidesPerView: 1 },   // <767px → 1 slide
+                        0: { slidesPerView: 1 },     // Default for mobile
+                    },
+                    slidesPerGroup: 3,  // Move 3 slides at a time
+                });
 
-// Pause autoplay when mouse enters any slide
-$('.swiper-container-h1 .swiper-slide').on('mouseenter', function () {
-    swiper.autoplay.stop();
-});
+                // Pause autoplay when mouse enters any slide
+                $('.swiper-container-h1 .swiper-slide').on('mouseenter', function () {
+                    swiper.autoplay.stop();
+                });
 
-// Resume autoplay when mouse leaves any slide
-$('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
-    swiper.autoplay.start();
-});
+                // Resume autoplay when mouse leaves any slide
+                $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
+                    swiper.autoplay.start();
+                });
 
-});
+            });
 
-           
 
-            $(document).ready(function() {
+
+            $(document).ready(function () {
                 var swiper = new Swiper(".team-swiper-container-h1", {
                     spaceBetween: 30,
                     slidesPerView: 4,
@@ -195,8 +195,8 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
                     //   disableOnInteraction: false,
                     // },
                     navigation: {
-                        nextEl: ".swiper-button-next",
-                        prevEl: ".swiper-button-prev",
+                        nextEl: ".swiper-button-next-team",
+                        prevEl: ".swiper-button-prev-team",
                     },
                     pagination: {
                         el: ".swiper-pagination",
@@ -225,7 +225,7 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
                 });
             });
 
-            $(document).ready(function() {
+            $(document).ready(function () {
                 var swiper = new Swiper(".swiper-container-h1-team", {
                     spaceBetween: 30,
                     slidesPerView: 4,
@@ -261,7 +261,7 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
                     },
                 });
             });
-            $(document).ready(function() {
+            $(document).ready(function () {
                 var swiper = new Swiper(".swiper-container-h1-team-8", {
                     spaceBetween: 150,
                     slidesPerView: 4,
@@ -298,7 +298,7 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
                 });
             });
 
-            $(document).ready(function() {
+            $(document).ready(function () {
 
                 var swiper = new Swiper(".swiper-container-h3", {
                     spaceBetween: 30,
@@ -339,7 +339,7 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
                 });
             });
 
-            $(document).ready(function() {
+            $(document).ready(function () {
                 var swiper = new Swiper(".swiper-container-h1.v3", {
                     spaceBetween: 30,
                     slidesPerView: 4,
@@ -354,14 +354,14 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
                         clickable: true,
                     },
                 });
-                $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function(e) {
+                $('a[data-bs-toggle="tab"]').on('shown.bs.tab', function (e) {
                     // Update Swiper when the tab with swiper is shown
                     swiper.update();
                 });
             });
 
 
-            $(document).ready(function() {
+            $(document).ready(function () {
                 var swiper = new Swiper(".swiper-container-h2", {
                     spaceBetween: 30,
                     slidesPerView: 4,
@@ -398,7 +398,7 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
                 });
             });
 
-            $(document).ready(function() {
+            $(document).ready(function () {
                 var swiper = new Swiper(".mySwiper-banner-2", {
                     spaceBetween: 0,
                     slidesPerView: 1,
@@ -415,7 +415,7 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
                     },
                 });
             });
-            $(document).ready(function() {
+            $(document).ready(function () {
                 var swiper = new Swiper(".mySwiper-banner-eight", {
                     spaceBetween: 0,
                     slidesPerView: 1,
@@ -433,7 +433,7 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
                 });
             });
 
-            $(document).ready(function() {
+            $(document).ready(function () {
                 var swiper = new Swiper(".mySwiper-brand", {
                     spaceBetween: 65,
                     slidesPerView: 5,
@@ -470,7 +470,7 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
                 });
             });
 
-            $(document).ready(function() {
+            $(document).ready(function () {
                 var swiper = new Swiper(".mySwiper-service-dental", {
                     spaceBetween: 30,
                     slidesPerView: 4,
@@ -507,7 +507,7 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
                 });
             });
 
-            $(document).ready(function() {
+            $(document).ready(function () {
                 var swiper = new Swiper(".mySwiper-banner-seven", {
                     spaceBetween: 0,
                     slidesPerView: 1,
@@ -525,7 +525,7 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
                 });
             });
 
-            $(document).ready(function() {
+            $(document).ready(function () {
                 var swiper = new Swiper(".mySwiper-portfolio", {
                     spaceBetween: 0,
                     slidesPerView: 1,
@@ -542,7 +542,7 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
                     },
                 });
             });
-            $(document).ready(function() {
+            $(document).ready(function () {
                 var swiper = new Swiper(".mySwiper-testimonials-2", {
                     spaceBetween: 0,
                     slidesPerView: 1,
@@ -559,12 +559,12 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
             });
         },
 
-        wowActive: function() {
+        wowActive: function () {
             new WOW().init();
         },
 
-        stickyHeader: function(e) {
-            $(window).scroll(function() {
+        stickyHeader: function (e) {
+            $(window).scroll(function () {
                 if ($(this).scrollTop() > 150) {
                     $('.header--sticky').addClass('sticky')
                 } else {
@@ -573,8 +573,8 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
             })
         },
 
-        backToTopInit: function() {
-            $(document).ready(function() {
+        backToTopInit: function () {
+            $(document).ready(function () {
                 "use strict";
 
                 var progressPath = document.querySelector('.progress-wrap path');
@@ -584,7 +584,7 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
                 progressPath.style.strokeDashoffset = pathLength;
                 progressPath.getBoundingClientRect();
                 progressPath.style.transition = progressPath.style.WebkitTransition = 'stroke-dashoffset 10ms linear';
-                var updateProgress = function() {
+                var updateProgress = function () {
                     var scroll = $(window).scrollTop();
                     var height = $(document).height() - $(window).height();
                     var progress = pathLength - (scroll * pathLength / height);
@@ -594,14 +594,14 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
                 $(window).scroll(updateProgress);
                 var offset = 50;
                 var duration = 550;
-                jQuery(window).on('scroll', function() {
+                jQuery(window).on('scroll', function () {
                     if (jQuery(this).scrollTop() > offset) {
                         jQuery('.progress-wrap').addClass('active-progress');
                     } else {
                         jQuery('.progress-wrap').removeClass('active-progress');
                     }
                 });
-                jQuery('.progress-wrap').on('click', function(event) {
+                jQuery('.progress-wrap').on('click', function (event) {
                     event.preventDefault();
                     jQuery('html, body').animate({
                         scrollTop: 0
@@ -613,38 +613,38 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
             });
         },
 
-        sideMenu: function() {
+        sideMenu: function () {
 
             // collups menu side right
-            $(document).on('click', '#menu-btn', function() {
+            $(document).on('click', '#menu-btn', function () {
                 $("#side-bar").addClass("show");
                 $("#anywhere-home").addClass("bgshow");
             });
-            $(document).on('click', '.close-icon-menu', function() {
+            $(document).on('click', '.close-icon-menu', function () {
                 $("#side-bar").removeClass("show");
                 $("#anywhere-home").removeClass("bgshow");
             });
-            $(document).on('click', '#anywhere-home', function() {
+            $(document).on('click', '#anywhere-home', function () {
                 $("#side-bar").removeClass("show");
                 $("#anywhere-home").removeClass("bgshow");
             });
-            $(document).on('click', '.onepage .mainmenu li a', function() {
+            $(document).on('click', '.onepage .mainmenu li a', function () {
                 $("#side-bar").removeClass("show");
                 $("#anywhere-home").removeClass("bgshow");
             });
         },
 
 
-        niceSelect: function() {
+        niceSelect: function () {
 
-            (function($) {
+            (function ($) {
 
-                $.fn.niceSelect = function(method) {
+                $.fn.niceSelect = function (method) {
 
                     // Methods
                     if (typeof method == 'string') {
                         if (method == 'update') {
-                            this.each(function() {
+                            this.each(function () {
                                 var $select = $(this);
                                 var $dropdown = $(this).next('.nice-select');
                                 var open = $dropdown.hasClass('open');
@@ -659,7 +659,7 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
                                 }
                             });
                         } else if (method == 'destroy') {
-                            this.each(function() {
+                            this.each(function () {
                                 var $select = $(this);
                                 var $dropdown = $(this).next('.nice-select');
 
@@ -681,7 +681,7 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
                     this.hide();
 
                     // Create custom markup
-                    this.each(function() {
+                    this.each(function () {
                         var $select = $(this);
 
                         if (!$select.next().hasClass('nice-select')) {
@@ -704,7 +704,7 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
 
                         $dropdown.find('.current').html($selected.data('display') || $selected.text());
 
-                        $options.each(function(i) {
+                        $options.each(function (i) {
                             var $option = $(this);
                             var display = $option.data('display');
 
@@ -725,7 +725,7 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
                     $(document).off('.nice_select');
 
                     // Open/close
-                    $(document).on('click.nice_select', '.nice-select', function(event) {
+                    $(document).on('click.nice_select', '.nice-select', function (event) {
                         var $dropdown = $(this);
 
                         $('.nice-select').not($dropdown).removeClass('open');
@@ -741,14 +741,14 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
                     });
 
                     // Close when clicking outside
-                    $(document).on('click.nice_select', function(event) {
+                    $(document).on('click.nice_select', function (event) {
                         if ($(event.target).closest('.nice-select').length === 0) {
                             $('.nice-select').removeClass('open').find('.option');
                         }
                     });
 
                     // Option click
-                    $(document).on('click.nice_select', '.nice-select .option:not(.disabled)', function(event) {
+                    $(document).on('click.nice_select', '.nice-select .option:not(.disabled)', function (event) {
                         var $option = $(this);
                         var $dropdown = $option.closest('.nice-select');
 
@@ -762,7 +762,7 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
                     });
 
                     // Keyboard events
-                    $(document).on('keydown.nice_select', '.nice-select', function(event) {
+                    $(document).on('keydown.nice_select', '.nice-select', function (event) {
                         var $dropdown = $(this);
                         var $focused_option = $($dropdown.find('.focus') || $dropdown.find('.list .option.selected'));
 
@@ -826,14 +826,14 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
 
             /* Initialize */
 
-            $(document).ready(function() {
+            $(document).ready(function () {
                 $('select').niceSelect();
             });
 
         },
 
-        vedioActivation: function() {
-            $(document).ready(function() {
+        vedioActivation: function () {
+            $(document).ready(function () {
                 $('.popup-youtube, .popup-video').magnificPopup({
                     type: 'iframe',
                     mainClass: 'mfp-fade',
@@ -844,10 +844,10 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
             });
         },
 
-        menuCurrentLink: function() {
+        menuCurrentLink: function () {
             var currentPage = location.pathname.split("/"),
                 current = currentPage[currentPage.length - 1];
-            $('.parent-nav li > a').each(function() {
+            $('.parent-nav li > a').each(function () {
                 var $this = $(this);
                 if ($this.attr('href') === current) {
                     $this.addClass('active');
@@ -857,14 +857,14 @@ $('.swiper-container-h1 .swiper-slide').on('mouseleave', function () {
         },
 
 
-        preloader: function() {
-            window.addEventListener('load', function() {
+        preloader: function () {
+            window.addEventListener('load', function () {
                 document.querySelector('body').classList.add("loaded")
             });
         },
 
-        datePicker: function() {
-            $(function() {
+        datePicker: function () {
+            $(function () {
                 $("#datepicker").datepicker({
                     dateFormat: "dd-mm-yy",
                     duration: "fast"
