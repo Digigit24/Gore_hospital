@@ -858,9 +858,14 @@
 
 
         preloader: function () {
+            var body = document.querySelector('body');
             window.addEventListener('load', function () {
-                document.querySelector('body').classList.add("loaded")
+                body.classList.add("loaded")
             });
+            // Safety timeout: remove preloader after 1.5 seconds max
+            setTimeout(function () {
+                body.classList.add("loaded");
+            }, 1000);
         },
 
         datePicker: function () {

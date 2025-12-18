@@ -1867,8 +1867,7 @@
 
             <!-- 1. Background Video -->
 
-            <video id="hero-video" class="banner-bg-video" autoplay muted loop playsinline
-              poster="videos/gore-hospital.mp4"></video>
+            <video id="hero-video" class="banner-bg-video" autoplay muted loop playsinline></video>
 
             <!-- HLS.js for streaming support -->
             <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -1880,11 +1879,22 @@
                 if (Hls.isSupported()) {
                   var hls = new Hls({
                     autoStartLoad: true,
-                    capLevelToPlayerSize: true, // Optimizes quality based on player size to save bandwidth
+                    startFragPrefetch: true,
+                    enableWorker: true,
+                    maxBufferLength: 5,
+                    maxMaxBufferLength: 10,
+                    manifestLoadingTimeOut: 150,
+                    manifestLoadingMaxRetry: 10,
+                    capLevelToPlayerSize: true,
                     debug: false
                   });
-                  hls.loadSource(videoSrc);
+
                   hls.attachMedia(video);
+
+                  hls.on(Hls.Events.MEDIA_ATTACHED, function () {
+                    hls.loadSource(videoSrc);
+                  });
+
                   hls.on(Hls.Events.MANIFEST_PARSED, function () {
                     var playPromise = video.play();
                     if (playPromise !== undefined) {
@@ -1893,6 +1903,28 @@
                       });
                     }
                   });
+
+                  // Robust Error Handling for Network/Stalling issues
+                  hls.on(Hls.Events.ERROR, function (event, data) {
+                    if (data.fatal) {
+                      switch (data.type) {
+                        case Hls.ErrorTypes.NETWORK_ERROR:
+                          // Try to recover network error
+                          console.log("fatal network error encountered, try to recover");
+                          hls.startLoad();
+                          break;
+                        case Hls.ErrorTypes.MEDIA_ERROR:
+                          console.log("fatal media error encountered, try to recover");
+                          hls.recoverMediaError();
+                          break;
+                        default:
+                          // cannot recover
+                          hls.destroy();
+                          break;
+                      }
+                    }
+                  });
+
                 } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
                   // Fallback for native HLS support (Safari)
                   video.src = videoSrc;
