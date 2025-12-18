@@ -950,7 +950,7 @@
         // --- DYNAMIC URL UPDATE (No Reload) ---
         const finalSlug = toSeoSlug(slugForSeo);
         if (finalSlug) {
-          const newUrl = `/post/${finalSlug}/`;
+          const newUrl = `/blogs/${finalSlug}/`;
           window.history.replaceState({ postId: post.id }, post.title?.rendered || "", newUrl);
         }
 
