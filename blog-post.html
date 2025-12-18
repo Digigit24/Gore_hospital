@@ -3,6 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
+  <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="image/x-icon" href="assets/logo.jpeg">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
@@ -570,9 +571,9 @@
                           </div>
                           <div class="col-lg-3">
                             <div class="menu-right-add">
-                              <img src="assets/01_menu.webp" alt="gore-hospital-image" loading="lazy">
+                              <img src="assets/01_menu.webp" alt="gore-hospital-image">
                               <div class="absolute-image">
-                                <img src="assets/02_menu.webp" alt="gore-hospital-image" loading="lazy">
+                                <img src="assets/02_menu.webp" alt="gore-hospital-image">
                                 <div class="inner-content">
                                   <h3 class="title">
                                     Trust Your Heart to <br>
@@ -605,7 +606,7 @@
             <div class="header-right">
               <a href="/appointment.html" class="rts-btn btn-primary">
                 Appointment
-                <img src="assets/arrow--up-right.svg" alt="gore-hospital-image" loading="lazy">
+                <img src="assets/arrow--up-right.svg" alt="gore-hospital-image">
               </a>
               <div class="menu-btn" id="menu-btn">
                 <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -682,17 +683,17 @@
                 <ul class="submenu mm-collapse">
                   <li>
                     <a class="mobile-menu-link" href="/services/cardiology.html">
-                      <img src="assets/cardiology.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">Cardiology
+                      <img src="assets/cardiology.png" alt="gore-hospital-image" style="max-width:33px;">Cardiology
                     </a>
                   </li>
                   <li>
                     <a class="mobile-menu-link" href="/services/pediatric.html">
-                      <img src="assets/Paediatrics.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">Paediatrics
+                      <img src="assets/Paediatrics.png" alt="gore-hospital-image" style="max-width:33px;">Paediatrics
                     </a>
                   </li>
                   <li>
                     <a class="mobile-menu-link" href="/services/neurology.html">
-                      <img src="assets/nephrology.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">Neurology
+                      <img src="assets/nephrology.png" alt="gore-hospital-image" style="max-width:33px;">Neurology
                     </a>
                   </li>
                 </ul>
@@ -702,18 +703,18 @@
                 <ul class="submenu mm-collapse">
                   <li>
                     <a class="mobile-menu-link" href="/services/orthopaedics.html">
-                      <img src="assets/orthopaedics.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">Orthopaedics
+                      <img src="assets/orthopaedics.png" alt="gore-hospital-image" style="max-width:33px;">Orthopaedics
                     </a>
                   </li>
                   <li>
                     <a class="mobile-menu-link" href="/services/family-physician.html">
-                      <img src="assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">Family
+                      <img src="assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;">Family
                       Physician
                     </a>
                   </li>
                   <li>
                     <a class="mobile-menu-link" href="/services/gynaecology.html">
-                      <img src="assets/gynecology.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">Gynecology
+                      <img src="assets/gynecology.png" alt="gore-hospital-image" style="max-width:33px;">Gynecology
                     </a>
                   </li>
                 </ul>
@@ -723,23 +724,23 @@
                 <ul class="submenu mm-collapse">
                   <li>
                     <a class="mobile-menu-link" href="/services/endocrinology.html">
-                      <img src="assets/Endocrinolog.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">Endocrinology
+                      <img src="assets/Endocrinolog.png" alt="gore-hospital-image" style="max-width:33px;">Endocrinology
                     </a>
                   </li>
                   <li>
                     <a class="mobile-menu-link" href="/services/nephrology.html">
-                      <img src="assets/nephrology.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">Nephrology
+                      <img src="assets/nephrology.png" alt="gore-hospital-image" style="max-width:33px;">Nephrology
                     </a>
                   </li>
                   <li>
                     <a class="mobile-menu-link" href="/services/cancer-care.html">
                       <img src="assets/cancer-care-treatment.png" alt="gore-hospital-image"
-                        style="max-width:33px;" loading="lazy">Cancer Care
+                        style="max-width:33px;">Cancer Care
                     </a>
                   </li>
                   <li>
                     <a class="mobile-menu-link" href="/services/radiology.html">
-                      <img src="assets/radiology.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">Radiology
+                      <img src="assets/radiology.png" alt="gore-hospital-image" style="max-width:33px;">Radiology
                     </a>
                   </li>
                 </ul>
@@ -875,14 +876,32 @@
       tag.setAttribute("content", content);
     }
 
+    // --- SEO URL Helper ---
+    function toSeoSlug(text) {
+      if (!text) return "";
+      return text
+        .toString()
+        .toLowerCase()
+        .replace(/\s+/g, "-") // Replace spaces with -
+        .replace(/[^\w-]+/g, "") // Remove all non-word chars (except -)
+        .replace(/--+/g, "-") // Replace multiple - with single -
+        .replace(/^-+/, "") // Trim - from start of text
+        .replace(/-+$/, ""); // Trim - from end of text
+    }
+
     async function loadSinglePost() {
       const container = document.getElementById("post-container");
 
-      // œ… Support BOTH slug and postId
+      // 1. Identification: Detect slug or postId from query parameters
       const slugParam = getQueryParam("slug");
       const postIdParam = getQueryParam("postId");
 
-      if (!slugParam && !postIdParam) {
+      // Fallback for paths if already transformed
+      const path = window.location.pathname;
+      const pathMatch = path.match(/\/post\/([^/]+)\/?$/);
+      const pathSlug = pathMatch ? pathMatch[1] : null;
+
+      if (!slugParam && !postIdParam && !pathSlug) {
         showPostError("No article selected. Please go back to the blog list.");
         return;
       }
@@ -891,11 +910,12 @@
         let post;
         let slugForSeo;
 
-        if (slugParam) {
+        if (slugParam || pathSlug) {
           // ” Fetch by slug
+          const targetSlug = slugParam || pathSlug;
           const res = await fetch(
             `${WP_BASE_URL}/posts?slug=${encodeURIComponent(
-              slugParam
+              targetSlug
             )}&_embed=1`
           );
 
@@ -911,7 +931,7 @@
           }
 
           post = posts[0];
-          slugForSeo = slugParam;
+          slugForSeo = post.slug;
         } else {
           // ” Fallback: fetch by ID (when link is blog-post.html?postId=123)
           const res = await fetch(
@@ -925,6 +945,13 @@
 
           post = await res.json();
           slugForSeo = post.slug; // use actual slug for SEO map
+        }
+
+        // --- DYNAMIC URL UPDATE (No Reload) ---
+        const finalSlug = toSeoSlug(slugForSeo);
+        if (finalSlug) {
+          const newUrl = `/post/${finalSlug}/`;
+          window.history.replaceState({ postId: post.id }, post.title?.rendered || "", newUrl);
         }
 
         const title = post.title?.rendered || "Health Article";
@@ -1004,7 +1031,7 @@
             <img src="${imageUrl}" alt="${cleanTitle.replace(
               /"/g,
               "&quot;"
-            )}" loading="lazy">
+            )}">
           </div>
         `
             : ""
@@ -1015,7 +1042,7 @@
         </div>
 
         <div class="single-post-back">
-          <a href="blog.html">
+          <a href="/blog.html">
             <i class="fas fa-arrow-left"></i> Back to all articles
           </a>
         </div>
@@ -1057,7 +1084,7 @@
               year: "numeric"
             });
             const slug = post.slug;
-            const link = `blog-post.html?slug=${encodeURIComponent(slug)}`;
+            const link = `/blog-post.html?slug=${slug}`;
 
             let imageUrl = getImageUrl(post);
             if (!imageUrl) {
@@ -1091,6 +1118,13 @@
     document.addEventListener("DOMContentLoaded", () => {
       loadSinglePost();
       fetchLatestSidebarPosts();
+
+      // Listen for browser back/forward buttons
+      window.addEventListener("popstate", () => {
+        loadSinglePost();
+      });
+
+
 
       const searchForm = document.getElementById("search-form");
       if (searchForm) {

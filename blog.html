@@ -374,22 +374,39 @@
     /* Blog card  -  clean image + title + button */
 
     .single-blog-card {
-      background: #ffffff;
-      border-radius: 12px;
+
+      background: #fffffe;
+
+      border-radius: 25px;
+
       padding: 0;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-      border: 1px solid rgba(0, 0, 0, 0.02);
+
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 1);
+
+      border: 1px solid rgba(245, 247, 249, 0.9);
+
       overflow: hidden;
+
       display: flex;
+
       flex-direction: column;
+
       height: 100%;
-      width: 100%;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      width: 150%;
+
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+
     }
 
+
+
     .single-blog-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+
+      transform: translateY(-4px);
+
+      box-shadow: 0 14px 32px rgba(15, 23, 42, 0.3);
+
     }
 
 
@@ -1179,7 +1196,7 @@
     const postSlug = post.slug;
 
     // Construct the URL for the post using the slug
-    const link = `blog-post.html/${postSlug}`;
+    const link = `/blog-post.html?slug=${postSlug}`;
 
     const imageUrl = getImageUrl(post);
 
@@ -1187,7 +1204,7 @@
         <div class="col-lg-6 col-md-6">
             <article class="single-blog-card">
                 <div class="thumb">
-                    ${imageUrl ? `<img src="${imageUrl}" alt="${cleanTitle.replace(/"/g, "&quot;")}" loading="lazy">` : ""}
+                    ${imageUrl ? `<img src="${imageUrl}" alt="${cleanTitle.replace(/"/g, "&quot;")}">` : ""}
                 </div>
                 <div class="blog-content">
                     <h3 class="title">
@@ -1254,7 +1271,7 @@
 
         const postId = post.id;
 
-        const url = `blog-post.html?postId=${postId}`;
+        const url = `/blog-post.html?slug=${post.slug}`;
 
         let imageUrl = getImageUrl(post) || fallbackThumb;
 
@@ -1903,11 +1920,11 @@
 
                             <div class="menu-right-add">
 
-                              <img src="assets/01_menu.webp" alt="gore-hospital-image" loading="lazy">
+                              <img src="assets/01_menu.webp" alt="gore-hospital-image">
 
                               <div class="absolute-image">
 
-                                <img src="assets/02_menu.webp" alt="gore-hospital-image" loading="lazy">
+                                <img src="assets/02_menu.webp" alt="gore-hospital-image">
 
                                 <div class="inner-content">
 
@@ -1971,7 +1988,7 @@
 
               <a href="/appointment.html" class="rts-btn btn-primary">Appointment
 
-                <img src="assets/arrow--up-right.svg" alt="gore-hospital-image" loading="lazy"></a>
+                <img src="assets/arrow--up-right.svg" alt="gore-hospital-image"></a>
 
               <div class="menu-btn" id="menu-btn">
 
@@ -2019,7 +2036,7 @@
 
               <div class="pre-title wow fadeInUp" data-wow-delay=".0s" data-wow-duration=".8s">
 
-                <img src="assets/08.svg" alt="icons" loading="lazy">
+                <img src="assets/08.svg" alt="icons">
 
                 <span>Gore Multispeciality Hospital - Health Blog</span>
 
@@ -2232,7 +2249,7 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/cardiology.html"><img src="assets/cardiology.png"
-                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        alt="gore-hospital-image" style="max-width:33px;">
 
                       Cardiology</a>
 
@@ -2241,7 +2258,7 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/pediatric.html"><img src="assets/Paediatrics.png"
-                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        alt="gore-hospital-image" style="max-width:33px;">
 
                       Paediatrics</a>
 
@@ -2250,7 +2267,7 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/neurology.html"><img src="assets/nephrology.png"
-                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        alt="gore-hospital-image" style="max-width:33px;">
 
                       Neurology</a>
 
@@ -2269,7 +2286,7 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/orthopaedics.html"><img src="assets/orthopaedics.png"
-                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        alt="gore-hospital-image" style="max-width:33px;">
 
                       Orthopaedics</a>
 
@@ -2278,7 +2295,7 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/family-physician.html"><img
-                        src="assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        src="assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;">
 
                       Family Physician</a>
 
@@ -2287,7 +2304,7 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/gynaecology.html"><img src="assets/gynecology.png"
-                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        alt="gore-hospital-image" style="max-width:33px;">
 
                       Gynecology</a>
 
@@ -2306,7 +2323,7 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/endocrinology.html"><img src="assets/Endocrinolog.png"
-                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        alt="gore-hospital-image" style="max-width:33px;">
 
                       Endocrinology</a>
 
@@ -2315,7 +2332,7 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/nephrology.html"><img src="assets/nephrology.png"
-                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        alt="gore-hospital-image" style="max-width:33px;">
 
                       Nephrology</a>
 
@@ -2324,7 +2341,7 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/cancer-care.html"><img
-                        src="assets/cancer-care-treatment.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        src="assets/cancer-care-treatment.png" alt="gore-hospital-image" style="max-width:33px;">
 
                       Cancer Care</a>
 
@@ -2333,7 +2350,7 @@
                   <li>
 
                     <a class="mobile-menu-link" href="/services/radiology.html"><img src="assets/radiology.png"
-                        alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        alt="gore-hospital-image" style="max-width:33px;">
 
                       Radiology</a>
 
