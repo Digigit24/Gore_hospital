@@ -1,8 +1,11 @@
-# --------------------------------------------------
-# 1. ALLOW AI SEARCH ENGINES (Visibility & Citations)
-# These bots help you appear in ChatGPT Search, Perplexity, and Claude Search.
-# --------------------------------------------------
+# =========================================================
+# 1. AI SEARCH & CITATION BOTS (Ranking in AI Answers)
+# These bots help you get links inside ChatGPT, Perplexity, & Siri.
+# =========================================================
 User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
 Allow: /
 
 User-agent: PerplexityBot
@@ -11,17 +14,77 @@ Allow: /
 User-agent: Claude-SearchBot
 Allow: /
 
-# --------------------------------------------------
-# 2. BLOCK AI DATA TRAINING (Data Protection)
-# These bots scrape your site to train their AI models without giving you traffic.
-# --------------------------------------------------
+User-agent: Claude-User
+Allow: /
+
+User-agent: meta-webindexer
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# =========================================================
+# 2. GLOBAL TRADITIONAL SEARCH ENGINES (Global SEO)
+# Rankings here provide the data for almost all other tools.
+# =========================================================
+
+# Google (Global)
+User-agent: Googlebot
+Allow: /
+
+# Bing & Yahoo (Global)
+User-agent: bingbot
+Allow: /
+User-agent: Slurp
+Allow: /
+
+# DuckDuckGo (Privacy Search)
+User-agent: DuckDuckBot
+Allow: /
+
+# Yandex (Russia & Eastern Europe)
+User-agent: YandexBot
+Allow: /
+
+# Baidu (China - World's largest non-Google market)
+User-agent: Baiduspider
+Allow: /
+
+# Naver (South Korea)
+User-agent: Yeti
+Allow: /
+
+# Seznam (Czech Republic & Europe)
+User-agent: SeznamBot
+Allow: /
+
+# Sogou (China)
+User-agent: Sogou web spider
+Allow: /
+
+# Qwant (France/Europe Privacy Search)
+User-agent: Qwantify
+Allow: /
+
+# Brave Search (AI/Privacy)
+User-agent: BraveBot
+Allow: /
+
+# =========================================================
+# 3. BLOCK AI TRAINING (Data Theft Protection)
+# These bots scrape you for free to build models. 
+# We block these so they have to use "Search" bots (above) instead.
+# =========================================================
 User-agent: GPTBot
 Disallow: /
 
 User-agent: Google-Extended
 Disallow: /
 
-User-agent: ClaudeBot
+User-agent: anthropic-ai
 Disallow: /
 
 User-agent: CCBot
@@ -30,16 +93,16 @@ Disallow: /
 User-agent: Bytespider
 Disallow: /
 
-User-agent: Applebot-Extended
+User-agent: FacebookBot
 Disallow: /
 
-# --------------------------------------------------
-# 3. STANDARD SEO & SECURITY (Google/Bing/WordPress)
-# --------------------------------------------------
-User-agent: *
-Allow: /
+User-agent: Amazonbot
+Disallow: /
 
-# --------------------------------------------------
-# 4. SITEMAP LOCATION
-# --------------------------------------------------
+# =========================================================
+# 5. SITEMAPS (Multiple sitemaps for deep indexing)
+# =========================================================
 Sitemap: https://gorehospital.com/sitemap/sitemap.xml
+Sitemap: https://gorehospital.com/sitemap/sitemap-services.xml
+Sitemap: https://gorehospital.com/sitemap/sitemap-clinic-info.xml
+Sitemap:https://gorehospital.com/sitemap/sitemap-blogs.xml
