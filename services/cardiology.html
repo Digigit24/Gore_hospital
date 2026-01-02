@@ -547,6 +547,97 @@
       top: auto;
       opacity: 0.12;
     }
+
+    /* =========================================
+       PROFESSIONAL SECTION STYLING (User Request)
+       ========================================= */
+    .service-intro-box {
+      background: #f8f9fa;
+      padding: 30px;
+      border-left: 5px solid #233f92;
+      border-radius: 0 8px 8px 0;
+      margin-top: 35px;
+      margin-bottom: 40px;
+    }
+
+    .service-intro-box .title {
+      font-size: 28px;
+      font-weight: 700;
+      color: #233f92;
+      margin-bottom: 15px;
+      text-transform: capitalize;
+    }
+
+    .service-intro-box .disc {
+      margin-bottom: 0;
+      font-size: 16px;
+      color: #333;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 25px;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+      padding: 24px;
+      position: relative;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      border-color: #233f92;
+    }
+
+    .service-card .card-number {
+      position: absolute;
+      top: -15px;
+      right: -10px;
+      font-size: 80px;
+      font-weight: 900;
+      color: rgba(35, 63, 146, 0.05);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .service-card .card-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .service-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1f1f25;
+      margin-bottom: 12px;
+      border-bottom: 2px solid transparent;
+      display: inline-block;
+      transition: border-color 0.3s;
+    }
+
+    .service-card:hover h3 {
+      color: #233f92;
+      border-bottom-color: #ff7f00;
+    }
+
+    .service-card p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #555;
+      margin-bottom: 0;
+    }
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-HW2B3PV89M"></script>
@@ -944,7 +1035,8 @@
                                 <ul class="mega-menu-item">
                                   <li>
                                     <a href="/services/orthopaedics.html">
-                                      <img src="/assets/orthopaedics.png" alt="service" class="service-logo">Orthopaedics</a>
+                                      <img src="/assets/orthopaedics.png" alt="service"
+                                        class="service-logo">Orthopaedics</a>
                                   </li>
                                   <li>
                                     <a href="/services/family-physician.html">
@@ -1093,60 +1185,90 @@
             </div>
 
             <!-- H1 Intro -->
-            <h1 class="title mt--35">
-              Best cardiology hospital in ravet pimpri chinchwad, pune
-            </h1>
-            <p class="disc mb--30">
-              Looking for the
-              <strong>best cardiology hospital in Ravet, Pimpri Chinchwad,
-                Pune</strong>? Welcome to <strong>Gore Hospital</strong>, where expert
-              cardiologists, advanced cardiac technology, and 247 emergency
-              services come together under one roof. Conveniently located near
-              <strong>Ravet, Wakad, Hinjewadi, Punawale, Nigdi, and Akurdi</strong>, Gore Hospital has earned a
-              reputation as one of the most
-              reliable <strong>heart hospitals in PCMC and Pune</strong>.
-            </p>
+            <!-- Professional Intro Box -->
+            <div class="service-intro-box">
+              <h1 class="title">
+                Best Cardiology Hospital in Ravet, Pimpri Chinchwad, Pune
+              </h1>
+              <p class="disc">
+                Looking for the
+                <strong>best cardiology hospital in Ravet, Pimpri Chinchwad,
+                  Pune</strong>? Welcome to <strong>Gore Hospital</strong>, where expert
+                cardiologists, advanced cardiac technology, and 24/7 emergency
+                services come together under one roof. Conveniently located near
+                <strong>Ravet, Wakad, Hinjewadi, Punawale, Nigdi, and Akurdi</strong>, Gore Hospital has earned a
+                reputation as one of the most
+                reliable <strong>heart hospitals in PCMC and Pune</strong>.
+              </p>
+            </div>
 
-            <!-- H2 Services -->
-            <h2 class="title mt--35">Cardiology Services at Gore Hospital</h2>
+            <!-- Services Heading -->
+            <h2 class="title mt--35 mb--25">Cardiology Services at Gore Hospital</h2>
 
-            <h3 class="title mt--20">1. Non-Invasive Cardiology</h3>
-            <p>
-              We offer painless and accurate tests like ECG, 2D Echo, TMT
-              stress tests, and Holter monitoring. These give our
-              cardiologists a clear picture of your heart health, helping
-              detect issues early and guide prevention or treatment.
-            </p>
+            <!-- Professional Service Grid -->
+            <div class="service-grid">
+              <!-- Service 1 -->
+              <div class="service-card">
+                <div class="card-number">01</div>
+                <div class="card-content">
+                  <h3>Non-Invasive Cardiology</h3>
+                  <p>
+                    We offer painless and accurate tests like ECG, 2D Echo, TMT
+                    stress tests, and Holter monitoring to give a clear picture of heart health, helping detect issues
+                    early.
+                  </p>
+                </div>
+              </div>
 
-            <h3 class="title mt--20">2. Interventional Cardiology</h3>
-            <p>
-              Minimally invasive options such as angioplasty, stent placement,
-              and pacemaker implantation restore blood flow, reduce risks, and
-              help you recover faster.
-            </p>
+              <!-- Service 2 -->
+              <div class="service-card">
+                <div class="card-number">02</div>
+                <div class="card-content">
+                  <h3>Interventional Cardiology</h3>
+                  <p>
+                    Minimally invasive options such as angioplasty, stent placement,
+                    and pacemaker implantation to restore blood flow and reduce risks for faster recovery.
+                  </p>
+                </div>
+              </div>
 
-            <h3 class="title mt--20">
-              3. Cardiac Surgery &amp; Advanced Treatment
-            </h3>
-            <p>
-              We perform CABG (bypass), valve repair/replacement, and more.
-              Advanced technology and personalized care ensure safe outcomes
-              and long-term heart health.
-            </p>
+              <!-- Service 3 -->
+              <div class="service-card">
+                <div class="card-number">03</div>
+                <div class="card-content">
+                  <h3>Cardiac Surgery &amp; Advanced Treatment</h3>
+                  <p>
+                    We perform CABG (bypass), valve repair/replacement, and more.
+                    Advanced technology and personalized care ensure safe outcomes and long-term health.
+                  </p>
+                </div>
+              </div>
 
-            <h3 class="title mt--20">4. Pediatric Cardiology</h3>
-            <p>
-              Dedicated diagnosis and treatment for congenital and acquired
-              heart issues in childrendelivered with expertise and
-              compassion.
-            </p>
+              <!-- Service 4 -->
+              <div class="service-card">
+                <div class="card-number">04</div>
+                <div class="card-content">
+                  <h3>Pediatric Cardiology</h3>
+                  <p>
+                    Dedicated diagnosis and treatment for congenital and acquired
+                    heart issues in children, delivered with expertise and compassion.
+                  </p>
+                </div>
+              </div>
 
-            <h3 class="title mt--20">5. Emergency Heart Care</h3>
-            <p>
-              Round-the-clock emergency cardiac services for heart attacks,
-              chest pain, and other urgent conditions with a fully equipped
-              cardiac ICU.
-            </p>
+              <!-- Service 5 -->
+              <div class="service-card">
+                <div class="card-number">05</div>
+                <div class="card-content">
+                  <h3>Emergency Heart Care</h3>
+                  <p>
+                    Round-the-clock emergency cardiac services for heart attacks,
+                    chest pain, and other urgent conditions with a fully equipped
+                    cardiac ICU.
+                  </p>
+                </div>
+              </div>
+            </div>
 
             <!-- Mid banner image -->
             <div class="service-details-mid-wrapper mt--40">
@@ -1703,7 +1825,8 @@
                   </li>
                   <li>
                     <a class="mobile-menu-link" href="/services/family-physician.html"><img
-                        src="/assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        src="/assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;"
+                        loading="lazy">
                       Family Physician</a>
                   </li>
 
@@ -1730,7 +1853,8 @@
                   </li>
                   <li>
                     <a class="mobile-menu-link" href="/services/cancer-care.html"><img
-                        src="/assets/cancer-care-treatment.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        src="/assets/cancer-care-treatment.png" alt="gore-hospital-image" style="max-width:33px;"
+                        loading="lazy">
                       Cancer Care</a>
                   </li>
                   <li>
@@ -1792,7 +1916,7 @@
       }
     });
 
-        // Auto-detect generic images and convert to gradient cards
+    // Auto-detect generic images and convert to gradient cards
     (function () {
       const genericImages = ["01.jpg", "02.jpg", "03.jpg", "04.jpg"];
       const grid = document.querySelector(".doc-grid");
@@ -1814,10 +1938,10 @@
 
           // Add scanner line animation if not present
           if (!card.querySelector('.scan-line')) {
-              const scanLine = document.createElement('div');
-              scanLine.className = 'scan-line';
-              const photoDiv = card.querySelector('.doc-photo');
-              if(photoDiv) photoDiv.appendChild(scanLine);
+            const scanLine = document.createElement('div');
+            scanLine.className = 'scan-line';
+            const photoDiv = card.querySelector('.doc-photo');
+            if (photoDiv) photoDiv.appendChild(scanLine);
           }
 
           cardsWithoutImages.push(card);
