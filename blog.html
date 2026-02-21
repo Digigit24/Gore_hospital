@@ -371,40 +371,47 @@
 
     /* Blog card  -  clean image + title + button */
 
-   .single-blog-card {
-  background: #fffffe;
-  border-radius: 25px;
-  padding: 20px; /* Add some padding inside the card for content spacing */
-  box-shadow: 0 6px 20px rgba(15, 23, 42, 1);
-  border: 1px solid rgba(245, 247, 249, 0.9);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  height: 100%; /* Allow the card to grow to fit content */
-  width: 100%; /* Adjust width to a reasonable size */
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  position: relative; /* Make sure we can absolutely position the "Read More" button */
-}
+    .single-blog-card {
+      background: #fffffe;
+      border-radius: 25px;
+      padding: 20px;
+      /* Add some padding inside the card for content spacing */
+      box-shadow: 0 6px 20px rgba(15, 23, 42, 1);
+      border: 1px solid rgba(245, 247, 249, 0.9);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      /* Allow the card to grow to fit content */
+      width: 100%;
+      /* Adjust width to a reasonable size */
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      position: relative;
+      /* Make sure we can absolutely position the "Read More" button */
+    }
 
-.single-blog-card .read-more {
-  margin-top: 10px;
-  align-self: center; /* Center the button horizontally */
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #ffffff;
-  text-decoration: none;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 5px 10px;
-  border-radius: 7px;
-  background: #d6a70d;
-  border: 1px solid #0b5ed7;
-  position: absolute;
-  bottom: 10px; /* Position the button at the bottom */
-  left: 50%;
-  transform: translateX(-50%); /* Center it horizontally */
-}
+    .single-blog-card .read-more {
+      margin-top: 10px;
+      align-self: center;
+      /* Center the button horizontally */
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #ffffff;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 10px;
+      border-radius: 7px;
+      background: #d6a70d;
+      border: 1px solid #0b5ed7;
+      position: absolute;
+      bottom: 10px;
+      /* Position the button at the bottom */
+      left: 50%;
+      transform: translateX(-50%);
+      /* Center it horizontally */
+    }
 
 
 
@@ -1515,8 +1522,27 @@
 
           <div class="row g-4" id="blog-list">
 
+            <!-- paediatric orthopaedic care tips 21 Feb 2026 -->
+            <div class="col-lg-6 col-md-6">
+              <article class="single-blog-card">
+                <div class="thumb">
+                  <img src="assets/orthopaedic-blog.png" alt="Paediatric Orthopaedic Care Tips For Parents">
+                </div>
+                <div class="blog-content">
+                  <h3 class="title">
+                    <a href="blogs/paediatric-orthopaedic-care-tips-for-parents.html">Paediatric Orthopaedic Care Tips
+                      For Parents</a>
+                  </h3>
+                  <p class="disc">Watching your child grow is one of life's greatest joys. Learn the most important
+                    paediatric orthopaedic care tips including early warning signs, injury prevention, and when to
+                    consult a specialist.</p>
+                  <a href="/blogs/paediatric-orthopaedic-care-tips-for-parents.html" class="read-more">Read More</a>
+                </div>
+              </article>
+            </div>
+
             <!-- most common ent problems 14 Jan 2026 -->
-             <div class="col-lg-6 col-md-6">
+            <div class="col-lg-6 col-md-6">
               <article class="single-blog-card">
                 <div class="thumb">
                   <img src="assets/most-common-ent-problems.png" alt="Most Common ENT Problems">
@@ -1525,7 +1551,9 @@
                   <h3 class="title">
                     <a href="blogs/most-common-ent-problems.html">12 Most Common ENT Problems: </a>
                   </h3>
-                  <p class="disc">Ear, Nose, and Throat (ENT) problems may seem minor at first, but they can significantly impact your daily comfort, sleep quality, communication, and overall health if left untreated. </p>
+                  <p class="disc">Ear, Nose, and Throat (ENT) problems may seem minor at first, but they can
+                    significantly impact your daily comfort, sleep quality, communication, and overall health if left
+                    untreated. </p>
                   <a href="/blogs/most-common-ent-problems.html" class="read-more">Read More</a>
                 </div>
               </article>
@@ -1534,16 +1562,18 @@
 
 
             <!-- early warning signs of diabetes 14 Jan 2026-->
-              <div class="col-lg-6 col-md-6">
+            <div class="col-lg-6 col-md-6">
               <article class="single-blog-card">
                 <div class="thumb">
                   <img src="assets/early-warning-signs-of-diabetes.png" alt="Early Warning Signs of Diabetes">
                 </div>
                 <div class="blog-content">
                   <h3 class="title">
-                    <a href="blogs/early-warning-signs-of-diabetes.html">What are the 10 early warning signs of diabetes?</a>
+                    <a href="blogs/early-warning-signs-of-diabetes.html">What are the 10 early warning signs of
+                      diabetes?</a>
                   </h3>
-                  <p class="disc">Diabetes doesn’t usually announce itself loudly. In many cases, it develops quietly, showing small changes in the body that are easy to dismiss as stress, aging.</p>
+                  <p class="disc">Diabetes doesn’t usually announce itself loudly. In many cases, it develops quietly,
+                    showing small changes in the body that are easy to dismiss as stress, aging.</p>
                   <a href="/blogs/early-warning-signs-of-diabetes.html" class="read-more">Read More</a>
                 </div>
               </article>
@@ -1554,13 +1584,16 @@
             <div class="col-lg-6 col-md-6">
               <article class="single-blog-card">
                 <div class="thumb">
-                  <img src="assets/top-warning-signs-of-heart-and-lung-disease.png" alt="Top Warning Signs of Heart and Lung Disease">
+                  <img src="assets/top-warning-signs-of-heart-and-lung-disease.png"
+                    alt="Top Warning Signs of Heart and Lung Disease">
                 </div>
                 <div class="blog-content">
                   <h3 class="title">
-                    <a href="blogs/top-warning-signs-of-heart-and-lung-disease.html">Top 15 Warning Signs of Heart and Lung Disease</a>
+                    <a href="blogs/top-warning-signs-of-heart-and-lung-disease.html">Top 15 Warning Signs of Heart and
+                      Lung Disease</a>
                   </h3>
-                  <p class="disc">We’ve divided the warning signs into heart-related and lung-related symptoms. This makes it easier to recognize which organ may be signaling a problem.</p>
+                  <p class="disc">We’ve divided the warning signs into heart-related and lung-related symptoms. This
+                    makes it easier to recognize which organ may be signaling a problem.</p>
                   <a href="/blogs/top-warning-signs-of-heart-and-lung-disease.html" class="read-more">Read More</a>
                 </div>
               </article>
@@ -1702,6 +1735,17 @@
                 <h4>Latest Articles</h4>
 
                 <ul id="latest-posts-list" class="latest-posts-list">
+                  <li class="latest-posts-item">
+                    <a href="/blogs/paediatric-orthopaedic-care-tips-for-parents.html" class="latest-post-link">
+                      <div class="latest-post-thumb">
+                        <img src="assets/orthopaedic-blog.png" alt="Health article" loading="lazy">
+                      </div>
+                      <div class="latest-post-text">
+                        <div class="latest-post-title">Paediatric Orthopaedic Care Tips</div>
+                        <span class="latest-post-date">21 Feb 2026</span>
+                      </div>
+                    </a>
+                  </li>
                   <li class="latest-posts-item">
                     <a href="/blogs/irregular-periods-in-teens.html" class="latest-post-link">
                       <div class="latest-post-thumb">
