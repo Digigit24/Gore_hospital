@@ -434,103 +434,175 @@
         });
     </script>
     <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@graph": [
     {
-      "@type": "Article",
-      "headline": "Neurologist vs Neurosurgeon: Differences & Consultation Guide",
-      "description": "Confused between a neurologist and a neurosurgeon? Learn the key differences, conditions treated, and when to consult each specialist.",
-      "image": "https://gorehospital.com/assets/neurologist-vs-neurosurgeon.jpg",
-      "author": {
-        "@type": "Organization",
-        "name": "Gore Hospital"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Gore Hospital",
-        "logo": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://gorehospital.com/#organization",
+          "name": "Gore Multispeciality Hospital",
+          "url": "https://gorehospital.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://gorehospital.com/#logo",
+            "url": "https://gorehospital.com/assets/logo.jpeg",
+            "contentUrl": "https://gorehospital.com/assets/logo.jpeg",
+            "width": "512",
+            "height": "512",
+            "caption": "Gore Multispeciality Hospital"
+          },
+          "image": {
+            "@id": "https://gorehospital.com/#logo"
+          },
+          "sameAs": [
+            "https://www.facebook.com/gore.multispeciality.hospital",
+            "https://www.instagram.com/gore_multispeciality_hospital/",
+            "https://www.linkedin.com/company/gore-multispecialty-hospital/",
+            "https://www.youtube.com/@Goremultispecialityhospital"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://gorehospital.com/#website",
+          "url": "https://gorehospital.com/",
+          "name": "Gore Multispeciality Hospital",
+          "publisher": {
+            "@id": "https://gorehospital.com/#organization"
+          }
+        },
+        {
           "@type": "ImageObject",
-          "url": "https://gorehospital.com/assets/logo.jpeg"
-        }
-      },
-      "datePublished": "2026-02-23",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://gorehospital.com/blogs/neurologist-vs-neurosurgeon-differences-consultation-guide.html"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://gorehospital.com/"
+          "@id": "https://gorehospital.com/blogs/neurologist-vs-neurosurgeon-differences-consultation-guide.html#primaryimage",
+          "url": "https://gorehospital.com/assets/neurologist-vs-neurosurgeon.jpg",
+          "width": "1200",
+          "height": "630"
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blogs",
-          "item": "https://gorehospital.com/blog.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
+          "@type": "WebPage",
+          "@id": "https://gorehospital.com/blogs/neurologist-vs-neurosurgeon-differences-consultation-guide.html#webpage",
+          "url": "https://gorehospital.com/blogs/neurologist-vs-neurosurgeon-differences-consultation-guide.html",
           "name": "Neurologist vs Neurosurgeon: Differences & Consultation Guide",
-          "item": "https://gorehospital.com/blogs/neurologist-vs-neurosurgeon-differences-consultation-guide.html"
-        }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Who treats nerve pain?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Neurologists usually treat nerve pain unless surgery is required."
+          "isPartOf": {
+            "@id": "https://gorehospital.com/#website"
+          },
+          "primaryImageOfPage": {
+            "@id": "https://gorehospital.com/blogs/neurologist-vs-neurosurgeon-differences-consultation-guide.html#primaryimage"
+          },
+          "datePublished": "2026-02-23T10:00:00+00:00",
+          "dateModified": "2026-02-23T10:00:00+00:00",
+          "description": "Confused between a neurologist and a neurosurgeon? Learn the key differences, conditions treated, and when to consult each specialist.",
+          "breadcrumb": {
+            "@id": "https://gorehospital.com/blogs/neurologist-vs-neurosurgeon-differences-consultation-guide.html#breadcrumb"
           }
         },
         {
-          "@type": "Question",
-          "name": "Who treats brain tumors?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Both specialists play important roles — neurologists help with diagnosis and symptom control, while neurosurgeons perform surgery."
-          }
+          "@type": "BreadcrumbList",
+          "@id": "https://gorehospital.com/blogs/neurologist-vs-neurosurgeon-differences-consultation-guide.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "WebPage",
+                "@id": "https://gorehospital.com/",
+                "url": "https://gorehospital.com/",
+                "name": "Home"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "WebPage",
+                "@id": "https://gorehospital.com/blog.html",
+                "url": "https://gorehospital.com/blog.html",
+                "name": "Blog"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "WebPage",
+                "@id": "https://gorehospital.com/blogs/neurologist-vs-neurosurgeon-differences-consultation-guide.html",
+                "url": "https://gorehospital.com/blogs/neurologist-vs-neurosurgeon-differences-consultation-guide.html",
+                "name": "Neurologist vs Neurosurgeon"
+              }
+            }
+          ]
         },
         {
-          "@type": "Question",
-          "name": "Is surgery always necessary for neurological problems?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Many neurological conditions are managed without surgery."
-          }
+          "@type": "BlogPosting",
+          "@id": "https://gorehospital.com/blogs/neurologist-vs-neurosurgeon-differences-consultation-guide.html#article",
+          "isPartOf": {
+            "@id": "https://gorehospital.com/blogs/neurologist-vs-neurosurgeon-differences-consultation-guide.html#webpage"
+          },
+          "author": {
+            "@id": "https://gorehospital.com/#organization"
+          },
+          "headline": "Neurologist vs. Neurosurgeon: What's the Difference & Whom Should You Consult?",
+          "datePublished": "2026-02-23T10:00:00+00:00",
+          "dateModified": "2026-02-23T10:00:00+00:00",
+          "mainEntityOfPage": {
+            "@id": "https://gorehospital.com/blogs/neurologist-vs-neurosurgeon-differences-consultation-guide.html#webpage"
+          },
+          "publisher": {
+            "@id": "https://gorehospital.com/#organization"
+          },
+          "image": {
+            "@id": "https://gorehospital.com/blogs/neurologist-vs-neurosurgeon-differences-consultation-guide.html#primaryimage"
+          },
+          "keywords": "Neurologist, Neurosurgeon, Neurology, Spinal Surgery, Brain Surgery, Gore Hospital Ravet",
+          "articleSection": "Neurology"
         },
         {
-          "@type": "Question",
-          "name": "Can a neurologist refer me to a neurosurgeon?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes, referrals between these specialists are very common."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which doctor treats stroke?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Neurologists primarily manage stroke patients."
-          }
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Who treats nerve pain?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Neurologists usually treat nerve pain unless surgery is required."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Who treats brain tumors?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Both specialists play important roles — neurologists help with diagnosis and symptom control, while neurosurgeons perform surgery."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is surgery always necessary for neurological problems?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Many neurological conditions are managed without surgery."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can a neurologist refer me to a neurosurgeon?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, referrals between these specialists are very common."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which doctor treats stroke?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Neurologists primarily manage stroke patients."
+              }
+            }
+          ]
         }
       ]
     }
-  ]
-}
-</script>
+    </script>
 </head>
 
 <body>

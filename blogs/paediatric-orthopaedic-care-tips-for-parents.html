@@ -430,58 +430,167 @@
 
     </script>
     <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@graph": [
     {
-      "@type": "Article",
-      "headline": "What Are The Most Important Paediatric Orthopaedic Care Tips For Parents?",
-      "description": "Learn the most important paediatric orthopaedic care tips for parents. Discover early warning signs, injury prevention advice, growth plate care, and when to consult a specialist.",
-      "image": "https://gorehospital.com/assets/orthopaedic-blog.png",
-      "author": {
-        "@type": "Organization",
-        "name": "Gore Hospital"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "Gore Hospital",
-        "logo": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://gorehospital.com/#organization",
+          "name": "Gore Multispeciality Hospital",
+          "url": "https://gorehospital.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://gorehospital.com/#logo",
+            "url": "https://gorehospital.com/assets/logo.jpeg",
+            "contentUrl": "https://gorehospital.com/assets/logo.jpeg",
+            "width": "512",
+            "height": "512",
+            "caption": "Gore Multispeciality Hospital"
+          },
+          "image": {
+            "@id": "https://gorehospital.com/#logo"
+          },
+          "sameAs": [
+            "https://www.facebook.com/gore.multispeciality.hospital",
+            "https://www.instagram.com/gore_multispeciality_hospital/",
+            "https://www.linkedin.com/company/gore-multispecialty-hospital/",
+            "https://www.youtube.com/@Goremultispecialityhospital"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://gorehospital.com/#website",
+          "url": "https://gorehospital.com/",
+          "name": "Gore Multispeciality Hospital",
+          "publisher": {
+            "@id": "https://gorehospital.com/#organization"
+          }
+        },
+        {
           "@type": "ImageObject",
-          "url": "https://gorehospital.com/assets/logo.jpeg"
-        }
-      },
-      "datePublished": "2026-02-21",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://gorehospital.com/blogs/paediatric-orthopaedic-care-tips-for-parents.html"
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://gorehospital.com/"
+          "@id": "https://gorehospital.com/blogs/paediatric-orthopaedic-care-tips-for-parents.html#primaryimage",
+          "url": "https://gorehospital.com/assets/orthopaedic-blog.png",
+          "width": "1200",
+          "height": "630"
         },
         {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Blogs",
-          "item": "https://gorehospital.com/blog.html"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
+          "@type": "WebPage",
+          "@id": "https://gorehospital.com/blogs/paediatric-orthopaedic-care-tips-for-parents.html#webpage",
+          "url": "https://gorehospital.com/blogs/paediatric-orthopaedic-care-tips-for-parents.html",
           "name": "Paediatric Orthopaedic Care Tips For Parents",
-          "item": "https://gorehospital.com/blogs/paediatric-orthopaedic-care-tips-for-parents.html"
+          "isPartOf": {
+            "@id": "https://gorehospital.com/#website"
+          },
+          "primaryImageOfPage": {
+            "@id": "https://gorehospital.com/blogs/paediatric-orthopaedic-care-tips-for-parents.html#primaryimage"
+          },
+          "datePublished": "2026-02-21T10:00:00+00:00",
+          "dateModified": "2026-02-23T10:00:00+00:00",
+          "description": "Learn the most important paediatric orthopaedic care tips for parents. Discover early warning signs, injury prevention advice, and growth plate care.",
+          "breadcrumb": {
+            "@id": "https://gorehospital.com/blogs/paediatric-orthopaedic-care-tips-for-parents.html#breadcrumb"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://gorehospital.com/blogs/paediatric-orthopaedic-care-tips-for-parents.html#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "item": {
+                "@type": "WebPage",
+                "@id": "https://gorehospital.com/",
+                "url": "https://gorehospital.com/",
+                "name": "Home"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "item": {
+                "@type": "WebPage",
+                "@id": "https://gorehospital.com/blog.html",
+                "url": "https://gorehospital.com/blog.html",
+                "name": "Blog"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "item": {
+                "@type": "WebPage",
+                "@id": "https://gorehospital.com/blogs/paediatric-orthopaedic-care-tips-for-parents.html",
+                "url": "https://gorehospital.com/blogs/paediatric-orthopaedic-care-tips-for-parents.html",
+                "name": "Paediatric Orthopaedic Care"
+              }
+            }
+          ]
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://gorehospital.com/blogs/paediatric-orthopaedic-care-tips-for-parents.html#article",
+          "isPartOf": {
+            "@id": "https://gorehospital.com/blogs/paediatric-orthopaedic-care-tips-for-parents.html#webpage"
+          },
+          "author": {
+            "@id": "https://gorehospital.com/#organization"
+          },
+          "headline": "What Are The Most Important Paediatric Orthopaedic Care Tips For Parents?",
+          "datePublished": "2026-02-21T10:00:00+00:00",
+          "dateModified": "2026-02-23T10:00:00+00:00",
+          "mainEntityOfPage": {
+            "@id": "https://gorehospital.com/blogs/paediatric-orthopaedic-care-tips-for-parents.html#webpage"
+          },
+          "publisher": {
+            "@id": "https://gorehospital.com/#organization"
+          },
+          "image": {
+            "@id": "https://gorehospital.com/blogs/paediatric-orthopaedic-care-tips-for-parents.html#primaryimage"
+          },
+          "keywords": "Paediatric Orthopaedics, Growth Plates, Child Health Tips, Gore Hospital Ravet, Orthopaedic Care",
+          "articleSection": "Paediatrics"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What make children's bones different from adults?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Children's bones are softer and more flexible than adult bones. They contain growth plates — areas of developing cartilage tissue near the ends of long bones responsible for lengthening bones as a child grows."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Why is early detection of orthopaedic issues important in children?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Early detection can prevent long-term deformities, reduce the need for surgery, improve recovery outcomes, support proper physical development, and minimize chronic pain later in life."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are early warning signs of orthopaedic problems in children?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Warning signs include persistent limping, excessive clumsiness, tilting of the head or uneven shoulders, persistent joint pain, and limited range of motion."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can parents prevent common orthopaedic injuries in children?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Prevention tips include using protective gear during sports, ensuring properly fitting shoes, encouraging balanced nutrition rich in calcium and vitamin D, and avoiding overuse injuries by allowing rest days."
+              }
+            }
+          ]
         }
       ]
     }
-  ]
-}
-</script>
+    </script>
 </head>
 
 <body>
