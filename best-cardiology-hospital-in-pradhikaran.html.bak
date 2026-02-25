@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/logo.jpeg">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <title>Best Cardiology Hospital in Pradhikaran</title>
+    <meta name="description"
+        content="Looking for the best cardiology hospital in Pradhikaran? Gore Multispeciality Hospital offers expert heart specialists, modern diagnostics, and 24/7 emergency cardiac care.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gorehospital.com/best-cardiology-hospital-in-pradhikaran.html">
+    <meta property="og:title" content="Best Cardiology Hospital in Pradhikaran">
+    <meta property="og:description"
+        content="Looking for the best cardiology hospital in Pradhikaran? Gore Multispeciality Hospital offers expert heart specialists, modern diagnostics, and 24/7 emergency cardiac care.">
+    <meta property="og:image" content="https://gorehospital.com/assets/logo.jpeg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://gorehospital.com/best-cardiology-hospital-in-pradhikaran.html">
+    <meta name="twitter:title" content="Best Cardiology Hospital in Pradhikaran">
+    <meta name="twitter:description"
+        content="Looking for the best cardiology hospital in Pradhikaran? Gore Multispeciality Hospital offers expert heart specialists, modern diagnostics, and 24/7 emergency cardiac care.">
+    <meta name="twitter:image" content="https://gorehospital.com/assets/logo.jpeg">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://gorehospital.com/best-cardiology-hospital-in-pradhikaran.html">
+
+    <link rel="stylesheet" href="assets/css/plugins/plugins.css">
+    <link rel="stylesheet" href="assets/css/plugins/magnifying-popup.css">
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <style>
+        .call-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 22px;
+            font-size: 16px;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .book-btn {
+            background-color: #1e88e5;
+        }
+
+        .emergency-btn {
+            background-color: #d32f2f;
+        }
+
+        /* Doctor Card Styles */
+        :root {
+            --text: #1f1f25;
+            --muted: #5b5b63;
+            --card-bg: #ffffff;
+            --card-bd: rgba(0, 0, 0, 0.06);
+            --soft: 0 6px 24px rgba(0, 0, 0, 0.06);
+            --soft-2: 0 12px 32px rgba(0, 0, 0, 0.07);
+        }
+
+        .doc-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            height: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.02);
+        }
+
+        .doc-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .doc-photo {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            background: #f8f9fa;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .doc-photo img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .doc-card:hover .doc-photo img {
+            transform: scale(1.08);
+        }
+
+        .doc-body {
+            padding: 24px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 6px;
+            flex-grow: 1;
+            background: #fff;
+        }
+
+        .doc-name {
+            font-weight: 500;
+            font-size: 19px;
+            line-height: 1.3;
+            margin: 0;
+            color: #1a202c;
+        }
+
+        .doc-spec {
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #007bff;
+            margin-top: 2px;
+        }
+
+        .hospital-card {
+            border-radius: 10px;
+            overflow: hidden;
+            background: #ffffff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgba(0, 138, 191, 0.08);
+            transition: all 0.25s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hospital-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 14px 32px rgba(0, 0, 0, 0.12);
+            border-color: rgba(0, 138, 191, 0.4);
+        }
+
+        .hospital-card .service-card-image img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            transition: transform 0.35s ease;
+            padding: 20px;
+            border-radius: 30px;
+        }
+
+        .banner-video-wrapper {
+            position: relative;
+            overflow: hidden;
+            min-height: 750px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+        }
+
+        .banner-bg-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .banner-video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(2, 167, 233, 0.2) 0%, rgba(0, 0, 0, 0.75) 100%);
+            z-index: -1;
+        }
+
+        .banner-content-area {
+            text-align: left;
+            position: relative;
+            z-index: 5;
+            width: 100%;
+            padding: 0 15px;
+        }
+
+        .problem-card {
+            background: #fff;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border-left: 5px solid #007bff;
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+
+        .problem-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .problem-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+            color: #0c3459;
+        }
+
+        .problem-card p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header-one header--sticky">
+        <div class="header-top-area">
+            <div class="container-full-header">
+                <div class="col-lg-12">
+                    <div class="header-top">
+                        <div class="left">
+                            <div class="map-area">
+                                <i class="fa-sharp fa-regular fa-location-dot"></i>
+                                <a href="https://share.google/1o4ABacpA4B04frhC">Gore Multispeciality Hospital</a>
+                            </div>
+                        </div>
+                        <div class="social-media-icons">
+                            <a href="https://www.facebook.com/gore.multispeciality.hospital" target="_blank"
+                                class="social-icon">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/gore_multispeciality_hospital/" target="_blank"
+                                class="social-icon">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/company/gore-multispecialty-hospital/about/"
+                                target="_blank" class="social-icon">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@Goremultispecialityhospital" target="_blank"
+                                class="social-icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                        <div class="right">
+                            <div class="map-area">
+                                <i class="fa-regular fa-phone"></i>
+                                <a href="tel:+91 9689528414">24x7 Emergency Line: +91 96895 28414</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-full-header">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="header-wrapper-1">
+                        <div class="logo-area-start">
+                            <a href="/index.html" class="logo">
+                                <img width="100" src="assets/logo.jpeg" alt="Gore Hospital Logo">
+                            </a>
+                            <div class="nav-area">
+                                <ul>
+                                    <li class="main-nav"><a href="/index.html">Home</a></li>
+                                    <li class="main-nav"><a href="/about-us.html">About</a></li>
+                                    <li class="main-nav"><a href="/our-doctors.html">Our Doctors</a></li>
+                                    <li class="main-nav"><a href="/blog.html">Blog</a></li>
+                                    <li class="main-nav"><a href="/gallery.html">Gallery</a></li>
+                                    <li class="main-nav"><a href="/contact-us.html">Contact</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="header-right">
+                            <a href="/appointment.html" class="rts-btn btn-primary">Appointment
+                                <img src="assets/arrow--up-right.svg" alt="arrow" loading="lazy"></a>
+                            <div class="menu-btn" id="menu-btn">
+                                <svg width="20" height="16" viewBox="0 0 20 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="14" width="20" height="2" fill="#1F1F25"></rect>
+                                    <rect y="7" width="20" height="2" fill="#1F1F25"></rect>
+                                    <rect width="20" height="2" fill="#1F1F25"></rect>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner-area-start">
+        <div class="container-full-header">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="banner-area-one rts-section-gap bg_image banner-video-wrapper">
+                        <video id="hero-video" class="banner-bg-video" autoplay muted loop playsinline></video>
+                        <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                var video = document.getElementById("hero-video");
+                                var videoSrc = "https://videos.thedigitechsolutions.com/videos-static/418688027f6e5994594de41338c39008/landscape/558d87a0-0807-4069-b6ee-e64a341fd5fd/master.m3u8";
+                                if (Hls.isSupported()) {
+                                    var hls = new Hls();
+                                    hls.loadSource(videoSrc);
+                                    hls.attachMedia(video);
+                                } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+                                    video.src = videoSrc;
+                                }
+                            });
+                        </script>
+                        <div class="banner-video-overlay"></div>
+                        <div class="banner-content-area">
+                            <div style="padding-left: 3%;" class="row align-items-center">
+                                <div class="col-lg-7 text-start">
+                                    <h1 class="title wow fadeInUp" data-wow-delay=".2s" data-wow-duration=".8s"
+                                        style="letter-spacing: 2px; font-size: 52px; color: #ffffff; margin-bottom: 20px; line-height: 1.2; text-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+                                        Best Cardiology Hospital in Pradhikaran
+                                    </h1>
+                                    <p class="disc wow fadeInUp" data-wow-delay=".2s" data-wow-duration=".8s"
+                                        style=" color: #f1f1f1; font-size: 18px; max-width: 600px; margin-bottom: 25px; ">
+                                        Hey there! Welcome to <strong>Gore Multispeciality Hospital</strong>, the
+                                        <strong>best cardiology hospital in Pradhikaran</strong>. We know how important
+                                        your
+                                        heart is, and we’re here to make sure it stays healthy. Whether you need a
+                                        routine check-up, advanced treatment, or emergency care, we’ve got you covered —
+                                        24/7.
+                                    </p>
+                                    <div class="call-buttons d-flex gap-5 flex-wrap">
+                                        <a href="tel:+919689528414" class="btn book-btn">📞 Book Your Appointment</a>
+                                        <a href="tel:+919689528414" class="btn emergency-btn">🚨 Emergency Helpline</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-5">
+                                    <div class="calendly-wrapper-glass wow fadeInUp" data-wow-delay=".4s">
+                                        <div class="calendly-inline-widget"
+                                            data-url="https://calendly.com/goremultispecialityhospital01/30min?hide_landing_page_details=1&hide_gdpr_banner=1"
+                                            style="min-width:320px;height:650px;"></div>
+                                        <script src="https://assets.calendly.com/assets/external/widget.js"
+                                            async></script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rts-about-area rts-section-gapBottom mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="about-image-left-wrapper">
+                        <div class="thumbnail-main move-right wow">
+                            <img src="assets/group-2.jpg" alt="about" style="border-radius: 22px" class="group-img"
+                                loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 offset-lg-1 mt--30">
+                    <div class="about-content-wrapper-right">
+                        <div class="title-wrapper-left">
+                            <h2 class="title wow fadeInUp" data-wow-delay=".4s" data-wow-duration=".8s">
+                                About Gore Multispeciality Hospital
+                            </h2>
+                        </div>
+                        <p class="disc wow fadeInUp" data-wow-delay=".4s" data-wow-duration=".8s"
+                            style="color: #555555; font-size: 18px; max-width: 600px; margin-bottom: 30px;">
+                            At <strong>Gore Multispeciality Hospital</strong>, we believe that excellent healthcare is
+                            not just about advanced machines and medicines—it’s also about care, respect, and
+                            understanding. Recognised as a leading multispeciality hospital, we are proud to be a
+                            trusted healthcare partner for families across the region.<br><br>
+                            Our hospital was built with a clear vision: to bring high-quality medical services under one
+                            roof, close to home. Today, we offer advanced treatments across multiple specialities,
+                            supported by modern diagnostic facilities and 24/7 emergency care.<br><br>
+                            Every patient is different, and so are their needs. That’s why we focus on personalised
+                            treatment that respects your health concerns, culture, and family values. Whether you come
+                            to us for a simple consultation, a preventive health check-up, or a complex surgery, our
+                            experienced doctors and caring staff make sure you receive the right treatment in a safe and
+                            supportive environment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="service-area position-relative rts-section-gapBottom mt--50">
+        <div class="container">
+            <div class="row g-5 justify-content-center">
+                <div class="col-lg-12 col-md-12">
+                    <div class="title-wrapper-left text-center mx-auto">
+                        <h2 class="title wow fadeInUp text-center" data-wow-delay=".4s" data-wow-duration=".8s">
+                            Our Heart Services Under One Roof
+                        </h2>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration=".8s">
+                    <div class="service-card hospital-card">
+                        <div class="service-card-image">
+                            <img src="assets/cardiology-heart.jpg" alt="Heart Checkups & Tests" class="img-fluid"
+                                loading="lazy">
+                        </div>
+                        <div class="service-card-body">
+                            <h4 class="service-card-title">1. Heart Checkups & Tests</h4>
+                            <p class="service-card-text">
+                                Keeping your heart healthy starts with regular checkups. At Gore Multispeciality
+                                Hospital, we offer ECG,
+                                ECHO, stress tests, and Holter monitoring to make sure your heart is in top shape. It’s
+                                simple, thorough,
+                                and gives you peace of mind about your heart’s health.
+                            </p>
+                            <a href="/services/cardiology.html" class="service-card-link">
+                                Learn More <i class="fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration=".8s">
+                    <div class="service-card hospital-card">
+                        <div class="service-card-image">
+                            <img src="assets/cardiology.jpg" alt="Interventional Cardiology" class="img-fluid"
+                                loading="lazy">
+                        </div>
+                        <div class="service-card-body">
+                            <h4 class="service-card-title">2. Interventional Cardiology</h4>
+                            <p class="service-card-text">
+                                If there’s a blockage or a rhythm issue, our team is ready to help. We perform advanced
+                                procedures like
+                                angioplasty, stent placement, and pacemaker implantations. We use minimally invasive
+                                techniques so you
+                                can recover faster and get back to your life.
+                            </p>
+                            <a href="/services/cardiology.html" class="service-card-link">
+                                Learn More <i class="fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.6s" data-wow-duration=".8s">
+                    <div class="service-card hospital-card">
+                        <div class="service-card-image">
+                            <img src="assets/machine-one.jpg" alt="Heart Surgeries" class="img-fluid" loading="lazy">
+                        </div>
+                        <div class="service-card-body">
+                            <h4 class="service-card-title">3. Heart Surgeries</h4>
+                            <p class="service-card-text">
+                                For complex heart conditions, our expert surgeons provide life-saving treatments like
+                                CABG (bypass surgery)
+                                and valve repairs. We combine advanced technology with a personal touch to ensure the
+                                best possible
+                                outcome for you and your family.
+                            </p>
+                            <a href="/services/cardiology.html" class="service-card-link">
+                                Learn More <i class="fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.8s" data-wow-duration=".8s">
+                    <div class="service-card hospital-card">
+                        <div class="service-card-image">
+                            <img src="assets/cardiology.png" alt="Preventive Cardiology" class="img-fluid"
+                                loading="lazy">
+                        </div>
+                        <div class="service-card-body">
+                            <h4 class="service-card-title">4. Preventive Cardiology</h4>
+                            <p class="service-card-text">
+                                The best way to treat a heart problem is to stop it before it starts. We provide guided
+                                lifestyle changes,
+                                diet plans, and risk assessments to help you manage blood pressure and cholesterol,
+                                keeping your heart
+                                strong for years to come.
+                            </p>
+                            <a href="/services/cardiology.html" class="service-card-link">
+                                Learn More <i class="fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration=".8s">
+                    <div class="service-card hospital-card">
+                        <div class="service-card-image">
+                            <img src="images/indian_emergency_stretcher_1769163615573.png" alt="Emergency Cardiac Care"
+                                class="img-fluid" loading="lazy">
+                        </div>
+                        <div class="service-card-body">
+                            <h4 class="service-card-title">5. Emergency Cardiac Care</h4>
+                            <p class="service-card-text">
+                                Heart emergencies don’t wait, and neither do we. Our 24/7 cardiac emergency unit is
+                                always ready to
+                                handle chest pain, heart attacks, and other critical situations. With our dedicated
+                                Cardiac ICU, you’re
+                                in safe hands every second.
+                            </p>
+                            <a href="/services/cardiology.html" class="service-card-link">
+                                Learn More <i class="fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="problem-area rts-section-gapBottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-wrapper-left text-center mx-auto mb--50">
+                        <h2 class="title wow fadeInUp text-center">Heart Problems We Treat</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration=".8s">
+                    <div class="service-card hospital-card">
+                        <div class="service-card-image">
+                            <img src="assets/top-warning-signs-of-heart-and-lung-disease.png" alt="Chest Pain"
+                                class="img-fluid" loading="lazy">
+                        </div>
+                        <div class="service-card-body">
+                            <h4 class="service-card-title">Chest Pain</h4>
+                            <p class="service-card-text">
+                                We carefully evaluate chest pain to identify heart-related causes and provide timely
+                                treatment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration=".8s">
+                    <div class="service-card hospital-card">
+                        <div class="service-card-image">
+                            <img src="assets/machine-two.jpg" alt="High Blood Pressure" class="img-fluid"
+                                loading="lazy">
+                        </div>
+                        <div class="service-card-body">
+                            <h4 class="service-card-title">High Blood Pressure</h4>
+                            <p class="service-card-text">
+                                Our doctors help control high blood pressure through proper diagnosis, medicines, and
+                                lifestyle guidance.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.6s" data-wow-duration=".8s">
+                    <div class="service-card hospital-card">
+                        <div class="service-card-image">
+                            <img src="assets/cardiology.jpg" alt="Heart Attack" class="img-fluid" loading="lazy">
+                        </div>
+                        <div class="service-card-body">
+                            <h4 class="service-card-title">Heart Attack</h4>
+                            <p class="service-card-text">
+                                We provide fast and effective emergency treatment for heart attacks to reduce damage.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.8s" data-wow-duration=".8s">
+                    <div class="service-card hospital-card">
+                        <div class="service-card-image">
+                            <img src="assets/cardiology-heart.jpg" alt="Blocked Arteries" class="img-fluid"
+                                loading="lazy">
+                        </div>
+                        <div class="service-card-body">
+                            <h4 class="service-card-title">Blocked Arteries</h4>
+                            <p class="service-card-text">
+                                We treat blocked arteries using advanced tests and procedures to improve blood flow.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration=".8s">
+                    <div class="service-card hospital-card">
+                        <div class="service-card-image">
+                            <img src="assets/card.png" alt="Irregular Heartbeat" class="img-fluid" loading="lazy">
+                        </div>
+                        <div class="service-card-body">
+                            <h4 class="service-card-title">Irregular Heartbeat</h4>
+                            <p class="service-card-text">
+                                We diagnose and manage abnormal heart rhythms to help maintain a steady heartbeat.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration=".8s">
+                    <div class="service-card hospital-card">
+                        <div class="service-card-image">
+                            <img src="assets/trust.png" alt="Heart Failure" class="img-fluid" loading="lazy">
+                        </div>
+                        <div class="service-card-body">
+                            <h4 class="service-card-title">Heart Failure</h4>
+                            <p class="service-card-text">
+                                Our team offers complete care for heart failure, focusing on symptom control and better
+                                function.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.6s" data-wow-duration=".8s">
+                    <div class="service-card hospital-card">
+                        <div class="service-card-image">
+                            <img src="assets/group-2.jpg" alt="High Cholesterol" class="img-fluid" loading="lazy">
+                        </div>
+                        <div class="service-card-body">
+                            <h4 class="service-card-title">High Cholesterol</h4>
+                            <p class="service-card-text">
+                                We manage high cholesterol through treatment plans that reduce heart disease risk.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 wow fadeInUp" data-wow-delay="0.8s" data-wow-duration=".8s">
+                    <div class="service-card hospital-card">
+                        <div class="service-card-image">
+                            <img src="assets/Paediatrics.png" alt="Congenital Heart Conditions" class="img-fluid"
+                                loading="lazy">
+                        </div>
+                        <div class="service-card-body">
+                            <h4 class="service-card-title">Congenital Heart Conditions</h4>
+                            <p class="service-card-text">
+                                We provide expert care for heart conditions present from birth, helping patients live
+                                healthier lives.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="team-area-start rts-section-gapBottom">
+        <div class="container">
+            <div class="row align-items-center mb--40">
+                <div class="col-lg-12">
+                    <div class="title-area-center">
+                        <span class="pre wow fadeInUp">Our Cardiology Team</span>
+                        <h2 class="title wow fadeInUp" data-wow-delay=".2s">Meet Our Expert Doctors</h2>
+                        <p class="disc wow fadeInUp" data-wow-delay=".4s">
+                            Our team of highly qualified cardiologists and specialists are dedicated to providing the
+                            best heart care in Pradhikaran.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-5 mt--20">
+                <div class="col-lg-12">
+                    <div class="team-swiper-wrapper-1">
+                        <div class="swiper team-swiper-container-h1">
+                            <div class="swiper-wrapper">
+                                <!-- 1) Dr. Dattesh Gore -->
+                                <div class="swiper-slide">
+                                    <article class="doc-card">
+                                        <div class="doc-photo">
+                                            <a href="our-doctors.html"
+                                                style="display: block; width: 100%; height: 100%;">
+                                                <img src="assets/gore.png" alt="Dr. Dattesh Gore" loading="lazy">
+                                            </a>
+                                        </div>
+                                        <div class="doc-body">
+                                            <h3 class="doc-name"><a href="our-doctors.html"
+                                                    style="color: inherit; text-decoration: none;">Dr. Dattesh Gore</a>
+                                            </h3>
+                                            <p class="doc-spec">Family Physician - MBBS, DA, MD Physician</p>
+                                        </div>
+                                    </article>
+                                </div>
+
+                                <!-- 2) Dr. Gautam Jugal -->
+                                <div class="swiper-slide">
+                                    <article class="doc-card">
+                                        <div class="doc-photo">
+                                            <a href="our-doctors.html"
+                                                style="display: block; width: 100%; height: 100%;">
+                                                <img src="#" alt="Dr. Gautam Jugal" loading="lazy">
+                                            </a>
+                                        </div>
+                                        <div class="doc-body">
+                                            <h3 class="doc-name"><a href="our-doctors.html"
+                                                    style="color: inherit; text-decoration: none;">Dr. Gautam Jugal</a>
+                                            </h3>
+                                            <p class="doc-spec">Cardiology - MBBS, MD, DM (Cardiologist)</p>
+                                        </div>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Navigation Buttons -->
+                        <div class="swiper-button-prev swiper-button-prev-team">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        <div class="swiper-button-next swiper-button-next-team">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="amenities-area rts-section-gapBottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-wrapper-left text-center mx-auto mb--50">
+                        <h2 class="title wow fadeInUp text-center">Modern Amenities for Patient Comfort</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="amenity-card text-center p-4" style="background: #f8f9fa; border-radius: 15px;">
+                        <i class="fa-solid fa-clock-rotate-left mb-3" style="font-size: 40px; color: #007bff;"></i>
+                        <h4>24/7 Emergency</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="amenity-card text-center p-4" style="background: #f8f9fa; border-radius: 15px;">
+                        <i class="fa-solid fa-bed-pulse mb-3" style="font-size: 40px; color: #007bff;"></i>
+                        <h4>Advanced ICU</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="amenity-card text-center p-4" style="background: #f8f9fa; border-radius: 15px;">
+                        <i class="fa-solid fa-truck-medical mb-3" style="font-size: 40px; color: #007bff;"></i>
+                        <h4>Ambulance Service</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="amenity-card text-center p-4" style="background: #f8f9fa; border-radius: 15px;">
+                        <i class="fa-solid fa-microscope mb-3" style="font-size: 40px; color: #007bff;"></i>
+                        <h4>Modern Labs</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="rts-testimonials-area rts-section-gap">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="title-area-center">
+                        <span class="pre wow fadeInUp">Patient Testimonials</span>
+                        <h2 class="title wow fadeInUp" data-wow-delay=".2s">What Our Patients Say</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt--30 g-5">
+                <div class="col-lg-12">
+                    <div class="swiper swiper-container-h1">
+                        <div class="swiper-wrapper">
+                            <!-- Testimonial 1 -->
+                            <div class="swiper-slide">
+                                <div class="single-testimonials-style">
+                                    <div class="quots">
+                                        <img src="images/quotes.png" alt="quotes" loading="lazy">
+                                    </div>
+                                    <p class="disc">“My mother was treated here for high BP and heart issues. The doctor
+                                        explained the problem in simple language and gave us confidence. We are very
+                                        satisfied with the treatment and follow-up care.”</p>
+                                    <div class="author-area">
+                                        <div class="info">
+                                            <h6 class="name">Sapna Dabhade</h6>
+                                            <div class="stars-area">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shape">
+                                        <img src="images/02.png" alt="shape" class="service-logo">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Testimonial 2 -->
+                            <div class="swiper-slide">
+                                <div class="single-testimonials-style">
+                                    <div class="quots">
+                                        <img src="images/quotes.png" alt="quotes" loading="lazy">
+                                    </div>
+                                    <p class="disc">“I had severe chest pain and was very scared. The doctors at
+                                        <strong>Gore Multispeciality Hospital</strong> treated me quickly and explained
+                                        everything clearly. The staff was very caring and supportive. I feel safe
+                                        trusting them with my heart.”
+                                    </p>
+                                    <div class="author-area">
+                                        <div class="info">
+                                            <h6 class="name">Soham kachare</h6>
+                                            <div class="stars-area">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shape">
+                                        <img src="images/02.png" alt="shape" class="service-logo">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Testimonial 3 -->
+                            <div class="swiper-slide">
+                                <div class="single-testimonials-style">
+                                    <div class="quots">
+                                        <img src="images/quotes.png" alt="quotes" loading="lazy">
+                                    </div>
+                                    <p class="disc">“My father was admitted for heart treatment and the care we received
+                                        was excellent. The cardiologist was very patient and answered all our questions.
+                                        The hospital is clean, well-managed, and the treatment was affordable.”</p>
+                                    <div class="author-area">
+                                        <div class="info">
+                                            <h6 class="name">GoodLuck Mohan</h6>
+                                            <div class="stars-area">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shape">
+                                        <img src="images/02.png" alt="shape" class="service-logo">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Testimonial 4 -->
+                            <div class="swiper-slide">
+                                <div class="single-testimonials-style">
+                                    <div class="quots">
+                                        <img src="images/quotes.png" alt="quotes" loading="lazy">
+                                    </div>
+                                    <p class="disc">“I went for a heart checkup and tests like ECG and Echo. The process
+                                        was smooth and not stressful at all. Doctors were friendly and gave proper
+                                        guidance about my lifestyle and medicines. Highly recommend this hospital for
+                                        heart care in Pradhikaran.”</p>
+                                    <div class="author-area">
+                                        <div class="info">
+                                            <h6 class="name">Shri Koli</h6>
+                                            <div class="stars-area">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shape">
+                                        <img src="images/02.png" alt="shape" class="service-logo">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Testimonial 5 -->
+                            <div class="swiper-slide">
+                                <div class="single-testimonials-style">
+                                    <div class="quots">
+                                        <img src="images/quotes.png" alt="quotes" loading="lazy">
+                                    </div>
+                                    <p class="disc">“Excellent treatment for cardiac issues. The staff is professional
+                                        and
+                                        the facilities are modern. We felt very well taken care of from the moment we
+                                        walked in. Recommended for anyone needing heart specialists.”</p>
+                                    <div class="author-area">
+                                        <div class="info">
+                                            <h6 class="name">Pravin Patil</h6>
+                                            <div class="stars-area">
+                                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                                                    class="fa-solid fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="shape">
+                                        <img src="images/02.png" alt="shape" class="service-logo">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="service-details rts-section-gap">
+        <div class="container">
+            <h2 class="title text-center mb--40">Frequently Asked Questions</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq1">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#c1">
+                            1. Which is the best cardiology hospital in Pradhikaran?
+                        </button>
+                    </h2>
+                    <div id="c1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            The best cardiology hospital is one that has experienced heart doctors, modern testing
+                            facilities, and emergency care available at all times. At <strong>Gore Multispeciality
+                                Hospital</strong>, the focus is also on patient comfort and clear communication, so
+                            people understand their condition and treatment without confusion.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c2">
+                            2. What tests are done for heart problems?
+                        </button>
+                    </h2>
+                    <div id="c2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Doctors usually suggest tests like ECG, 2D Echo, TMT, and blood tests to understand how your
+                            heart is working. These tests help find blockages, rhythm problems, or weak heart muscles
+                            and guide the doctor in choosing the right treatment.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c3">
+                            3. Is chest pain always related to heart disease?
+                        </button>
+                    </h2>
+                    <div id="c3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Chest pain is not always caused by heart problems. It can also happen due to gas, muscle
+                            strain, or anxiety. However, since heart-related chest pain can be dangerous, it is always
+                            safer to consult a doctor and get proper evaluation.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c4">
+                            4. What is angiography and why is it done?
+                        </button>
+                    </h2>
+                    <div id="c4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Angiography is a special test that helps doctors see if there are blockages in the heart’s
+                            blood vessels. It is done when a person has chest pain or other symptoms of heart disease,
+                            so doctors can decide the best treatment option.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c5">
+                            5. Do you provide emergency heart care?
+                        </button>
+                    </h2>
+                    <div id="c5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, emergency heart care is available round the clock for patients with chest pain, heart
+                            attack symptoms, or sudden breathing difficulty. Quick testing and treatment during an
+                            emergency can save lives, which is why emergency cardiac care is very important.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c6">
+                            6. What are the symptoms of a heart attack?
+                        </button>
+                    </h2>
+                    <div id="c6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Common heart attack symptoms include chest pain or pressure, pain in the left arm or jaw,
+                            shortness of breath, sweating, nausea, and sudden weakness. Some people may also feel
+                            dizziness or extreme tiredness. Any of these signs need immediate medical attention.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq7">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c7">
+                            7. What causes heart blockage?
+                        </button>
+                    </h2>
+                    <div id="c7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Heart blockage usually happens when cholesterol and fat build up inside the blood vessels
+                            over many years. This is often linked to unhealthy eating, lack of exercise, smoking,
+                            obesity, diabetes, and stress. Over time, this buildup reduces blood flow to the heart.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faq8">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#c8">
+                            8. Do heart problems affect young people?
+                        </button>
+                    </h2>
+                    <div id="c8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Yes, heart problems can affect young people too. Stress, poor diet, smoking, lack of
+                            exercise, obesity, and family history can increase risk even at a young age. That is why
+                            young adults should also pay attention to heart health and lifestyle habits.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="assets/js/plugins/jquery.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/footer.js"></script>
+</body>
+
+</html>
