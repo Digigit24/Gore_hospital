@@ -16,7 +16,7 @@
     content="Explore our hospital gallery featuring modern facilities, advanced equipment, patient rooms and emergency care areas in Ravet, Pimpri Chinchwad.">
   <meta property="og:image"
     content="https://gorehospital.com/images/gallery-gore-multispeciality-hospital-ravet-pimpri-chinchwad-pune.png">
-  
+
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
@@ -1048,7 +1048,8 @@
                   </li>
                   <li>
                     <a class="mobile-menu-link" href="/services/family-physician.html"><img
-                        src="assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        src="assets/family-physician.png" alt="gore-hospital-image" style="max-width:33px;"
+                        loading="lazy">
                       Family Physician</a>
                   </li>
 
@@ -1075,7 +1076,8 @@
                   </li>
                   <li>
                     <a class="mobile-menu-link" href="/services/cancer-care.html"><img
-                        src="assets/cancer-care-treatment.png" alt="gore-hospital-image" style="max-width:33px;" loading="lazy">
+                        src="assets/cancer-care-treatment.png" alt="gore-hospital-image" style="max-width:33px;"
+                        loading="lazy">
                       Cancer Care</a>
                   </li>
                   <li>
@@ -1207,6 +1209,24 @@
       </div>
     </section>
   </div>
+
+  <!-- VIDEO GALLERY SECTION -->
+  <section class="video-gallery"
+    style="background: linear-gradient(180deg, var(--bg-soft) 0%, #ffffff 100%); padding: clamp(50px, 7vw, 90px) 12px; position: relative;">
+    <div class="grid-container" style="max-width: 1000px; margin: 0 auto;">
+      <div class="grid-header" style="text-align: center; margin-bottom: clamp(32px, 5vw, 48px);">
+        <h2 class="section-title">Hospital Tour Video</h2>
+        <p class="section-desc">
+          Take a detailed look inside our world-class facilities and advanced care units.
+        </p>
+      </div>
+      <div class="video-wrapper"
+        style="position: relative; width: 100%; max-width: 360px; margin: 0 auto; aspect-ratio: 9/16; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15); background: #000;">
+        <video id="hospital-tour-video" controls autoplay loop muted playsinline crossorigin="anonymous"
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; outline: none; border-radius: 20px;"></video>
+      </div>
+    </div>
+  </section>
 
   <!-- GALLERY GRID -->
   <section class="gallery-grid">
@@ -1481,6 +1501,25 @@
   <script type="module">
     TaskadeEmbed.AgentPublicChatPopup.init({
       publicAgentId: "01K7KBX8K63VVH2RR5VFFXVX9D",
+    });
+  </script>
+  <!-- HLS Player for Video -->
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var video = document.getElementById('hospital-tour-video');
+      var videoSrc = 'https://videos.thedigitechsolutions.com/videos-static/9f31cd4b39815e5385764ac0bc204b7c/portrait/da2b26cc-39c8-4e36-a160-43c647c417d1/master.m3u8';
+
+      if (Hls.isSupported()) {
+        var hls = new Hls({
+          capLevelToPlayerSize: true, // Enables hybrid adaptive bitrate
+          maxMaxBufferLength: 30
+        });
+        hls.loadSource(videoSrc);
+        hls.attachMedia(video);
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = videoSrc;
+      }
     });
   </script>
   <script src="assets/js/footer.js"></script>
