@@ -120,9 +120,29 @@
             color: #b02a37;
         }
 
-        /* SIDEBAR */
-        .blog-sidebar {
-            position: relative;
+            /* Ensure parent containers support sticky positioning */
+    .rts-section-gapTop.rts-section-gapBottom {
+      overflow: visible !important;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    /* Column for sidebar - prevent stretching */
+    .col-lg-4.col-md-12 {
+      align-self: flex-start;
+    }
+
+/* SIDEBAR */
+    .blog-sidebar {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 80px;
+            align-self: flex-start;
+            z-index: 10;
         }
 
         .sidebar-widget {

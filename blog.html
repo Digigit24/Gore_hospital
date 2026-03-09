@@ -541,15 +541,7 @@
 
 
 
-    /* SIDEBAR */
-
-    .blog-sidebar {
-
-      position: relative;
-
-      margin-left: 10%;
-
-    }
+   
 
     .sidebar-widget {
 
@@ -900,19 +892,29 @@
 
 
 
-    /* RESPONSIVE TWEAKS */
+/* SIDEBAR */
+.blog-sidebar {
+  position: relative;
+}
 
-    @media (max-width: 991.98px) {
+.blog-sidebar.is-sticky {
+  position: fixed;
+  top: 180px; /* adjust to match your sticky header height */
+  width: inherit;
+  z-index: 10;
+}
 
-      .blog-sidebar {
-
-        margin-left: 0;
-
-        margin-top: 25px;
-
-      }
-
-    }
+@media (max-width: 991.98px) {
+  .blog-sidebar {
+    margin-left: 0;
+    margin-top: 25px;
+  }
+  .blog-sidebar.is-sticky {
+    position: relative !important;
+    top: auto !important;
+    width: auto !important;
+  }
+}
 
 
 
@@ -1522,6 +1524,23 @@
 
           <div class="row g-4" id="blog-list">
 
+             <!-- heart healthy foods cardilogists recommend 09 march 2026 -->
+            <div class="col-lg-6 col-md-6">
+              <article class="single-blog-card">
+                <div class="thumb">
+                  <img src="assets/heart-healthy-foods-cardiologists-recommend.jpg"
+                    alt="25 Heart-Healthy Foods Cardiologists Recommend">
+                </div>
+                <div class="blog-content">
+                  <h3 class="title">
+                    <a href="blogs/heart-healthy-foods-cardiologists-recommend.html">25 Heart-Healthy Foods Cardiologists Recommend for Better Heart Health</a>
+                  </h3>
+                  <p class="disc">Your heart works tirelessly every second of the day, pumping blood and oxygen throughout your body. Yet, heart disease remains one of the leading health concerns worldwide. The good news is that your daily diet plays a powerful role in protecting your heart.</p>
+                  <a href="/blogs/heart-healthy-foods-cardiologists-recommend.html" class="read-more">Read More</a>
+                </div>
+              </article>
+            </div>
+
             <!-- preconception health tips 23 Feb 2026 -->
             <div class="col-lg-6 col-md-6">
               <article class="single-blog-card">
@@ -1836,44 +1855,6 @@
                       <div class="latest-post-text">
                         <div class="latest-post-title">Paediatric Orthopaedic Care Tips</div>
                         <span class="latest-post-date">21 Feb 2026</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="latest-posts-item">
-                    <a href="/blogs/irregular-periods-in-teens.html" class="latest-post-link">
-                      <div class="latest-post-thumb">
-                        <img src="assets/irregular-periods-in-teens-blog-gore-image.png" alt="Health article"
-                          loading="lazy">
-                      </div>
-                      <div class="latest-post-text">
-                        <div class="latest-post-title">Irregular Periods in Teens</div>
-                        <span class="latest-post-date">24 Nov 2025</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="latest-posts-item">
-                    <a href="/blogs/minimally-invasive-orthopaedic-surgery-faster-recovery-less-pain.html"
-                      class="latest-post-link">
-                      <div class="latest-post-thumb">
-                        <img src="assets/minimally-invasive-orthopaedic-surgery-faster-recovery-less-pain.jpeg  "
-                          alt="Health article" loading="lazy">
-                      </div>
-                      <div class="latest-post-text">
-                        <div class="latest-post-title">Minimally Invasive Orthopaedic Surgery</div>
-                        <span class="latest-post-date">24 Nov 2025</span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="latest-posts-item">
-                    <a href="/blogs/signs-your-sports-injury-needs-arthroscopic-surgery-immediately.html"
-                      class="latest-post-link">
-                      <div class="latest-post-thumb">
-                        <img src="assets/signs-you-need-arthroscopic-surgery-for-sports-injury.png" alt="Health article"
-                          loading="lazy">
-                      </div>
-                      <div class="latest-post-text">
-                        <div class="latest-post-title">Signs You Need Arthroscopic Surgery</div>
-                        <span class="latest-post-date">24 Nov 2025</span>
                       </div>
                     </a>
                   </li>
@@ -2405,6 +2386,45 @@
     });
 
   </script>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const sidebar = document.querySelector(".blog-sidebar");
+    const sidebarCol = sidebar ? sidebar.closest(".col-lg-4") : null;
+
+    if (!sidebar || !sidebarCol) return;
+
+    const headerHeight = 90; // match your sticky header height
+    let offsetTop = sidebarCol.getBoundingClientRect().top + window.scrollY;
+
+    // Recalculate on resize
+    window.addEventListener("resize", function () {
+      offsetTop = sidebarCol.getBoundingClientRect().top + window.scrollY;
+    });
+
+    window.addEventListener("scroll", function () {
+      if (window.innerWidth < 992) {
+        sidebar.classList.remove("is-sticky");
+        sidebar.style.width = "";
+        return;
+      }
+
+      const colBottom = sidebarCol.getBoundingClientRect().bottom + window.scrollY;
+      const sidebarHeight = sidebar.offsetHeight;
+      const scrollY = window.scrollY;
+
+      if (
+        scrollY + headerHeight >= offsetTop &&
+        scrollY + headerHeight + sidebarHeight <= colBottom
+      ) {
+        sidebar.classList.add("is-sticky");
+        sidebar.style.width = sidebarCol.offsetWidth + "px";
+      } else {
+        sidebar.classList.remove("is-sticky");
+        sidebar.style.width = "";
+      }
+    });
+  });
+</script>
 
   <script src="assets/js/footer.js"></script>
 </body>

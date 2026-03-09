@@ -59,7 +59,6 @@
       border-radius: 12px;
       padding: 24px 20px 40px;
       box-shadow: 0 8px 24px rgb(7, 35, 77);
-      min-height: 100vh;
     }
 
     .single-post-title {
@@ -131,18 +130,32 @@
       color: #b02a37;
     }
 
+    /* Ensure parent containers support sticky positioning */
+    .rts-section-gapTop.rts-section-gapBottom {
+      overflow: visible !important;
+    }
+
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    /* Column for sidebar - prevent stretching */
+    .col-lg-4.col-md-12 {
+      align-self: flex-start;
+    }
+
     /* SIDEBAR */
-   /* Make the sidebar fixed and align it to the right */
+   /* Make the sidebar sticky and align it to the right */
 .blog-sidebar {
-    position: fixed;
-    width: 30vw;  /* Set a fixed width for the sidebar */
-    right: 0;  /* Align it to the right side */
-    background: #fff;/* Optional: Set a background color */
-    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.509); 
-    padding: 20px; /* Optional: Add padding inside the sidebar */
-    overflow-y: auto; /* Ensure it scrolls if the content is long */
-    z-index: -1;
-    margin-right: 2%;
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 20px;  /* Distance from top when sticky */
+    align-self: flex-start; /* Align to the start of the flex container */
+    max-height: calc(100vh - 40px); /* Prevent it from being taller than viewport */
+    overflow-y: auto; /* Allow scrolling if content is too long */
+    z-index: 10;
 }
 
 
@@ -396,9 +409,8 @@
 
       .blog-sidebar {
         margin-top: 25px;
-        position: relative;
-        z-index: null !important;
-        width: 100%;
+        position: relative !important;
+        top: auto !important;
       }
     }
 
@@ -948,15 +960,15 @@
                 <h4>Latest Articles</h4>
                 <ul class="latest-posts-list">
                   <li class="latest-posts-item">
-                    <a href="/blogs/minimally-invasive-orthopaedic-surgery-faster-recovery-less-pain.html"
+                    <a href="/blogs/heart-healthy-foods-cardiologists-recommend.html"
                       class="latest-post-link">
                       <div class="latest-post-thumb">
-                        <img src="assets/minimally-invasive-orthopaedic-surgery-faster-recovery-less-pain.jpeg  "
+                        <img src="assets/heart-healthy-foods-cardiologists-recommend.jpg"
                           alt="Health article" loading="lazy">
                       </div>
                       <div class="latest-post-text">
-                        <div class="latest-post-title">Minimally Invasive Orthopaedic Surgery</div>
-                        <span class="latest-post-date">24 Nov 2025</span>
+                        <div class="latest-post-title">25 Heart-Healthy Foods Cardiologists Recommend</div>
+                        <span class="latest-post-date">09 March 2026</span>
                       </div>
                     </a>
                   </li>
