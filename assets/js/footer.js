@@ -101,3 +101,17 @@ document.addEventListener('DOMContentLoaded', function () {
     footerPlaceholder.innerHTML = footerHTML;
   }
 });
+
+// Dynamic reading time for single blog post pages
+document.addEventListener('DOMContentLoaded', function () {
+  const content = document.querySelector('.single-post-content');
+  const meta = document.querySelector('.single-post-meta');
+  if (!content || !meta) return;
+
+  const wordCount = content.textContent.replace(/\s+/g, ' ').trim().split(' ').filter(Boolean).length;
+  const mins = Math.ceil(wordCount / 238);
+
+  const readTimeSpan = document.createElement('span');
+  readTimeSpan.innerHTML = '<i class="fa fa-clock"></i> ' + mins + ' min read';
+  meta.appendChild(readTimeSpan);
+});
