@@ -249,6 +249,22 @@
 <image:loc>https://gorehospital.com/assets/gastrology-menu.png</image:loc>
 <image:title> Gastroenterology Hospital In Ravet </image:title>
 </image:image>
+<image:image>
+<image:loc>https://gorehospital.com/assets/dr.dattesh-gore.JPG</image:loc>
+<image:title> Dr. Dattesh Gore - Gore Hospital Ravet </image:title>
+</image:image>
+<image:image>
+<image:loc>https://gorehospital.com/assets/dr.ajay-dombale.jpg</image:loc>
+<image:title> Dr. Ajay Dombale - Gore Hospital Ravet </image:title>
+</image:image>
+<image:image>
+<image:loc>https://gorehospital.com/assets/dr.shankar-mundhe.JPG</image:loc>
+<image:title> Dr. Shankar Mundhe - Gore Hospital Ravet </image:title>
+</image:image>
+<image:image>
+<image:loc>https://gorehospital.com/assets/sandesh.jpg</image:loc>
+<image:title> Dr. Sandesh Gawade - Gore Hospital Ravet </image:title>
+</image:image>
 </url>
 <url>
 <loc>https://gorehospital.com/blog.html</loc>
@@ -290,6 +306,26 @@
 <image:image>
 <image:loc>https://gorehospital.com/assets/gore-hospital-beds.jpg</image:loc>
 <image:title> Gore Hospital Beds </image:title>
+</image:image>
+<image:image>
+<image:loc>https://gorehospital.com/assets/group-2.jpg</image:loc>
+<image:title> Gore Hospital Group Photo </image:title>
+</image:image>
+<image:image>
+<image:loc>https://gorehospital.com/assets/machine-one.jpg</image:loc>
+<image:title> Gore Hospital Medical Equipment </image:title>
+</image:image>
+<image:image>
+<image:loc>https://gorehospital.com/assets/machine-two.jpg</image:loc>
+<image:title> Gore Hospital Medical Machine </image:title>
+</image:image>
+<image:image>
+<image:loc>https://gorehospital.com/assets/treatment-beds.jpg</image:loc>
+<image:title> Gore Hospital Treatment Beds </image:title>
+</image:image>
+<image:image>
+<image:loc>https://gorehospital.com/assets/pharmacy.jpg</image:loc>
+<image:title> Gore Hospital Pharmacy in Ravet </image:title>
 </image:image>
 </url>
 <url>
@@ -399,4 +435,229 @@
 </image:image>
 </url>
 
+<url>
+<loc>https://gorehospital.com/blogs/neurologist-vs-neurosurgeon-differences-consultation-guide.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/neurologist-vs-neurosurgeon.jpg</image:loc>
+<image:title> Neurologist vs Neurosurgeon Differences Consultation Guide </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/blogs/paediatric-orthopaedic-care-tips-for-parents.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/orthopaedic-blog.png</image:loc>
+<image:title> Paediatric Orthopaedic Care Tips For Parents </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/blogs/preconception-health-tips-to-prepare-for-pregnancy.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/preconception-health-tips-blog.jpg</image:loc>
+<image:title> Preconception Health Tips To Prepare For Pregnancy </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/blogs/what-are-the-symptoms-of-pcos-in-females.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/symptoms-pcos-blog.jpg</image:loc>
+<image:title> What Are The Symptoms Of PCOS In Females </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/best-cardiology-hospital-in-ravet.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+</url>
+
+<url>
+<loc>https://gorehospital.com/best-cardiology-hospital-in-akurdi.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/heart-attack-emergency.jpg</image:loc>
+<image:title> Heart Attack Emergency Treatment in Akurdi </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/best-cardiology-hospital-in-nigdi.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/heart-blood-pressure.jpg</image:loc>
+<image:title> Heart Blood Pressure Treatment in Nigdi </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/best-cardiology-hospital-in-pcmc.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/heart-cholesterol.jpg</image:loc>
+<image:title> Heart Cholesterol Treatment in PCMC </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/best-cardiology-hospital-in-pradhikaran.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/heart-chest-pain.jpg</image:loc>
+<image:title> Heart Chest Pain Treatment in Pradhikaran </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/best-cardiology-hospital-in-mamurdi.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/heart-failure-care.jpg</image:loc>
+<image:title> Heart Failure Care in Mamurdi </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/best-gynecologist-in-ravet-pcmc.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/best-gynecologist-in-ravet-pcmc.jpg</image:loc>
+<image:title> Best Gynecologist in Ravet PCMC </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/best-gynecologist-in-akurdi.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/best-gynecologist-in-akurdi.jpg</image:loc>
+<image:title> Best Gynecologist in Akurdi </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/best-gynecologist-in-nigdi.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/best-gynecologist-in-nigdi.jpg</image:loc>
+<image:title> Best Gynecologist in Nigdi </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/best-gynecologist-in-pcmc.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/best-gynecologist-in-pcmc.jpg</image:loc>
+<image:title> Best Gynecologist in PCMC </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/best-gynecologist-in-pradhikaran.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/best-gynecologist-in-pradhikaran.jpg</image:loc>
+<image:title> Best Gynecologist in Pradhikaran </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/best-gynecologist-in-hinjewadi.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/best-gynecologist-in-hinjewadi.png</image:loc>
+<image:title> Best Gynecologist in Hinjewadi </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/best-gynecologist-in-wakad.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/best-gynecologist-in-wakad.png</image:loc>
+<image:title> Best Gynecologist in Wakad </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/best-gynecologist-in-punawale.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/best-gynecologist-in-punawale.png</image:loc>
+<image:title> Best Gynecologist in Punawale </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/best-gynecologist-in-marunji.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/best-gynecologist-in-marunji.jpg</image:loc>
+<image:title> Best Gynecologist in Marunji </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/best-gynecologist-in-kiwale.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/best-gynecologist-in-kiwale.png</image:loc>
+<image:title> Best Gynecologist in Kiwale </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/best-gynecologist-in-thergaon.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/best-gynecologist-in-thergaon.jpg</image:loc>
+<image:title> Best Gynecologist in Thergaon </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/best-gynecologist-in-bhumkar-chowk.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/best-gynecologist-in-bhumkar-chowk.png</image:loc>
+<image:title> Best Gynecologist in Bhumkar Chowk </image:title>
+</image:image>
+</url>
+
+<url>
+<loc>https://gorehospital.com/best-gynecologist-in-walhekarwadi.html</loc>
+<lastmod>2026-02-20</lastmod>
+<priority>0.8</priority>
+<image:image>
+<image:loc>https://gorehospital.com/assets/best-gynecologist-in-walhekarwadi.png</image:loc>
+<image:title> Best Gynecologist in Walhekarwadi </image:title>
+</image:image>
+</url>
 </urlset>
