@@ -3,7 +3,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 <url>
 <loc>https://gorehospital.com/</loc>
-<lastmod>2026-03-11 </lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>1.0</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/logo.jpeg</image:loc>
@@ -92,7 +92,7 @@
 </url>
 <url>
 <loc>https://gorehospital.com/about-us.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>1.0</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/team.png</image:loc>
@@ -101,7 +101,7 @@
 </url>
 <url>
 <loc>https://gorehospital.com/services/cardiology.html</loc>
-<lastmod>2026-03-11 </lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/cardiology.jpg</image:loc>
@@ -114,7 +114,7 @@
 </url>
 <url>
 <loc>https://gorehospital.com/services/pediatric.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/paediatric.jpg</image:loc>
@@ -131,7 +131,7 @@
 </url>
 <url>
 <loc>https://gorehospital.com/services/neurology.html</loc>
-<lastmod>2026-03-11 </lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/neurology.jpg</image:loc>
@@ -144,7 +144,7 @@
 </url>
 <url>
 <loc>https://gorehospital.com/services/orthopaedics.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/orthopedic.jpg</image:loc>
@@ -153,12 +153,12 @@
 </url>
 <url>
 <loc>https://gorehospital.com/services/family-physician.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://gorehospital.com/services/gynaecology.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/gynecology.jpg</image:loc>
@@ -167,7 +167,7 @@
 </url>
 <url>
 <loc>https://gorehospital.com/services/endocrinology.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/endocrinology.jpg</image:loc>
@@ -176,7 +176,7 @@
 </url>
 <url>
 <loc>https://gorehospital.com/services/nephrology.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/nephrology-service.jpg</image:loc>
@@ -185,7 +185,7 @@
 </url>
 <url>
 <loc>https://gorehospital.com/services/gastrology.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/gastrology.jpg</image:loc>
@@ -194,7 +194,7 @@
 </url>
 <url>
 <loc>https://gorehospital.com/services/ent.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/ent-img.jpg</image:loc>
@@ -203,12 +203,12 @@
 </url>
 <url>
 <loc>https://gorehospital.com/services/pulmonology.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://gorehospital.com/services/cancer-care.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/cancer-care-menu.jpg</image:loc>
@@ -221,7 +221,7 @@
 </url>
 <url>
 <loc>https://gorehospital.com/services/radiology.html</loc>
-<lastmod>2026-03-11 </lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/Radiology.jpg</image:loc>
@@ -238,12 +238,12 @@
 </url>
 <url>
 <loc>https://gorehospital.com/appointment.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>1.0</priority>
 </url>
 <url>
 <loc>https://gorehospital.com/our-doctors.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>1.0</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/gastrology-menu.png</image:loc>
@@ -268,7 +268,7 @@
 </url>
 <url>
 <loc>https://gorehospital.com/blog.html</loc>
-<lastmod>2026-03-11 </lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>1.0</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/irregular-periods-in-teens-blog-gore-image.png</image:loc>
@@ -289,7 +289,7 @@
 </url>
 <url>
 <loc>https://gorehospital.com/gallery.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>1.0</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/treatment-room.jpg</image:loc>
@@ -330,44 +330,44 @@
 </url>
 <url>
 <loc>https://gorehospital.com/contact-us.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>1.0</priority>
 </url>
 <url>
 <loc>https://gorehospital.com/privacy-policy.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>1.0</priority>
 </url>
 <url>
 <loc>https://gorehospital.com/term.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>1.0</priority>
 </url>
 <url>
 <loc>https://gorehospital.com/blogs/irregular-periods-in-teens.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://gorehospital.com/blogs/minimally-invasive-orthopaedic-surgery-faster-recovery-less-pain.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://gorehospital.com/blogs/signs-your-sports-injury-needs-arthroscopic-surgery-immediately.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 </url>
 <url>
 <loc>https://gorehospital.com/blogs/what-are-the-most-common-ent-surgeries.html</loc>
-<lastmod>2026-03-11 </lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 </url>
 
 
 <url>
 <loc>https://gorehospital.com/blogs/top-warning-signs-of-heart-and-lung-disease.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>1.0</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/top-warning-signs-of-heart-and-lung-disease.png</image:loc>
@@ -377,7 +377,7 @@
 
 <url>
 <loc>https://gorehospital.com/blogs/most-common-ent-problems.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>1.0</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/most-common-ent-problems.png</image:loc>
@@ -387,7 +387,7 @@
 
 <url>
 <loc>https://gorehospital.com/blogs/early-warning-signs-of-diabetes.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>1.0</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/early-warning-signs-of-diabetes.png</image:loc>
@@ -397,7 +397,7 @@
 
 <url>
 <loc>https://gorehospital.com/blogs/heart-healthy-foods-cardiologists-recommend.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>1.0</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/heart-healthy-foods-cardiologists-recommend.jpg</image:loc>
@@ -407,7 +407,7 @@
 
 <url>
 <loc>https://gorehospital.com/blogs/top-ten-nutrition-tips-for-healthy-kids.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>1.0</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/top-ten-nutrition-tips-for-healthy-kids.jpg</image:loc>
@@ -417,7 +417,7 @@
 
 <url>
 <loc>https://gorehospital.com/blogs/ten-important-health-tests-women-must-take-regularly.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>1.0</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/ten-important-health-tests-women-must-take-regularly.png</image:loc>
@@ -427,7 +427,7 @@
 
 <url>
 <loc>https://gorehospital.com/blogs/ten-common-myths-and-facts-about-cancer-treatment.html</loc>
-<lastmod>2026-03-11</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>1.0</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/ten-common-myths-and-facts-about-cancer-treatment.png</image:loc>
@@ -437,7 +437,7 @@
 
 <url>
 <loc>https://gorehospital.com/blogs/neurologist-vs-neurosurgeon-differences-consultation-guide.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/neurologist-vs-neurosurgeon.jpg</image:loc>
@@ -447,7 +447,7 @@
 
 <url>
 <loc>https://gorehospital.com/blogs/paediatric-orthopaedic-care-tips-for-parents.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/orthopaedic-blog.png</image:loc>
@@ -457,7 +457,7 @@
 
 <url>
 <loc>https://gorehospital.com/blogs/preconception-health-tips-to-prepare-for-pregnancy.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/preconception-health-tips-blog.jpg</image:loc>
@@ -467,7 +467,7 @@
 
 <url>
 <loc>https://gorehospital.com/blogs/what-are-the-symptoms-of-pcos-in-females.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/symptoms-pcos-blog.jpg</image:loc>
@@ -477,13 +477,13 @@
 
 <url>
 <loc>https://gorehospital.com/best-cardiology-hospital-in-ravet.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 </url>
 
 <url>
 <loc>https://gorehospital.com/best-cardiology-hospital-in-akurdi.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/heart-attack-emergency.jpg</image:loc>
@@ -493,7 +493,7 @@
 
 <url>
 <loc>https://gorehospital.com/best-cardiology-hospital-in-nigdi.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/heart-blood-pressure.jpg</image:loc>
@@ -503,7 +503,7 @@
 
 <url>
 <loc>https://gorehospital.com/best-cardiology-hospital-in-pcmc.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/heart-cholesterol.jpg</image:loc>
@@ -513,7 +513,7 @@
 
 <url>
 <loc>https://gorehospital.com/best-cardiology-hospital-in-pradhikaran.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/heart-chest-pain.jpg</image:loc>
@@ -523,7 +523,7 @@
 
 <url>
 <loc>https://gorehospital.com/best-cardiology-hospital-in-mamurdi.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/heart-failure-care.jpg</image:loc>
@@ -533,7 +533,7 @@
 
 <url>
 <loc>https://gorehospital.com/best-gynecologist-in-ravet-pcmc.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/best-gynecologist-in-ravet-pcmc.jpg</image:loc>
@@ -543,7 +543,7 @@
 
 <url>
 <loc>https://gorehospital.com/best-gynecologist-in-akurdi.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/best-gynecologist-in-akurdi.jpg</image:loc>
@@ -553,7 +553,7 @@
 
 <url>
 <loc>https://gorehospital.com/best-gynecologist-in-nigdi.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/best-gynecologist-in-nigdi.jpg</image:loc>
@@ -563,7 +563,7 @@
 
 <url>
 <loc>https://gorehospital.com/best-gynecologist-in-pcmc.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/best-gynecologist-in-pcmc.jpg</image:loc>
@@ -573,7 +573,7 @@
 
 <url>
 <loc>https://gorehospital.com/best-gynecologist-in-pradhikaran.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/best-gynecologist-in-pradhikaran.jpg</image:loc>
@@ -583,7 +583,7 @@
 
 <url>
 <loc>https://gorehospital.com/best-gynecologist-in-hinjewadi.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/best-gynecologist-in-hinjewadi.png</image:loc>
@@ -593,7 +593,7 @@
 
 <url>
 <loc>https://gorehospital.com/best-gynecologist-in-wakad.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/best-gynecologist-in-wakad.png</image:loc>
@@ -603,7 +603,7 @@
 
 <url>
 <loc>https://gorehospital.com/best-gynecologist-in-punawale.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/best-gynecologist-in-punawale.png</image:loc>
@@ -613,7 +613,7 @@
 
 <url>
 <loc>https://gorehospital.com/best-gynecologist-in-marunji.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/best-gynecologist-in-marunji.jpg</image:loc>
@@ -623,7 +623,7 @@
 
 <url>
 <loc>https://gorehospital.com/best-gynecologist-in-kiwale.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/best-gynecologist-in-kiwale.png</image:loc>
@@ -633,7 +633,7 @@
 
 <url>
 <loc>https://gorehospital.com/best-gynecologist-in-thergaon.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/best-gynecologist-in-thergaon.jpg</image:loc>
@@ -643,7 +643,7 @@
 
 <url>
 <loc>https://gorehospital.com/best-gynecologist-in-bhumkar-chowk.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/best-gynecologist-in-bhumkar-chowk.png</image:loc>
@@ -653,7 +653,7 @@
 
 <url>
 <loc>https://gorehospital.com/best-gynecologist-in-walhekarwadi.html</loc>
-<lastmod>2026-02-20</lastmod>
+<lastmod>2026-04-16</lastmod>
 <priority>0.8</priority>
 <image:image>
 <image:loc>https://gorehospital.com/assets/best-gynecologist-in-walhekarwadi.png</image:loc>
