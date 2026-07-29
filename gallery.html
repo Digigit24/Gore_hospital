@@ -1433,6 +1433,20 @@
       <div class="vg-slider-track-wrap">
         <div class="vg-slider-track" id="vg-track">
 
+          <!-- Slide: Doctor Message (Portrait, 9:16) -->
+          <div class="vg-slide">
+            <div class="vg-card vg-portrait">
+              <div class="vg-video-wrap">
+                <div class="vg-floating-tag">
+                  <div class="vg-pulse"></div>
+                  Doctor Message
+                </div>
+                <video id="doctor-message-video-portrait" controls autoplay loop muted playsinline
+                  crossorigin="anonymous"></video>
+              </div>
+            </div>
+          </div>
+
           <!-- Slide 1: Landscape Video (Main) -->
           <div class="vg-slide">
             <div class="vg-card vg-landscape">
@@ -1529,7 +1543,7 @@
         const prevBtn = document.getElementById('vg-prev');
         const nextBtn = document.getElementById('vg-next');
         let currentSlide = 0;
-        const totalSlides = 5; // We have 5 slides
+        const totalSlides = 6; // We have 6 slides
 
         function updateSlider() {
           track.style.transform = `translateX(-${currentSlide * 100}%)`;
@@ -1849,6 +1863,7 @@
         }
       }
 
+      setupHlsPlayer('doctor-message-video-portrait', 'https://videos.thedigitechsolutions.com/videos-static/954c439f48045ebfaf8cee1ec1d7b52e/portrait/39ffbf49-9474-4682-8526-d9b2181c6f4d/master.m3u8');
       setupHlsPlayer('hospital-tour-video', 'https://videos.thedigitechsolutions.com/videos-static/9f31cd4b39815e5385764ac0bc204b7c/portrait/da2b26cc-39c8-4e36-a160-43c647c417d1/master.m3u8');
       setupHlsPlayer('hospital-tour-video-landscape', 'https://videos.thedigitechsolutions.com/videos-static/6a6ae02939583a99914994decf7fe517/landscape/c801afe8-1c57-48b1-80c0-f5d71e469e5b/master.m3u8');
       setupHlsPlayer('hospital-tour-video-2', 'https://videos.thedigitechsolutions.com/videos-static/fae82b34e7c2ec70f4dfc1aca0de0117/portrait/8595ab63-14b0-416b-9903-2aaa94d61c58/master.m3u8');
