@@ -29,20 +29,20 @@ RewriteRule ^blog-post\.html/(.+)$ /post/$1/ [R=301,L]
 </IfModule>
 
 # ----------------------------------------------------------------------
-# BROWSER CACHING (Expires): long for images/fonts, 7 days for CSS/JS, none for HTML
+# BROWSER CACHING (Expires): 30 days images, 1 year fonts, 7 days CSS/JS, none for HTML
 # ----------------------------------------------------------------------
 <IfModule mod_expires.c>
   ExpiresActive On
 
-  # Images: 1 year
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType image/gif "access plus 1 year"
-  ExpiresByType image/webp "access plus 1 year"
-  ExpiresByType image/avif "access plus 1 year"
-  ExpiresByType image/svg+xml "access plus 1 year"
-  ExpiresByType image/x-icon "access plus 1 year"
-  ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+  # Images: 30 days (filenames are reused when images are replaced)
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/gif "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/avif "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType image/x-icon "access plus 30 days"
+  ExpiresByType image/vnd.microsoft.icon "access plus 30 days"
 
   # Fonts: 1 year
   ExpiresByType font/woff2 "access plus 1 year"
@@ -70,7 +70,10 @@ RewriteRule ^blog-post\.html/(.+)$ /post/$1/ [R=301,L]
 # blog-post.html) also gets no-cache. No "immutable": filenames are not hashed.
 # ----------------------------------------------------------------------
 <IfModule mod_headers.c>
-  <FilesMatch "(?i)\.(jpe?g|png|gif|webp|avif|svg|ico|woff2?|ttf|otf|eot)$">
+  <FilesMatch "(?i)\.(jpe?g|png|gif|webp|avif|svg|ico)$">
+    Header set Cache-Control "public, max-age=2592000"
+  </FilesMatch>
+  <FilesMatch "(?i)\.(woff2?|ttf|otf|eot)$">
     Header set Cache-Control "public, max-age=31536000"
   </FilesMatch>
   <FilesMatch "(?i)\.(css|js)$">
