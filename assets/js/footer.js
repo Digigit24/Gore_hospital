@@ -58,8 +58,8 @@ const footerHTML = `
             <div class="single-wized">
               <h6 class="title">Working Time</h6>
               <div class="body">
-                <p class="location">OPD (Mon “ Sat): 9:00 AM “ 9:00 PM</p>
-                <p class="location">Sunday: 10:00 AM “ 2:00 PM</p>
+                <p class="location">OPD (Mon - Sat): 9:00 AM - 9:00 PM</p>
+                <p class="location">Sunday: 10:00 AM - 2:00 PM</p>
                 <p class="location">Emergency: 24x7</p>
                 <a href="tel:+919689528414">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
