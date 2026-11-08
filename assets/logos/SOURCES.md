@@ -54,23 +54,36 @@ empanelled partners.
 | vidal-health.png | https://www.vidalhealth.com/ | https://www.vidalhealth.com/wp-content/themes/vidal-health/images/logo.png |
 | health-india.png | https://www.healthindiatpa.com/ | Cropped from https://www.healthindiatpa.com/images2021/logo.png (wordmark only; IRDAI licence and ISO text removed) |
 
+## Hand-collected (supplied by the hospital team, 2026-11-08)
+
+These sites block automated access, so the files were saved by hand by the
+hospital team. Source sites confirmed by the team on 2026-11-08.
+Same processing rules as above.
+
+| File | Source site (confirmed) | Notes |
+|---|---|---|
+| insurers/aditya-birla-health.png | https://www.adityabirlacapital.com/healthinsurance/ | |
+| insurers/care-health.png | https://www.careinsurance.com/ | Cropped: removed a header border strip above the logo; flattened onto white |
+| insurers/cholamandalam-ms.png | https://www.cholainsurance.com/ | |
+| insurers/go-digit.png | https://www.godigit.com/ | Cropped: removed a header border line above the logo; flattened onto white; small source (90x57) |
+| insurers/iffco-tokio.png | https://www.iffcotokio.co.in/ | |
+| insurers/national-insurance.png | https://nationalinsurance.nic.co.in/ | Converted from SVG |
+| insurers/navi-general.png | https://navi.com/ | |
+| insurers/united-india.png | https://uiic.co.in/ | Cropped to the circular emblem from the site header banner (removed yellow background, name text and tagline; corners made transparent); small source, 56x50 |
+| tpas/family-health-plan.png | https://www.fhpl.net/ | |
+| tpas/health-insurance-tpa-of-india.png | https://www.hitpa.co.in/ | |
+| tpas/heritage-health.png | https://www.heritagehealthtpa.com/ | |
+
+The zip also contained `hdfc-ergo.png` and `raheja-qbe.jpg`, byte-identical to
+the files already collected above (the Raheja one still has the badge), so the
+existing versions were kept.
+
 ## Not collected yet
 
 These tiles show the initials placeholder until a file is added.
 
 | File | Reason |
 |---|---|
-| insurers/cholamandalam-ms.png | cholainsurance.com returned 502 (unreachable) |
-| insurers/aditya-birla-health.png | Site TLS certificate chain could not be verified |
-| insurers/icici-lombard.png | Site blocked automated access (403) |
-| insurers/national-insurance.png | Connection reset (site not reachable from outside India) |
-| insurers/united-india.png | Site blocked automated access (403) |
-| insurers/new-india-assurance.png | Connection reset (site not reachable from outside India) |
-| insurers/navi-general.png | Site blocked automated access (challenge page) |
-| insurers/go-digit.png | Site blocked automated access (403) |
-| insurers/iffco-tokio.png | Connection reset (site not reachable from outside India) |
-| insurers/care-health.png | Site blocked automated access (403) |
+| insurers/icici-lombard.png | Site blocked automated access (403). Hand-collected file (2026-11-08) is the white-text version for dark headers - only the "i" mark shows on white; colour version needed |
+| insurers/new-india-assurance.png | Connection reset (site not reachable from outside India). Hand-collected file (2026-11-08) is the white-text version for dark headers - only the seal shows on white; colour version needed |
 | insurers/nvgt-care.png | No company website found |
-| tpas/family-health-plan.png | Site blocked automated access (403) |
-| tpas/heritage-health.png | Header logo is built from HTML/CSS, not an image file |
-| tpas/health-insurance-tpa-of-india.png | Site TLS certificate chain could not be verified |
