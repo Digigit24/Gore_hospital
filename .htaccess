@@ -2,7 +2,7 @@
 # CLEAN SEO URL REWRITES
 # ----------------------------------------------------------------------
 
-Options -MultiViews
+Options -MultiViews -Indexes
 RewriteEngine On
 RewriteBase /
 
