@@ -42,6 +42,7 @@ empanelled partners.
 | magma-hdi.png | https://www.magmainsurance.com/ | https://www.magmainsurance.com/documents/5553002/0/Magma+Logo_0424+208X48+px.svg/633a6028-0d82-2e1a-eece-d0a9941e4a86?t=1735814746303 - current brand, Magma General Insurance (formerly Magma HDI) |
 | tata-aig.png | https://www.tataaig.com/ | Cropped from https://www.tataaig.com/s3/Tata_AIG_Logo_Sept_2026_630c66ccd7.png (logo box only; "25 Years" anniversary mark removed) |
 | raheja-qbe.png | https://www.rahejaqbe.com/ | Cropped from https://www.rahejaqbe.com/uploads/images/logo-ls-26.jpg (logo only; "Great Place to Work" badge removed; small 180x88 source) |
+| nvgt-care.png | https://nvgtcare.com/ | https://nvgtcare.com/assets/img/logo.png (collected 2026-11-08; the site was missed in the first pass) |
 
 ## TPAs (`tpas/`)
 
@@ -84,8 +85,4 @@ existing versions were kept.
 
 ## Not collected yet
 
-These tiles show the initials placeholder until a file is added.
-
-| File | Reason |
-|---|---|
-| insurers/nvgt-care.png | No company website found |
+None - all 42 partner logos are collected.
