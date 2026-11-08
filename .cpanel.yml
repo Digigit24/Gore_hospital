@@ -1,5 +1,7 @@
 ---
+# webroot is the repo clone; deploy = git pull; do not add copy steps
+# (/home/divineblisspuna/public_html/gorehospital.com is itself the git
+# checkout of this repo. Copying files into it copies the folder onto itself.)
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/divineblisspuna/public_html/gorehospital.com
-    - /bin/cp -R * $DEPLOYPATH
+    - echo "webroot is the repo clone; deploy = git pull; do not add copy steps"
