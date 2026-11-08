@@ -140,6 +140,7 @@
     width: auto;
     height: auto;
     object-fit: contain;
+    border-radius: 0; /* theme sets img { border-radius: 22px }, which clips logo corners */
 }
 
 /* initials placeholder - only visible when the logo is missing */
