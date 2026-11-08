@@ -23407,3 +23407,18 @@ h6,
     width: 140px;
     margin-bottom: 20px;
 }
+
+/* Cashless Facility nav item: shorter label where the desktop nav is tight */
+.cf-nav-short {
+    display: none;
+}
+
+@media only screen and (max-width: 1200px) {
+    .nav-area .cf-nav-full {
+        display: none;
+    }
+
+    .nav-area .cf-nav-short {
+        display: inline;
+    }
+}

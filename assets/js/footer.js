@@ -37,6 +37,7 @@ const footerHTML = `
                   <li><a href="/about-us.html">About Us</a></li>
                   <li><a href="/our-doctors.html">Specialist Doctors</a></li>
                   <li><a href="/appointment.html">Book Appointment</a></li>
+                  <li><a href="/cashless-facility.html">Cashless Facility</a></li>
                   <li><a href="/contact-us.html">Contact</a></li>
                 </ul>
               </div>
