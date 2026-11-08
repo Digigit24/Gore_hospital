@@ -17,6 +17,19 @@ RewriteRule ^article/([^/]+)/?$ /post/$1/ [R=301,L]
 RewriteRule ^blog-post\.html/(.+)$ /post/$1/ [R=301,L]
 
 # ----------------------------------------------------------------------
+# HARDENING: the webroot is the git clone, so hide repo and dev files.
+# Returns 404 for any path segment starting with "." (.git, .claude, .vscode,
+# .cpanel.yml, .gitignore, .gitattributes, ...) except /.well-known/ (needed
+# for SSL certificate validation), plus Python scripts, *.bak backups and
+# dev-only files.
+# ----------------------------------------------------------------------
+<IfModule mod_alias.c>
+  RedirectMatch 404 "/\.(?!well-known(?:/|$))"
+  RedirectMatch 404 "(?i)\.(py|pyc|bak)$"
+  RedirectMatch 404 "^/(clone-layout\.js|debug-positions\.txt)$"
+</IfModule>
+
+# ----------------------------------------------------------------------
 # COMPRESSION: gzip text-based assets (images/fonts like jpg/png/webp/woff/woff2
 # are already compressed and are intentionally excluded)
 # ----------------------------------------------------------------------
