@@ -57,7 +57,9 @@ empanelled partners.
 ## Hand-collected (supplied by the hospital team, 2026-11-08)
 
 These sites block automated access, so the files were saved by hand by the
-hospital team. Source sites confirmed by the team on 2026-11-08.
+hospital team. Source sites confirmed by the team on 2026-11-08. ICICI Lombard
+and New India Assurance come from each company's official social-media
+company page (profile image), which the team approved as a source.
 Same processing rules as above.
 
 | File | Source site (confirmed) | Notes |
@@ -66,9 +68,11 @@ Same processing rules as above.
 | insurers/care-health.png | https://www.careinsurance.com/ | Cropped: removed a header border strip above the logo; flattened onto white |
 | insurers/cholamandalam-ms.png | https://www.cholainsurance.com/ | |
 | insurers/go-digit.png | https://www.godigit.com/ | Cropped: removed a header border line above the logo; flattened onto white; small source (90x57) |
+| insurers/icici-lombard.png | Official ICICI Lombard company page on Facebook or LinkedIn (platform not recorded) - profile image | Used as supplied: white logo on the orange gradient square (approved exception to the white/transparent background rule); 400x400 |
 | insurers/iffco-tokio.png | https://www.iffcotokio.co.in/ | |
 | insurers/national-insurance.png | https://nationalinsurance.nic.co.in/ | Converted from SVG |
 | insurers/navi-general.png | https://navi.com/ | |
+| insurers/new-india-assurance.png | Official New India Assurance company page on Facebook or LinkedIn (platform not recorded) - profile image | Seal only, on white; 197x197 |
 | insurers/united-india.png | https://uiic.co.in/ | Cropped to the circular emblem from the site header banner (removed yellow background, name text and tagline; corners made transparent); small source, 56x50 |
 | tpas/family-health-plan.png | https://www.fhpl.net/ | |
 | tpas/health-insurance-tpa-of-india.png | https://www.hitpa.co.in/ | |
@@ -84,6 +88,4 @@ These tiles show the initials placeholder until a file is added.
 
 | File | Reason |
 |---|---|
-| insurers/icici-lombard.png | Site blocked automated access (403). Hand-collected file (2026-11-08) is the white-text version for dark headers - only the "i" mark shows on white; colour version needed |
-| insurers/new-india-assurance.png | Connection reset (site not reachable from outside India). Hand-collected file (2026-11-08) is the white-text version for dark headers - only the seal shows on white; colour version needed |
 | insurers/nvgt-care.png | No company website found |
