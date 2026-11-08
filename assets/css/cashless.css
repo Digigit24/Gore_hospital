@@ -167,11 +167,8 @@
     line-height: 1.35;
     color: var(--cf-heading);
     font-weight: 500;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
     overflow-wrap: anywhere;
+    hyphens: auto;
 }
 
 @media (min-width: 768px) {
@@ -196,7 +193,6 @@
 
 .cf-grid--full .cf-name {
     font-size: 13px;
-    -webkit-line-clamp: 4;
 }
 
 @media (min-width: 768px) {
